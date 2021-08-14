@@ -1,24 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mD-oF-1Um">
+                                <rect key="frame" x="191" y="265" width="32" height="30"/>
+                                <state key="normal" title="1519"/>
+                                <connections>
+                                    <action selector="touchUpFirstButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Gc-yv-hVO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJC-Fc-sCw">
+                                <rect key="frame" x="190" y="345" width="34" height="30"/>
+                                <state key="normal" title="1520"/>
+                                <connections>
+                                    <action selector="touchUpSecondButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Cb-06-VPN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLg-jt-8iR">
+                                <rect key="frame" x="191" y="425" width="32" height="30"/>
+                                <state key="normal" title="1521"/>
+                                <connections>
+                                    <action selector="touchUpThirdButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Y0-aD-bCU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZf-rc-BAc">
+                                <rect key="frame" x="188.5" y="505" width="37" height="30"/>
+                                <state key="normal" title="4095"/>
+                                <connections>
+                                    <action selector="touchUpFourthButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="19e-I8-4Jd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="버튼을 눌러보세여" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivn-mC-AOc">
+                                <rect key="frame" x="146" y="184" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oJC-Fc-sCw" firstAttribute="top" secondItem="1mD-oF-1Um" secondAttribute="bottom" constant="50" id="DNE-Ii-Xfa"/>
+                            <constraint firstItem="1mD-oF-1Um" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MQC-Eq-3Bw"/>
+                            <constraint firstItem="ZZf-rc-BAc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Me3-eA-Fqj"/>
+                            <constraint firstItem="QLg-jt-8iR" firstAttribute="top" secondItem="oJC-Fc-sCw" secondAttribute="bottom" constant="50" id="Tgn-ur-p5E"/>
+                            <constraint firstItem="QLg-jt-8iR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TiC-Sl-Enu"/>
+                            <constraint firstItem="oJC-Fc-sCw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VfK-9f-Rmi"/>
+                            <constraint firstItem="ivn-mC-AOc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WuV-tS-BMY"/>
+                            <constraint firstItem="ZZf-rc-BAc" firstAttribute="top" secondItem="QLg-jt-8iR" secondAttribute="bottom" constant="50" id="cmg-se-hnH"/>
+                            <constraint firstItem="1mD-oF-1Um" firstAttribute="top" secondItem="ivn-mC-AOc" secondAttribute="bottom" constant="60" id="gc6-gb-lgR"/>
+                            <constraint firstItem="ivn-mC-AOc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="h7m-Yr-lrX"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="20" y="94"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
