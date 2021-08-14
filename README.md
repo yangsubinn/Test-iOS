@@ -4,7 +4,7 @@
 <br>
 
 | number   |      what about      |  ✅ |
-|----------|:-------------:|:------:|
+|:----------:|:-------------:|:------:|
 | 1 |  버튼 클릭시 Haptic Vibration | ✅ |
 | 2 |    CodeBase로 NavigationBar   |   |
 | 3 | NavigationBar 보이지 않도록 했을 때, Swipe Back Gesture |     |
