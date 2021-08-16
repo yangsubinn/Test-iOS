@@ -13,6 +13,7 @@
 		2B89500D26C8126B0070DB10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B89500B26C8126B0070DB10 /* Main.storyboard */; };
 		2B89500F26C8126C0070DB10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B89500E26C8126C0070DB10 /* Assets.xcassets */; };
 		2B89501226C8126C0070DB10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B89501026C8126C0070DB10 /* LaunchScreen.storyboard */; };
+		2BE6E34026CA23C30006E2DB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6E33F26CA23C30006E2DB /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2B89500E26C8126C0070DB10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B89501126C8126C0070DB10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B89501326C8126C0070DB10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BE6E33F26CA23C30006E2DB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				2B89500726C8126B0070DB10 /* SceneDelegate.swift */,
 				2B89500926C8126B0070DB10 /* ViewController.swift */,
 				2B89500B26C8126B0070DB10 /* Main.storyboard */,
+				2BE6E33F26CA23C30006E2DB /* SecondViewController.swift */,
 				2B89500E26C8126C0070DB10 /* Assets.xcassets */,
 				2B89501026C8126C0070DB10 /* LaunchScreen.storyboard */,
 				2B89501326C8126C0070DB10 /* Info.plist */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BE6E34026CA23C30006E2DB /* SecondViewController.swift in Sources */,
 				2B89500A26C8126B0070DB10 /* ViewController.swift in Sources */,
 				2B89500626C8126B0070DB10 /* AppDelegate.swift in Sources */,
 				2B89500826C8126B0070DB10 /* SceneDelegate.swift in Sources */,
