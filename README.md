@@ -9,5 +9,5 @@
 | 2 |    CodeBase로 NavigationBar   |   |
 | 3 | NavigationBar 보이지 않도록 했을 때, Swipe Back Gesture |     |
 | 4 | 가로모드 막기 |   ✅  |
-| 5 | AutoLayout Programmatically |     |
-| 6 | Snapkit |     |
+| 5 | AutoLayout Programmatically |  ✅   |
+| 6 | Snapkit |   ✅  |
