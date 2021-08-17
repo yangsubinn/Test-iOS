@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B20C04526CBAC5A00037FDD /* KeyboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B20C04426CBAC5A00037FDD /* KeyboardVC.swift */; };
 		2B89500626C8126B0070DB10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89500526C8126B0070DB10 /* AppDelegate.swift */; };
 		2B89500826C8126B0070DB10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89500726C8126B0070DB10 /* SceneDelegate.swift */; };
 		2B89500A26C8126B0070DB10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89500926C8126B0070DB10 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		0A08C96D7CA146DF5734B9E3 /* Pods_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B20C04426CBAC5A00037FDD /* KeyboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardVC.swift; sourceTree = "<group>"; };
 		2B89500226C8126B0070DB10 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B89500526C8126B0070DB10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B89500726C8126B0070DB10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				2BE6E33F26CA23C30006E2DB /* SecondViewController.swift */,
 				2BE6E34826CA49750006E2DB /* FirstNaviVC.swift */,
 				2BE6E34A26CA49C60006E2DB /* SecondNaviVC.swift */,
+				2B20C04426CBAC5A00037FDD /* KeyboardVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				2B89500A26C8126B0070DB10 /* ViewController.swift in Sources */,
 				2BE6E34926CA49750006E2DB /* FirstNaviVC.swift in Sources */,
 				2B89500626C8126B0070DB10 /* AppDelegate.swift in Sources */,
+				2B20C04526CBAC5A00037FDD /* KeyboardVC.swift in Sources */,
 				2B89500826C8126B0070DB10 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
