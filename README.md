@@ -11,5 +11,5 @@
 | 4 | 가로모드 막기 |   ✅  |
 | 5 | AutoLayout Programmatically |  ✅   |
 | 6 | Snapkit |   ✅  |
-| 7 | UIView.animate |   |
+| 7 | UIView.animate | ✅  |
 | 8 | 키보드 사라져라 얍 | ✅ |
