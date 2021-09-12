@@ -7,20 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B20C04526CBAC5A00037FDD /* KeyboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B20C04426CBAC5A00037FDD /* KeyboardVC.swift */; };
 		2B89500626C8126B0070DB10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89500526C8126B0070DB10 /* AppDelegate.swift */; };
 		2B89500826C8126B0070DB10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89500726C8126B0070DB10 /* SceneDelegate.swift */; };
 		2B89500A26C8126B0070DB10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89500926C8126B0070DB10 /* ViewController.swift */; };
 		2B89500D26C8126B0070DB10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B89500B26C8126B0070DB10 /* Main.storyboard */; };
 		2B89501226C8126C0070DB10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B89501026C8126C0070DB10 /* LaunchScreen.storyboard */; };
+		2BBEE1C326CC0308009064B9 /* AnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBEE1C226CC0308009064B9 /* AnimationVC.swift */; };
 		2BE6E34026CA23C30006E2DB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6E33F26CA23C30006E2DB /* SecondViewController.swift */; };
 		2BE6E34726CA493D0006E2DB /* Navigate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BE6E34626CA493D0006E2DB /* Navigate.storyboard */; };
 		2BE6E34926CA49750006E2DB /* FirstNaviVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6E34826CA49750006E2DB /* FirstNaviVC.swift */; };
 		2BE6E34B26CA49C60006E2DB /* SecondNaviVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6E34A26CA49C60006E2DB /* SecondNaviVC.swift */; };
+		2BF35F6126EBBBC400C5A360 /* PresentBeforeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF35F6026EBBBC400C5A360 /* PresentBeforeVC.swift */; };
+		2BF35F6326EBBFA800C5A360 /* PresentModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF35F6226EBBFA800C5A360 /* PresentModalVC.swift */; };
 		6444DD8794AB45C810C927F0 /* Pods_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A08C96D7CA146DF5734B9E3 /* Pods_Test.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A08C96D7CA146DF5734B9E3 /* Pods_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B20C04426CBAC5A00037FDD /* KeyboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardVC.swift; sourceTree = "<group>"; };
 		2B89500226C8126B0070DB10 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B89500526C8126B0070DB10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B89500726C8126B0070DB10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,11 +33,14 @@
 		2B89500C26C8126B0070DB10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B89500E26C8126C0070DB10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B89501126C8126C0070DB10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2BBEE1C226CC0308009064B9 /* AnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationVC.swift; sourceTree = "<group>"; };
 		2BE6E33F26CA23C30006E2DB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		2BE6E34626CA493D0006E2DB /* Navigate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Navigate.storyboard; sourceTree = "<group>"; };
 		2BE6E34826CA49750006E2DB /* FirstNaviVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirstNaviVC.swift; path = Test/Source/ViewControllers/FirstNaviVC.swift; sourceTree = SOURCE_ROOT; };
 		2BE6E34A26CA49C60006E2DB /* SecondNaviVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondNaviVC.swift; sourceTree = "<group>"; };
 		2BE6E34C26CA4AF80006E2DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BF35F6026EBBBC400C5A360 /* PresentBeforeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentBeforeVC.swift; sourceTree = "<group>"; };
+		2BF35F6226EBBFA800C5A360 /* PresentModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PresentModalVC.swift; path = Test/Source/ViewControllers/PresentModalVC.swift; sourceTree = SOURCE_ROOT; };
 		34C9A6C4D225611A1B9A0412 /* Pods-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.debug.xcconfig"; path = "Target Support Files/Pods-Test/Pods-Test.debug.xcconfig"; sourceTree = "<group>"; };
 		81F1FB71A0E81367868B1A24 /* Pods-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.release.xcconfig"; path = "Target Support Files/Pods-Test/Pods-Test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +110,10 @@
 				2BE6E33F26CA23C30006E2DB /* SecondViewController.swift */,
 				2BE6E34826CA49750006E2DB /* FirstNaviVC.swift */,
 				2BE6E34A26CA49C60006E2DB /* SecondNaviVC.swift */,
+				2B20C04426CBAC5A00037FDD /* KeyboardVC.swift */,
+				2BBEE1C226CC0308009064B9 /* AnimationVC.swift */,
+				2BF35F6026EBBBC400C5A360 /* PresentBeforeVC.swift */,
+				2BF35F6226EBBFA800C5A360 /* PresentModalVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -261,7 +273,11 @@
 				2B89500A26C8126B0070DB10 /* ViewController.swift in Sources */,
 				2BE6E34926CA49750006E2DB /* FirstNaviVC.swift in Sources */,
 				2B89500626C8126B0070DB10 /* AppDelegate.swift in Sources */,
+				2BF35F6326EBBFA800C5A360 /* PresentModalVC.swift in Sources */,
+				2BBEE1C326CC0308009064B9 /* AnimationVC.swift in Sources */,
+				2B20C04526CBAC5A00037FDD /* KeyboardVC.swift in Sources */,
 				2B89500826C8126B0070DB10 /* SceneDelegate.swift in Sources */,
+				2BF35F6126EBBBC400C5A360 /* PresentBeforeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
