@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5xQ-IC-P8F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iTI-6j-kSu">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -139,6 +139,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9T-P3-HXd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2561" y="94"/>
+        </scene>
+        <!--PresentBeforeVC-->
+        <scene sceneID="evs-a8-WDH">
+            <objects>
+                <viewController storyboardIdentifier="PresentBeforeVC" title="PresentBeforeVC" id="iTI-6j-kSu" customClass="PresentBeforeVC" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="del-vU-9np">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ai8-EH-0Sm">
+                                <rect key="frame" x="137" y="310" width="140" height="30"/>
+                                <state key="normal" title="Present 방식 (modal)"/>
+                                <connections>
+                                    <action selector="buttonClick:" destination="iTI-6j-kSu" eventType="touchUpInside" id="7ap-YT-y5A"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFB-2V-cvO">
+                                <rect key="frame" x="186" y="198" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="83K-8J-MMp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ai8-EH-0Sm" firstAttribute="centerX" secondItem="del-vU-9np" secondAttribute="centerX" id="RQo-zg-wsP"/>
+                            <constraint firstItem="ai8-EH-0Sm" firstAttribute="top" secondItem="yFB-2V-cvO" secondAttribute="bottom" constant="91" id="t84-VO-Ivo"/>
+                            <constraint firstItem="yFB-2V-cvO" firstAttribute="top" secondItem="83K-8J-MMp" secondAttribute="top" constant="154" id="uIo-Kq-3wc"/>
+                            <constraint firstItem="yFB-2V-cvO" firstAttribute="centerX" secondItem="del-vU-9np" secondAttribute="centerX" id="wRT-cT-Pfi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="yFB-2V-cvO" id="NL6-fn-fhO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q7D-6r-sc3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3435" y="84"/>
+        </scene>
+        <!--ViewController2-->
+        <scene sceneID="TQb-fi-kTv">
+            <objects>
+                <viewController storyboardIdentifier="PresentModalVC" title="ViewController2" id="hRs-i7-VLo" customClass="PresentModalVC" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C1R-5O-4Pl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EX6-e6-11C">
+                                <rect key="frame" x="182.5" y="347" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PresentModalVC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNZ-gv-CcU">
+                                <rect key="frame" x="143" y="284" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="X2J-8R-6oz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EX6-e6-11C" firstAttribute="top" secondItem="BNZ-gv-CcU" secondAttribute="bottom" constant="42" id="Hv8-lv-Qj0"/>
+                            <constraint firstItem="BNZ-gv-CcU" firstAttribute="top" secondItem="X2J-8R-6oz" secondAttribute="top" constant="240" id="J1X-gW-RpG"/>
+                            <constraint firstItem="EX6-e6-11C" firstAttribute="centerX" secondItem="C1R-5O-4Pl" secondAttribute="centerX" id="u7Q-pg-ZQk"/>
+                            <constraint firstItem="BNZ-gv-CcU" firstAttribute="centerX" secondItem="C1R-5O-4Pl" secondAttribute="centerX" id="uz1-cz-A2i"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gqm-cY-pLV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4266.666666666667" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
