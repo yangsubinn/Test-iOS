@@ -16,6 +16,5 @@
 | 9 | present 화면전환 얍 | ✅ |
 | 10 | scrollView 얍 | ✅ |
 | 11 | collectionView 얍 |  |
-| 12 | collectionView 얍 |  |
-| 13 | TabBar Programmatically 얍 |  |
-| 14 | StackView 얍 |  |
+| 12 | TabBar Programmatically 얍 |  |
+| 13 | StackView 얍 |  |
