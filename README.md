@@ -14,7 +14,7 @@
 | 7 | UIView.animate | ✅  |
 | 8 | 키보드 사라져라 얍 | ✅ |
 | 9 | present 화면전환 얍 | ✅ |
-| 10 | push 화면전환 얍 |  |
+| 10 | scrollView 얍 | ✅ |
 | 11 | collectionView 얍 |  |
 | 12 | TabBar Programmatically 얍 |  |
 | 13 | StackView 얍 |  |
