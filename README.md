@@ -17,4 +17,4 @@
 | 10 | scrollView 얍 | ✅ |
 | 11 | collectionView 얍 |  |
 | 12 | TabBar Programmatically 얍 |  |
-| 13 | StackView 얍 |  |
+| 13 | StackView 얍 | ✅ |
