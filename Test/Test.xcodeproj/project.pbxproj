@@ -35,7 +35,7 @@
 		2B89500C26C8126B0070DB10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B89500E26C8126C0070DB10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B89501126C8126C0070DB10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2BB3B5D726F1B88D00EF7856 /* StackViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StackViewVC.swift; path = Test/Source/ViewControllers/StackViewVC.swift; sourceTree = "<group>"; };
+		2BB3B5D726F1B88D00EF7856 /* StackViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewVC.swift; sourceTree = "<group>"; };
 		2BBEE1C226CC0308009064B9 /* AnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationVC.swift; sourceTree = "<group>"; };
 		2BC2CC8326EDE54D00916279 /* ScrollVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollVC.swift; sourceTree = "<group>"; };
 		2BE6E33F26CA23C30006E2DB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -64,7 +64,6 @@
 		2B894FF926C8126B0070DB10 = {
 			isa = PBXGroup;
 			children = (
-				2BB3B5D726F1B88D00EF7856 /* StackViewVC.swift */,
 				2B89500426C8126B0070DB10 /* Test */,
 				2B89500326C8126B0070DB10 /* Products */,
 				68EE808B2122C8195C114B8D /* Pods */,
@@ -111,6 +110,7 @@
 		2BE6E34326CA454C0006E2DB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2BB3B5D726F1B88D00EF7856 /* StackViewVC.swift */,
 				2B89500926C8126B0070DB10 /* ViewController.swift */,
 				2BE6E33F26CA23C30006E2DB /* SecondViewController.swift */,
 				2BE6E34826CA49750006E2DB /* FirstNaviVC.swift */,
