@@ -7,5 +7,6 @@ target 'Test' do
 
   # Pods for Test
   pod 'SnapKit', '~> 5.0.0'
+  pod 'VerticalCardSwiper'
 
 end
