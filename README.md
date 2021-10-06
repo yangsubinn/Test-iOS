@@ -17,4 +17,5 @@
 | 10 | scrollView 얍 | ✅ |
 | 11 | collectionView 얍 |  |
 | 12 | TabBar Programmatically 얍 |  |
-| 13 | StackView 얍 | ✅ | [📂](https://github.com/yangsubinn/Test-iOS/blob/master/Test/Test/Source/ViewControllers/StackViewVC.swift)
+| 13 | StackView 얍 | ✅ | [📂](https://github.com/yangsubinn/Test-iOS/blob/master/Test/Test/Source/ViewControllers/StackViewVC.swift) |
+| 14 | UILabel 특정 범위만 다른 속성 |  |  |
