@@ -3,6 +3,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=swift,xcode,cocoapods
 
 *.DS_Store
+  echo .DS_Store >> .gitignore
 
 ### CocoaPods ###
 ## CocoaPods GitIgnore Template
