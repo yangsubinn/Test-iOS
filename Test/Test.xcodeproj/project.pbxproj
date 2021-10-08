@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B20C04526CBAC5A00037FDD /* KeyboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B20C04426CBAC5A00037FDD /* KeyboardVC.swift */; };
+		2B514D0B2710BFF100D1731A /* SearchBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B514D0A2710BFF100D1731A /* SearchBarVC.swift */; };
 		2B89500626C8126B0070DB10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89500526C8126B0070DB10 /* AppDelegate.swift */; };
 		2B89500826C8126B0070DB10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89500726C8126B0070DB10 /* SceneDelegate.swift */; };
 		2B89500A26C8126B0070DB10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89500926C8126B0070DB10 /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		0A08C96D7CA146DF5734B9E3 /* Pods_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B20C04426CBAC5A00037FDD /* KeyboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardVC.swift; sourceTree = "<group>"; };
+		2B514D0A2710BFF100D1731A /* SearchBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarVC.swift; sourceTree = "<group>"; };
 		2B89500226C8126B0070DB10 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B89500526C8126B0070DB10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B89500726C8126B0070DB10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,7 +74,6 @@
 		2B894FF926C8126B0070DB10 = {
 			isa = PBXGroup;
 			children = (
-				2BB3B5D726F1B88D00EF7856 /* StackViewVC.swift */,
 				2B89500426C8126B0070DB10 /* Test */,
 				2B89500326C8126B0070DB10 /* Products */,
 				68EE808B2122C8195C114B8D /* Pods */,
@@ -119,11 +120,11 @@
 		2BE6E34326CA454C0006E2DB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				2BB3B5D726F1B88D00EF7856 /* StackViewVC.swift */,
 				2B89500926C8126B0070DB10 /* ViewController.swift */,
 				2BE6E33F26CA23C30006E2DB /* SecondViewController.swift */,
 				2BE6E34826CA49750006E2DB /* FirstNaviVC.swift */,
 				2BE6E34A26CA49C60006E2DB /* SecondNaviVC.swift */,
+				2BB3B5D726F1B88D00EF7856 /* StackViewVC.swift */,
 				2B20C04426CBAC5A00037FDD /* KeyboardVC.swift */,
 				2BBEE1C226CC0308009064B9 /* AnimationVC.swift */,
 				2BF35F6026EBBBC400C5A360 /* PresentBeforeVC.swift */,
@@ -133,6 +134,7 @@
 				2B93A41927041D410000E667 /* VerticalCardSwiperVC.swift */,
 				2B93A41B27041EDC0000E667 /* ExampleCardCell.swift */,
 				2BC0081B270ECF0C0001F679 /* LabelVC.swift */,
+				2B514D0A2710BFF100D1731A /* SearchBarVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -296,6 +298,7 @@
 				2BE6E34926CA49750006E2DB /* FirstNaviVC.swift in Sources */,
 				2B89500626C8126B0070DB10 /* AppDelegate.swift in Sources */,
 				2BB3B5D826F1B88D00EF7856 /* StackViewVC.swift in Sources */,
+				2B514D0B2710BFF100D1731A /* SearchBarVC.swift in Sources */,
 				2BF35F6326EBBFA800C5A360 /* PresentModalVC.swift in Sources */,
 				2B97075D26FAF26200B6B4A3 /* TestVC.swift in Sources */,
 				2BBEE1C326CC0308009064B9 /* AnimationVC.swift in Sources */,
