@@ -14,6 +14,7 @@
 		2B2A71E52712013200C66B6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B2A71E32712013200C66B6E /* Main.storyboard */; };
 		2B2A71E72712013300C66B6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B2A71E62712013300C66B6E /* Assets.xcassets */; };
 		2B2A71EA2712013300C66B6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B2A71E82712013300C66B6E /* LaunchScreen.storyboard */; };
+		2B2A71F8271215DB00C66B6E /* CustomTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2A71F7271215DB00C66B6E /* CustomTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		2B2A71E62712013300C66B6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B2A71E92712013300C66B6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B2A71EB2712013300C66B6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B2A71F7271215DB00C66B6E /* CustomTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTVC.swift; sourceTree = "<group>"; };
 		68885DB6B690D7500A40B579 /* Pods-Slack-SearchBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Slack-SearchBar.release.xcconfig"; path = "Target Support Files/Pods-Slack-SearchBar/Pods-Slack-SearchBar.release.xcconfig"; sourceTree = "<group>"; };
 		A0B92CCBA346ACCD8357F29F /* Pods-Slack-SearchBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Slack-SearchBar.debug.xcconfig"; path = "Target Support Files/Pods-Slack-SearchBar/Pods-Slack-SearchBar.debug.xcconfig"; sourceTree = "<group>"; };
 		E09AF998DA2EABD0AB7F348D /* Pods_Slack_SearchBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Slack_SearchBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,8 +84,9 @@
 		2B2A71F22712021E00C66B6E /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				2B2A71F42712025300C66B6E /* Supports */,
+				2B2A71F6271215AC00C66B6E /* Cells */,
 				2B2A71F32712024A00C66B6E /* ViewControllers */,
+				2B2A71F42712025300C66B6E /* Supports */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -112,6 +115,14 @@
 				2B2A71E82712013300C66B6E /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		2B2A71F6271215AC00C66B6E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2B2A71F7271215DB00C66B6E /* CustomTVC.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		3B0A14D1154DDA1448E79143 /* Pods */ = {
@@ -248,6 +259,7 @@
 			files = (
 				2B2A71E22712013200C66B6E /* ViewController.swift in Sources */,
 				2B2A71DE2712013200C66B6E /* AppDelegate.swift in Sources */,
+				2B2A71F8271215DB00C66B6E /* CustomTVC.swift in Sources */,
 				2B2A71E02712013200C66B6E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
