@@ -20,4 +20,4 @@
 | 13 | StackView 얍 | ✔️ | [📂](https://github.com/yangsubinn/Test-iOS/blob/master/Test/Test/Source/ViewControllers/StackViewVC.swift) |
 | 14 | UILabel 특정 범위만 다른 속성 | ✔️ | [📂](https://github.com/yangsubinn/Test-iOS/blob/master/Test/Test/Source/ViewControllers/LabelVC.swift) |
 | 15 | Search Bar | ✔️ | [📂](https://github.com/UXThinkBig/YangSuBin/blob/master/UXThinkBig-SearchBar/UXThinkBig-SearchBar/Source/ViewControllers/ViewController.swift) |
-| 16 | Notification | | |
+| 16 | Notification | ✔️ |[📂](https://github.com/yangsubinn/Test-iOS/blob/master/Test/Test/Source/ViewControllers/NotiVC.swift) |
