@@ -1,20 +1,24 @@
 PODS:
   - SnapKit (5.0.1)
+  - Then (2.7.0)
   - VerticalCardSwiper (2.3.1)
 
 DEPENDENCIES:
   - SnapKit (~> 5.0.0)
+  - Then
   - VerticalCardSwiper
 
 SPEC REPOS:
   trunk:
     - SnapKit
+    - Then
     - VerticalCardSwiper
 
 SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  Then: acfe0be7e98221c6204e12f8161459606d5d822d
   VerticalCardSwiper: 68df635b354500f86934ea044ade37a264c044c6
 
-PODFILE CHECKSUM: fda6e8ab4c10c1197b7f8da4872c74078e1d8bb1
+PODFILE CHECKSUM: d92fe0feb25a801b3e3329b4821fa3701c634335
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2
