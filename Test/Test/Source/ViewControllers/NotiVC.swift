@@ -18,7 +18,7 @@ class NotiVC: UIViewController {
      */
     
     // MARK: - Properties
-    var resultLabel = UILabel().then { /// Then 라이브러리 사용
+    var resultLabel = UILabel().then {
         $0.textColor = .orange
         $0.text = "최종결과가 들어올 라벨입니당"
         $0.textAlignment = .center
