@@ -19,19 +19,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         // navigationController 로 사용할 때..
-//        guard let windowScene = (scene as? UIWindowScene) else { return }
-//
-//        window?.windowScene = windowScene
-//        window?.makeKeyAndVisible()
-//
-//        self.window = UIWindow(windowScene: windowScene)
-//        // 루트 뷰 컨트롤러가 될 뷰컨트롤러 생성
-//        let rootViewController = FirstNaviVC()
-//        // 위에서 생성한 뷰 컨트롤러로 네비게이션 컨트롤러를 생성
-//        let navigationController = UINavigationController(rootViewController: rootViewController)
-//
-//        // 윈도우의 루트 뷰 컨트롤러로 네비게이션 컨트롤러를 설정
-//        self.window?.rootViewController = navigationController
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+
+        window?.windowScene = windowScene
+        window?.makeKeyAndVisible()
+
+        self.window = UIWindow(windowScene: windowScene)
+        // 루트 뷰 컨트롤러가 될 뷰컨트롤러 생성
+        let rootViewController = FirstNaviVC()
+        // 위에서 생성한 뷰 컨트롤러로 네비게이션 컨트롤러를 생성
+        let navigationController = UINavigationController(rootViewController: rootViewController)
+
+        // 윈도우의 루트 뷰 컨트롤러로 네비게이션 컨트롤러를 설정
+        self.window?.rootViewController = navigationController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
