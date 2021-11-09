@@ -76,6 +76,7 @@ class SecondNaviVC: UIViewController, UITextFieldDelegate {
     }
     
     func setUserDefault() {
+        /// 사용
         toggleButton.isOn = UserDefaults.standard.bool(forKey: "switchState")
         nameTextField.text = UserDefaults.standard.string(forKey: "nameState")
     }
@@ -88,6 +89,7 @@ class SecondNaviVC: UIViewController, UITextFieldDelegate {
     
     @objc
     func toggleSwitchButton() {
+        /// UserDefaults 에 저장
         UserDefaults.standard.set(toggleButton.isOn, forKey: "switchState")
         UserDefaults.standard.set(nameTextField.text, forKey: "nameState")
     }
