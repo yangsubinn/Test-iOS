@@ -12,6 +12,11 @@
 		2B48087E274643050067724A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B48087C274643050067724A /* Main.storyboard */; };
 		2B480880274643070067724A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B48087F274643070067724A /* Assets.xcassets */; };
 		2B480883274643070067724A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B480881274643070067724A /* LaunchScreen.storyboard */; };
+		2BAF2AC22746D2600084D9DB /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF2AC12746D2600084D9DB /* NewsVC.swift */; };
+		2BAF2AC42746D5840084D9DB /* ArticleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF2AC32746D5840084D9DB /* ArticleListViewModel.swift */; };
+		2BAF2AC62746D5BE0084D9DB /* ArticleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF2AC52746D5BE0084D9DB /* ArticleDataModel.swift */; };
+		2BAF2AC82746D7CD0084D9DB /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF2AC72746D7CD0084D9DB /* ArticleService.swift */; };
+		2BAF2ACA2746DC250084D9DB /* NewsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF2AC92746DC250084D9DB /* NewsTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		2B48087F274643070067724A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B480882274643070067724A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B480884274643070067724A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BAF2AC12746D2600084D9DB /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
+		2BAF2AC32746D5840084D9DB /* ArticleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewModel.swift; sourceTree = "<group>"; };
+		2BAF2AC52746D5BE0084D9DB /* ArticleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDataModel.swift; sourceTree = "<group>"; };
+		2BAF2AC72746D7CD0084D9DB /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
+		2BAF2AC92746DC250084D9DB /* NewsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +86,7 @@
 				2BAF2AC0274664BA0084D9DB /* Managers */,
 				2BAF2ABF274664AC0084D9DB /* Models */,
 				2BAF2ABE274664A20084D9DB /* Service */,
-				2BAF2ABC274664250084D9DB /* ViewModel */,
+				2BAF2ABC274664250084D9DB /* ViewModels */,
 				2BAF2ABA274663C20084D9DB /* Scene */,
 				2BAF2AB9274663B40084D9DB /* Support */,
 			);
@@ -96,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				2BAF2ABD274664710084D9DB /* Cell */,
+				2BAF2AC12746D2600084D9DB /* NewsVC.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -109,16 +120,18 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		2BAF2ABC274664250084D9DB /* ViewModel */ = {
+		2BAF2ABC274664250084D9DB /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				2BAF2AC32746D5840084D9DB /* ArticleListViewModel.swift */,
 			);
-			path = ViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		2BAF2ABD274664710084D9DB /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				2BAF2AC92746DC250084D9DB /* NewsTVC.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -126,6 +139,7 @@
 		2BAF2ABE274664A20084D9DB /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				2BAF2AC72746D7CD0084D9DB /* ArticleService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -133,6 +147,7 @@
 		2BAF2ABF274664AC0084D9DB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2BAF2AC52746D5BE0084D9DB /* ArticleDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -215,8 +230,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BAF2ACA2746DC250084D9DB /* NewsTVC.swift in Sources */,
 				2B480877274643050067724A /* AppDelegate.swift in Sources */,
+				2BAF2AC42746D5840084D9DB /* ArticleListViewModel.swift in Sources */,
+				2BAF2AC82746D7CD0084D9DB /* ArticleService.swift in Sources */,
 				2B480879274643050067724A /* SceneDelegate.swift in Sources */,
+				2BAF2AC22746D2600084D9DB /* NewsVC.swift in Sources */,
+				2BAF2AC62746D5BE0084D9DB /* ArticleDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,8 +385,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4QG3GC35LA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Test-MVVM/Info.plist";
+				INFOPLIST_FILE = "Test-MVVM/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -392,8 +413,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4QG3GC35LA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Test-MVVM/Info.plist";
+				INFOPLIST_FILE = "Test-MVVM/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
