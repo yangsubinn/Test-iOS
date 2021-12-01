@@ -15,7 +15,7 @@
 		2B514D0B2710BFF100D1731A /* SearchBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B514D0A2710BFF100D1731A /* SearchBarVC.swift */; };
 		2B89500626C8126B0070DB10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89500526C8126B0070DB10 /* AppDelegate.swift */; };
 		2B89500826C8126B0070DB10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89500726C8126B0070DB10 /* SceneDelegate.swift */; };
-		2B89500A26C8126B0070DB10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89500926C8126B0070DB10 /* ViewController.swift */; };
+		2B89500A26C8126B0070DB10 /* HapticVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89500926C8126B0070DB10 /* HapticVC.swift */; };
 		2B89500D26C8126B0070DB10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B89500B26C8126B0070DB10 /* Main.storyboard */; };
 		2B89501226C8126C0070DB10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B89501026C8126C0070DB10 /* LaunchScreen.storyboard */; };
 		2B93A41A27041D410000E667 /* VerticalCardSwiperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93A41927041D410000E667 /* VerticalCardSwiperVC.swift */; };
@@ -25,7 +25,7 @@
 		2BBEE1C326CC0308009064B9 /* AnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBEE1C226CC0308009064B9 /* AnimationVC.swift */; };
 		2BC0081C270ECF0C0001F679 /* LabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0081B270ECF0C0001F679 /* LabelVC.swift */; };
 		2BC2CC8426EDE54D00916279 /* ScrollVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2CC8326EDE54D00916279 /* ScrollVC.swift */; };
-		2BE6E34026CA23C30006E2DB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6E33F26CA23C30006E2DB /* SecondViewController.swift */; };
+		2BE6E34026CA23C30006E2DB /* AutolayoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6E33F26CA23C30006E2DB /* AutolayoutVC.swift */; };
 		2BE6E34726CA493D0006E2DB /* Navigate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BE6E34626CA493D0006E2DB /* Navigate.storyboard */; };
 		2BE6E34926CA49750006E2DB /* FirstNaviVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6E34826CA49750006E2DB /* FirstNaviVC.swift */; };
 		2BE6E34B26CA49C60006E2DB /* SecondNaviVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6E34A26CA49C60006E2DB /* SecondNaviVC.swift */; };
@@ -45,7 +45,7 @@
 		2B89500226C8126B0070DB10 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B89500526C8126B0070DB10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B89500726C8126B0070DB10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2B89500926C8126B0070DB10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B89500926C8126B0070DB10 /* HapticVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticVC.swift; sourceTree = "<group>"; };
 		2B89500C26C8126B0070DB10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B89500E26C8126C0070DB10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B89501126C8126C0070DB10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		2BBEE1C226CC0308009064B9 /* AnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationVC.swift; sourceTree = "<group>"; };
 		2BC0081B270ECF0C0001F679 /* LabelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelVC.swift; sourceTree = "<group>"; };
 		2BC2CC8326EDE54D00916279 /* ScrollVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollVC.swift; sourceTree = "<group>"; };
-		2BE6E33F26CA23C30006E2DB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		2BE6E33F26CA23C30006E2DB /* AutolayoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutolayoutVC.swift; sourceTree = "<group>"; };
 		2BE6E34626CA493D0006E2DB /* Navigate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Navigate.storyboard; sourceTree = "<group>"; };
 		2BE6E34826CA49750006E2DB /* FirstNaviVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirstNaviVC.swift; path = Test/Source/ViewControllers/FirstNaviVC.swift; sourceTree = SOURCE_ROOT; };
 		2BE6E34A26CA49C60006E2DB /* SecondNaviVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondNaviVC.swift; sourceTree = "<group>"; };
@@ -147,8 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				2B48088A274643680067724A /* Header */,
-				2B89500926C8126B0070DB10 /* ViewController.swift */,
-				2BE6E33F26CA23C30006E2DB /* SecondViewController.swift */,
+				2B89500926C8126B0070DB10 /* HapticVC.swift */,
+				2BE6E33F26CA23C30006E2DB /* AutolayoutVC.swift */,
 				2BE6E34826CA49750006E2DB /* FirstNaviVC.swift */,
 				2BE6E34A26CA49C60006E2DB /* SecondNaviVC.swift */,
 				2BB3B5D726F1B88D00EF7856 /* StackViewVC.swift */,
@@ -321,8 +321,8 @@
 				2BC0081C270ECF0C0001F679 /* LabelVC.swift in Sources */,
 				2BC2CC8426EDE54D00916279 /* ScrollVC.swift in Sources */,
 				2B93A41A27041D410000E667 /* VerticalCardSwiperVC.swift in Sources */,
-				2BE6E34026CA23C30006E2DB /* SecondViewController.swift in Sources */,
-				2B89500A26C8126B0070DB10 /* ViewController.swift in Sources */,
+				2BE6E34026CA23C30006E2DB /* AutolayoutVC.swift in Sources */,
+				2B89500A26C8126B0070DB10 /* HapticVC.swift in Sources */,
 				2B21C9C027313DEC004E2370 /* NotiVC.swift in Sources */,
 				2BE6E34926CA49750006E2DB /* FirstNaviVC.swift in Sources */,
 				2B89500626C8126B0070DB10 /* AppDelegate.swift in Sources */,
