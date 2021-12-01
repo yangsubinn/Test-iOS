@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HapticVC.swift
 //  Test
 //
 //  Created by 양수빈 on 2021/08/15.
@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class HapticVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

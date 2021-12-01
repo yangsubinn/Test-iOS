@@ -5,6 +5,10 @@
 //  Created by 양수빈 on 2021/10/07.
 //
 
+/**
+   라벨 일부만 다른 font, weight, color, size 적용 테스트
+ */
+
 import UIKit
 import SnapKit
 

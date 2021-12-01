@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  AutolayoutVC.swift
 //  Test
 //
 //  Created by 양수빈 on 2021/08/16.
@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class SecondViewController: UIViewController {
+class AutolayoutVC: UIViewController {
     
     let titleLabel = UILabel()
     let subLabel = UILabel()

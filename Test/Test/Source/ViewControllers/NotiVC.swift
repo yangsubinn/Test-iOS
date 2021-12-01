@@ -11,7 +11,7 @@ import SnapKit
 import Then
 
 class NotiVC: UIViewController {
-    /*
+    /**
          notiButton을 누르면 willChangeLabel이 바뀌고,
          바뀐 willChangedLabel을 notificationCenter에서 잡아서
          resultLabel을 변경하는 로직
