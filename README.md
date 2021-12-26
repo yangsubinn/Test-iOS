@@ -6,7 +6,7 @@
 | number   |      what about      |  check  | code |
 |:----------:|:-------------:|:------:|:------:|
 | 1 |  Haptic Vibration | ✔️ | [📂](https://github.com/yangsubinn/Test-iOS/blob/master/Test/Test/Source/ViewControllers/ViewController.swift) |
-| 2 |    CodeBase NavigationBar   | ✔️ |🕳|
+| 2 |  NavigationBar Programmatically | ✔️ |🕳|
 | 3 | NavigationBar 보이지 않도록 했을 때, Swipe Back Gesture |   ✔️  | [📂](https://github.com/yangsubinn/Test-iOS/blob/master/Test/Test/Source/ViewControllers/FirstNaviVC.swift)
 | 4 | 가로모드 막기 |   ✔️  | [📂](https://github.com/yangsubinn/Test-iOS/blob/master/Test/Test/Source/Supports/AppDelegate.swift) |
 | 5 | AutoLayout Programmatically |  ✔️   | [📂](https://github.com/yangsubinn/Test-iOS/blob/master/Test/Test/Source/ViewControllers/SecondViewController.swift) |
