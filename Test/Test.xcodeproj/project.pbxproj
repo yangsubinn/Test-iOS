@@ -24,6 +24,13 @@
 		2BB3B5D826F1B88D00EF7856 /* StackViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB3B5D726F1B88D00EF7856 /* StackViewVC.swift */; };
 		2BBEE1C326CC0308009064B9 /* AnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBEE1C226CC0308009064B9 /* AnimationVC.swift */; };
 		2BC0081C270ECF0C0001F679 /* LabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0081B270ECF0C0001F679 /* LabelVC.swift */; };
+		2BC19D4A27783C0700407707 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC19D4927783C0700407707 /* Tabbar.storyboard */; };
+		2BC19D4D27783E7200407707 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC19D4C27783E7200407707 /* TabBarController.swift */; };
+		2BC19D4F2778410C00407707 /* MyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC19D4E2778410C00407707 /* MyVC.swift */; };
+		2BC19D512778411800407707 /* OtherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC19D502778411800407707 /* OtherVC.swift */; };
+		2BC19D53277846C100407707 /* CommunityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC19D52277846C100407707 /* CommunityVC.swift */; };
+		2BC19D55277846D200407707 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC19D54277846D200407707 /* HomeVC.swift */; };
+		2BC19D57277846DC00407707 /* LikeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC19D56277846DC00407707 /* LikeVC.swift */; };
 		2BC2CC8426EDE54D00916279 /* ScrollVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2CC8326EDE54D00916279 /* ScrollVC.swift */; };
 		2BE6E34026CA23C30006E2DB /* AutolayoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6E33F26CA23C30006E2DB /* AutolayoutVC.swift */; };
 		2BE6E34726CA493D0006E2DB /* Navigate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BE6E34626CA493D0006E2DB /* Navigate.storyboard */; };
@@ -55,6 +62,13 @@
 		2BB3B5D726F1B88D00EF7856 /* StackViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewVC.swift; sourceTree = "<group>"; };
 		2BBEE1C226CC0308009064B9 /* AnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationVC.swift; sourceTree = "<group>"; };
 		2BC0081B270ECF0C0001F679 /* LabelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelVC.swift; sourceTree = "<group>"; };
+		2BC19D4927783C0700407707 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
+		2BC19D4C27783E7200407707 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		2BC19D4E2778410C00407707 /* MyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVC.swift; sourceTree = "<group>"; };
+		2BC19D502778411800407707 /* OtherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherVC.swift; sourceTree = "<group>"; };
+		2BC19D52277846C100407707 /* CommunityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityVC.swift; sourceTree = "<group>"; };
+		2BC19D54277846D200407707 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		2BC19D56277846DC00407707 /* LikeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeVC.swift; sourceTree = "<group>"; };
 		2BC2CC8326EDE54D00916279 /* ScrollVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollVC.swift; sourceTree = "<group>"; };
 		2BE6E33F26CA23C30006E2DB /* AutolayoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutolayoutVC.swift; sourceTree = "<group>"; };
 		2BE6E34626CA493D0006E2DB /* Navigate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Navigate.storyboard; sourceTree = "<group>"; };
@@ -151,6 +165,19 @@
 			path = Test;
 			sourceTree = "<group>";
 		};
+		2BC19D4B27783E4300407707 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				2BC19D4C27783E7200407707 /* TabBarController.swift */,
+				2BC19D4E2778410C00407707 /* MyVC.swift */,
+				2BC19D502778411800407707 /* OtherVC.swift */,
+				2BC19D52277846C100407707 /* CommunityVC.swift */,
+				2BC19D54277846D200407707 /* HomeVC.swift */,
+				2BC19D56277846DC00407707 /* LikeVC.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
 		2BE6E34126CA45140006E2DB /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +204,7 @@
 				2B29504C27572AF5000C6F59 /* Present */,
 				2B29504B27572AC4000C6F59 /* VerticalCardSwiper */,
 				2B48088A274643680067724A /* Header */,
+				2BC19D4B27783E4300407707 /* Tabbar */,
 				2B89500926C8126B0070DB10 /* HapticVC.swift */,
 				2BE6E33F26CA23C30006E2DB /* AutolayoutVC.swift */,
 				2BB3B5D726F1B88D00EF7856 /* StackViewVC.swift */,
@@ -206,6 +234,7 @@
 				2B89500B26C8126B0070DB10 /* Main.storyboard */,
 				2B89501026C8126C0070DB10 /* LaunchScreen.storyboard */,
 				2BE6E34626CA493D0006E2DB /* Navigate.storyboard */,
+				2BC19D4927783C0700407707 /* Tabbar.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -286,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BC19D4A27783C0700407707 /* Tabbar.storyboard in Resources */,
 				2B89501226C8126C0070DB10 /* LaunchScreen.storyboard in Resources */,
 				2BE6E34726CA493D0006E2DB /* Navigate.storyboard in Resources */,
 				2B89500D26C8126B0070DB10 /* Main.storyboard in Resources */,
@@ -344,6 +374,7 @@
 				2BE6E34B26CA49C60006E2DB /* SecondNaviVC.swift in Sources */,
 				2BC0081C270ECF0C0001F679 /* LabelVC.swift in Sources */,
 				2BC2CC8426EDE54D00916279 /* ScrollVC.swift in Sources */,
+				2BC19D512778411800407707 /* OtherVC.swift in Sources */,
 				2B93A41A27041D410000E667 /* VerticalCardSwiperVC.swift in Sources */,
 				2BE6E34026CA23C30006E2DB /* AutolayoutVC.swift in Sources */,
 				2B89500A26C8126B0070DB10 /* HapticVC.swift in Sources */,
@@ -352,15 +383,20 @@
 				2B89500626C8126B0070DB10 /* AppDelegate.swift in Sources */,
 				2BB3B5D826F1B88D00EF7856 /* StackViewVC.swift in Sources */,
 				2B514D0B2710BFF100D1731A /* SearchBarVC.swift in Sources */,
+				2BC19D4F2778410C00407707 /* MyVC.swift in Sources */,
 				2B37BA602742DCEB005BE803 /* HeaderVC.swift in Sources */,
+				2BC19D57277846DC00407707 /* LikeVC.swift in Sources */,
 				2BF35F6326EBBFA800C5A360 /* PresentModalVC.swift in Sources */,
 				2B97075D26FAF26200B6B4A3 /* TestVC.swift in Sources */,
 				2B48088F274646650067724A /* HeaderReusableView.swift in Sources */,
+				2BC19D55277846D200407707 /* HomeVC.swift in Sources */,
 				2BBEE1C326CC0308009064B9 /* AnimationVC.swift in Sources */,
+				2BC19D4D27783E7200407707 /* TabBarController.swift in Sources */,
 				2B20C04526CBAC5A00037FDD /* KeyboardVC.swift in Sources */,
 				2B89500826C8126B0070DB10 /* SceneDelegate.swift in Sources */,
 				2B48088D274646240067724A /* HeaderCVC.swift in Sources */,
 				2BF35F6126EBBBC400C5A360 /* PresentBeforeVC.swift in Sources */,
+				2BC19D53277846C100407707 /* CommunityVC.swift in Sources */,
 				2B93A41C27041EDC0000E667 /* ExampleCardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
