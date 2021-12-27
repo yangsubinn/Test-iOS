@@ -1,14 +1,14 @@
 //
-//  TabVC.swift
+//  IconTabVC.swift
 //  Test
 //
-//  Created by 양수빈 on 2021/12/26.
+//  Created by 양수빈 on 2021/12/27.
 //
 
 import UIKit
 
-class TabVC: UIViewController {
-    
+class IconTabVC: UIViewController {
+
     var selectedIndex: Int = 0
     var previousIndex: Int = 0
     
@@ -36,12 +36,13 @@ class TabVC: UIViewController {
         viewControllers.append(TabVC.fifthVC)
         
         buttons[selectedIndex].isSelected = true
-        tabChanged(sender: buttons[selectedIndex])
+        iconTabChanged(sender: buttons[selectedIndex])
     }
 }
 
-extension TabVC {
-    @IBAction func tabChanged(sender: UIButton) {
+extension IconTabVC {
+    
+    @IBAction func iconTabChanged(sender: UIButton) {
         /// 탭바의 버튼을 눌렀을 때 precious에는 이전 인덱스, selected에는 현재 탭한 tag 인덱스
         previousIndex = selectedIndex
         selectedIndex = sender.tag
@@ -64,7 +65,7 @@ extension TabVC {
         
         self.view.bringSubviewToFront(tabView)
     }
-    
+
     /// UIView로 구성한 탭바 아래로 숨기기
     func hideHeader() {
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveLinear, animations: {
@@ -84,4 +85,5 @@ extension TabVC {
                                         height: self.footerHeight)
         })
     }
+
 }
