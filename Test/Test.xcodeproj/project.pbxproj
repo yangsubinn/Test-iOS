@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B0A8D572779D5D300E6CFEA /* FifthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A8D562779D5D200E6CFEA /* FifthVC.swift */; };
+		2B0A8D5B2779DC1600E6CFEA /* IconTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A8D5A2779DC1600E6CFEA /* IconTabVC.swift */; };
 		2B20C04526CBAC5A00037FDD /* KeyboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B20C04426CBAC5A00037FDD /* KeyboardVC.swift */; };
 		2B21C9C027313DEC004E2370 /* NotiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B21C9BF27313DEC004E2370 /* NotiVC.swift */; };
 		2B37BA602742DCEB005BE803 /* HeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B37BA5F2742DCEB005BE803 /* HeaderVC.swift */; };
@@ -49,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		0A08C96D7CA146DF5734B9E3 /* Pods_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B0A8D562779D5D200E6CFEA /* FifthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthVC.swift; sourceTree = "<group>"; };
+		2B0A8D5A2779DC1600E6CFEA /* IconTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTabVC.swift; sourceTree = "<group>"; };
 		2B20C04426CBAC5A00037FDD /* KeyboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardVC.swift; sourceTree = "<group>"; };
 		2B21C9BF27313DEC004E2370 /* NotiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiVC.swift; sourceTree = "<group>"; };
 		2B37BA5F2742DCEB005BE803 /* HeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderVC.swift; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 				2BC19D5F277886B100407707 /* SecondVC.swift */,
 				2BC19D61277886BC00407707 /* ThirdVC.swift */,
 				2BC19D63277886CF00407707 /* FourthVC.swift */,
+				2B0A8D562779D5D200E6CFEA /* FifthVC.swift */,
+				2B0A8D5A2779DC1600E6CFEA /* IconTabVC.swift */,
 			);
 			path = FloatingTabbar;
 			sourceTree = "<group>";
@@ -409,6 +415,7 @@
 				2B89500A26C8126B0070DB10 /* HapticVC.swift in Sources */,
 				2B21C9C027313DEC004E2370 /* NotiVC.swift in Sources */,
 				2BE6E34926CA49750006E2DB /* FirstNaviVC.swift in Sources */,
+				2B0A8D572779D5D300E6CFEA /* FifthVC.swift in Sources */,
 				2B89500626C8126B0070DB10 /* AppDelegate.swift in Sources */,
 				2BB3B5D826F1B88D00EF7856 /* StackViewVC.swift in Sources */,
 				2B514D0B2710BFF100D1731A /* SearchBarVC.swift in Sources */,
@@ -418,6 +425,7 @@
 				2BC19D57277846DC00407707 /* LikeVC.swift in Sources */,
 				2BF35F6326EBBFA800C5A360 /* PresentModalVC.swift in Sources */,
 				2B97075D26FAF26200B6B4A3 /* TestVC.swift in Sources */,
+				2B0A8D5B2779DC1600E6CFEA /* IconTabVC.swift in Sources */,
 				2B48088F274646650067724A /* HeaderReusableView.swift in Sources */,
 				2BC19D55277846D200407707 /* HomeVC.swift in Sources */,
 				2BBEE1C326CC0308009064B9 /* AnimationVC.swift in Sources */,
