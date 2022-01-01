@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B8891892780A8DA00F60A79 /* CustomCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8891872780A8DA00F60A79 /* CustomCVC.swift */; };
+		2B88918A2780A8DA00F60A79 /* CustomCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B8891882780A8DA00F60A79 /* CustomCVC.xib */; };
 		2BF49053277AEE3C00845768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF49052277AEE3C00845768 /* AppDelegate.swift */; };
 		2BF49055277AEE3C00845768 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF49054277AEE3C00845768 /* SceneDelegate.swift */; };
 		2BF49057277AEE3C00845768 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF49056277AEE3C00845768 /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B8891872780A8DA00F60A79 /* CustomCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCVC.swift; sourceTree = "<group>"; };
+		2B8891882780A8DA00F60A79 /* CustomCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCVC.xib; sourceTree = "<group>"; };
 		2BF4904F277AEE3C00845768 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BF49052277AEE3C00845768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BF49054277AEE3C00845768 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				2BF49054277AEE3C00845768 /* SceneDelegate.swift */,
 				2BF49056277AEE3C00845768 /* ViewController.swift */,
 				2BF49058277AEE3C00845768 /* Main.storyboard */,
+				2B8891872780A8DA00F60A79 /* CustomCVC.swift */,
+				2B8891882780A8DA00F60A79 /* CustomCVC.xib */,
 				2BF49066277B02DB00845768 /* SecondViewController.swift */,
 				2BF4905B277AEE3D00845768 /* Assets.xcassets */,
 				2BF4905D277AEE3D00845768 /* LaunchScreen.storyboard */,
@@ -155,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BF4905F277AEE3D00845768 /* LaunchScreen.storyboard in Resources */,
+				2B88918A2780A8DA00F60A79 /* CustomCVC.xib in Resources */,
 				2BF4905C277AEE3D00845768 /* Assets.xcassets in Resources */,
 				2BF4905A277AEE3C00845768 /* Main.storyboard in Resources */,
 			);
@@ -211,6 +218,7 @@
 			files = (
 				2BF49067277B02DB00845768 /* SecondViewController.swift in Sources */,
 				2BF49057277AEE3C00845768 /* ViewController.swift in Sources */,
+				2B8891892780A8DA00F60A79 /* CustomCVC.swift in Sources */,
 				2BF49053277AEE3C00845768 /* AppDelegate.swift in Sources */,
 				2BF49055277AEE3C00845768 /* SceneDelegate.swift in Sources */,
 			);
