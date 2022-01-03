@@ -11,6 +11,8 @@
 		2B0A8D5B2779DC1600E6CFEA /* IconTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A8D5A2779DC1600E6CFEA /* IconTabVC.swift */; };
 		2B20C04526CBAC5A00037FDD /* KeyboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B20C04426CBAC5A00037FDD /* KeyboardVC.swift */; };
 		2B21C9C027313DEC004E2370 /* NotiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B21C9BF27313DEC004E2370 /* NotiVC.swift */; };
+		2B22FE1F27829CA500BB2978 /* SideCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B22FE1E27829CA500BB2978 /* SideCollectionVC.swift */; };
+		2B22FE2227829DE300BB2978 /* SideCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B22FE2127829DE300BB2978 /* SideCVC.swift */; };
 		2B37BA602742DCEB005BE803 /* HeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B37BA5F2742DCEB005BE803 /* HeaderVC.swift */; };
 		2B48088D274646240067724A /* HeaderCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B48088C274646240067724A /* HeaderCVC.swift */; };
 		2B48088F274646650067724A /* HeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B48088E274646650067724A /* HeaderReusableView.swift */; };
@@ -55,6 +57,8 @@
 		2B0A8D5A2779DC1600E6CFEA /* IconTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTabVC.swift; sourceTree = "<group>"; };
 		2B20C04426CBAC5A00037FDD /* KeyboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardVC.swift; sourceTree = "<group>"; };
 		2B21C9BF27313DEC004E2370 /* NotiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiVC.swift; sourceTree = "<group>"; };
+		2B22FE1E27829CA500BB2978 /* SideCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideCollectionVC.swift; sourceTree = "<group>"; };
+		2B22FE2127829DE300BB2978 /* SideCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideCVC.swift; sourceTree = "<group>"; };
 		2B37BA5F2742DCEB005BE803 /* HeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderVC.swift; sourceTree = "<group>"; };
 		2B48088C274646240067724A /* HeaderCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCVC.swift; sourceTree = "<group>"; };
 		2B48088E274646650067724A /* HeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderReusableView.swift; sourceTree = "<group>"; };
@@ -109,6 +113,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B22FE1D27829AE500BB2978 /* Side */ = {
+			isa = PBXGroup;
+			children = (
+				2B22FE2027829DC000BB2978 /* Cell */,
+				2B22FE1E27829CA500BB2978 /* SideCollectionVC.swift */,
+			);
+			path = Side;
+			sourceTree = "<group>";
+		};
+		2B22FE2027829DC000BB2978 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2B22FE2127829DE300BB2978 /* SideCVC.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		2B29504B27572AC4000C6F59 /* VerticalCardSwiper */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +251,7 @@
 		2BE6E34326CA454C0006E2DB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2B22FE1D27829AE500BB2978 /* Side */,
 				2B29504D27572B0D000C6F59 /* Navigation */,
 				2B29504C27572AF5000C6F59 /* Present */,
 				2B29504B27572AC4000C6F59 /* VerticalCardSwiper */,
@@ -404,10 +426,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B22FE1F27829CA500BB2978 /* SideCollectionVC.swift in Sources */,
 				2BE6E34B26CA49C60006E2DB /* SecondNaviVC.swift in Sources */,
 				2BC0081C270ECF0C0001F679 /* LabelVC.swift in Sources */,
 				2BC19D5C2778850A00407707 /* TabVC.swift in Sources */,
 				2BC2CC8426EDE54D00916279 /* ScrollVC.swift in Sources */,
+				2B22FE2227829DE300BB2978 /* SideCVC.swift in Sources */,
 				2BC19D512778411800407707 /* OtherVC.swift in Sources */,
 				2B93A41A27041D410000E667 /* VerticalCardSwiperVC.swift in Sources */,
 				2BE6E34026CA23C30006E2DB /* AutolayoutVC.swift in Sources */,
