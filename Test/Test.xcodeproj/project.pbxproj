@@ -20,6 +20,7 @@
 		2B60D94427856CA800D4E760 /* TimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B60D94327856CA800D4E760 /* TimerVC.swift */; };
 		2B60D94627856CD400D4E760 /* Spark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B60D94527856CD400D4E760 /* Spark.storyboard */; };
 		2B60D94827856FB000D4E760 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B60D94727856FB000D4E760 /* Stopwatch.swift */; };
+		2B60D94B27857F0800D4E760 /* FloatingButtonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B60D94A27857F0800D4E760 /* FloatingButtonVC.swift */; };
 		2B89500626C8126B0070DB10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89500526C8126B0070DB10 /* AppDelegate.swift */; };
 		2B89500826C8126B0070DB10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89500726C8126B0070DB10 /* SceneDelegate.swift */; };
 		2B89500A26C8126B0070DB10 /* HapticVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89500926C8126B0070DB10 /* HapticVC.swift */; };
@@ -69,6 +70,7 @@
 		2B60D94327856CA800D4E760 /* TimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerVC.swift; sourceTree = "<group>"; };
 		2B60D94527856CD400D4E760 /* Spark.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Spark.storyboard; sourceTree = "<group>"; };
 		2B60D94727856FB000D4E760 /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
+		2B60D94A27857F0800D4E760 /* FloatingButtonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonVC.swift; sourceTree = "<group>"; };
 		2B89500226C8126B0070DB10 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B89500526C8126B0070DB10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B89500726C8126B0070DB10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +192,14 @@
 			path = Timer;
 			sourceTree = "<group>";
 		};
+		2B60D94927857ED500D4E760 /* FloatingButton */ = {
+			isa = PBXGroup;
+			children = (
+				2B60D94A27857F0800D4E760 /* FloatingButtonVC.swift */,
+			);
+			path = FloatingButton;
+			sourceTree = "<group>";
+		};
 		2B894FF926C8126B0070DB10 = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +276,7 @@
 		2BE6E34326CA454C0006E2DB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2B60D94927857ED500D4E760 /* FloatingButton */,
 				2B60D94227856C8800D4E760 /* Timer */,
 				2B22FE1D27829AE500BB2978 /* Side */,
 				2B29504D27572B0D000C6F59 /* Navigation */,
@@ -476,6 +487,7 @@
 				2BC19D4D27783E7200407707 /* TabBarController.swift in Sources */,
 				2BC19D62277886BC00407707 /* ThirdVC.swift in Sources */,
 				2B20C04526CBAC5A00037FDD /* KeyboardVC.swift in Sources */,
+				2B60D94B27857F0800D4E760 /* FloatingButtonVC.swift in Sources */,
 				2BC19D64277886CF00407707 /* FourthVC.swift in Sources */,
 				2B89500826C8126B0070DB10 /* SceneDelegate.swift in Sources */,
 				2B48088D274646240067724A /* HeaderCVC.swift in Sources */,
