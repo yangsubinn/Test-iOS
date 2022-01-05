@@ -17,6 +17,9 @@
 		2B48088D274646240067724A /* HeaderCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B48088C274646240067724A /* HeaderCVC.swift */; };
 		2B48088F274646650067724A /* HeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B48088E274646650067724A /* HeaderReusableView.swift */; };
 		2B514D0B2710BFF100D1731A /* SearchBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B514D0A2710BFF100D1731A /* SearchBarVC.swift */; };
+		2B60D94427856CA800D4E760 /* TimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B60D94327856CA800D4E760 /* TimerVC.swift */; };
+		2B60D94627856CD400D4E760 /* Spark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B60D94527856CD400D4E760 /* Spark.storyboard */; };
+		2B60D94827856FB000D4E760 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B60D94727856FB000D4E760 /* Stopwatch.swift */; };
 		2B89500626C8126B0070DB10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89500526C8126B0070DB10 /* AppDelegate.swift */; };
 		2B89500826C8126B0070DB10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89500726C8126B0070DB10 /* SceneDelegate.swift */; };
 		2B89500A26C8126B0070DB10 /* HapticVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89500926C8126B0070DB10 /* HapticVC.swift */; };
@@ -63,6 +66,9 @@
 		2B48088C274646240067724A /* HeaderCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCVC.swift; sourceTree = "<group>"; };
 		2B48088E274646650067724A /* HeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderReusableView.swift; sourceTree = "<group>"; };
 		2B514D0A2710BFF100D1731A /* SearchBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarVC.swift; sourceTree = "<group>"; };
+		2B60D94327856CA800D4E760 /* TimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerVC.swift; sourceTree = "<group>"; };
+		2B60D94527856CD400D4E760 /* Spark.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Spark.storyboard; sourceTree = "<group>"; };
+		2B60D94727856FB000D4E760 /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		2B89500226C8126B0070DB10 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B89500526C8126B0070DB10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B89500726C8126B0070DB10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +181,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		2B60D94227856C8800D4E760 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				2B60D94327856CA800D4E760 /* TimerVC.swift */,
+				2B60D94727856FB000D4E760 /* Stopwatch.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
 		2B894FF926C8126B0070DB10 = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +266,7 @@
 		2BE6E34326CA454C0006E2DB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2B60D94227856C8800D4E760 /* Timer */,
 				2B22FE1D27829AE500BB2978 /* Side */,
 				2B29504D27572B0D000C6F59 /* Navigation */,
 				2B29504C27572AF5000C6F59 /* Present */,
@@ -289,6 +305,7 @@
 				2BE6E34626CA493D0006E2DB /* Navigate.storyboard */,
 				2BC19D4927783C0700407707 /* Tabbar.storyboard */,
 				2BC19D59277884A500407707 /* FloatingTabbar.storyboard */,
+				2B60D94527856CD400D4E760 /* Spark.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -369,6 +386,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B60D94627856CD400D4E760 /* Spark.storyboard in Resources */,
 				2BC19D4A27783C0700407707 /* Tabbar.storyboard in Resources */,
 				2B89501226C8126C0070DB10 /* LaunchScreen.storyboard in Resources */,
 				2BE6E34726CA493D0006E2DB /* Navigate.storyboard in Resources */,
@@ -440,12 +458,14 @@
 				2B21C9C027313DEC004E2370 /* NotiVC.swift in Sources */,
 				2BE6E34926CA49750006E2DB /* FirstNaviVC.swift in Sources */,
 				2B0A8D572779D5D300E6CFEA /* FifthVC.swift in Sources */,
+				2B60D94427856CA800D4E760 /* TimerVC.swift in Sources */,
 				2B89500626C8126B0070DB10 /* AppDelegate.swift in Sources */,
 				2BB3B5D826F1B88D00EF7856 /* StackViewVC.swift in Sources */,
 				2B514D0B2710BFF100D1731A /* SearchBarVC.swift in Sources */,
 				2BC19D4F2778410C00407707 /* MyVC.swift in Sources */,
 				2B37BA602742DCEB005BE803 /* HeaderVC.swift in Sources */,
 				2BC19D60277886B100407707 /* SecondVC.swift in Sources */,
+				2B60D94827856FB000D4E760 /* Stopwatch.swift in Sources */,
 				2BC19D57277846DC00407707 /* LikeVC.swift in Sources */,
 				2BF35F6326EBBFA800C5A360 /* PresentModalVC.swift in Sources */,
 				2B97075D26FAF26200B6B4A3 /* TestVC.swift in Sources */,
