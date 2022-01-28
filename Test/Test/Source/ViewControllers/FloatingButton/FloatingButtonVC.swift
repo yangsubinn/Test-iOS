@@ -8,6 +8,7 @@
 import UIKit
 
 import JJFloatingActionButton
+import SnapKit
 
 class FloatingButtonVC: UIViewController {
     

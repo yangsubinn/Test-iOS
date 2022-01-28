@@ -16,12 +16,12 @@ class TimerVC: UIViewController {
     
     var timerLabel = UILabel()
     var resetButton = UIButton()
-    var startButton = UIButton() /// start-pause
-    var stopTimeLabel = UILabel()
-
+    var startButton = UIButton()
+    var stopTimeLabel = UILabel() /// 멈췄을 때 시간 표시하는 라벨
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setLayout()
         setUI()
         setAddTarget()
@@ -83,14 +83,13 @@ class TimerVC: UIViewController {
         if !isPlay {
             unowned let weakSelf = self
             
-            stopwatch.timer = Timer.scheduledTimer(timeInterval: 0.035, target: weakSelf, selector: Selector.updateMainTimer, userInfo: nil, repeats: true)
+            stopwatch.timer = Timer.scheduledTimer(timeInterval: 0.035, target: weakSelf, selector: #selector(TimerVC.updateMainTimer), userInfo: nil, repeats: true)
             
             RunLoop.current.add(stopwatch.timer, forMode: RunLoop.Mode.common)
             
             isPlay = true
             changeButton(startButton, title: "Stop", titleColor: UIColor.white)
         } else {
-            print("------timerLabel: \(timerLabel.text)")
             stopTimeLabel.text = timerLabel.text
             
             stopwatch.timer.invalidate()
@@ -109,42 +108,43 @@ class TimerVC: UIViewController {
     }
     
     fileprivate func changeButton(_ button: UIButton, title: String, titleColor: UIColor) {
-      button.setTitle(title, for: UIControl.State())
-      button.setTitleColor(titleColor, for: UIControl.State())
+        button.setTitle(title, for: UIControl.State())
+        button.setTitleColor(titleColor, for: UIControl.State())
     }
     
     fileprivate func resetMainTimer() {
-      resetTimer(stopwatch, label: timerLabel)
+        resetTimer(stopwatch, label: timerLabel)
+        stopTimeLabel.text = "-"
     }
     
     fileprivate func resetTimer(_ stopwatch: Stopwatch, label: UILabel) {
-      stopwatch.timer.invalidate()
-      stopwatch.counter = 0.0
-      label.text = "00:00:00"
+        stopwatch.timer.invalidate()
+        stopwatch.counter = 0.0
+        label.text = "00:00:00"
     }
     
     @objc func updateMainTimer() {
-      updateTimer(stopwatch, label: timerLabel)
+        updateTimer(stopwatch, label: timerLabel)
     }
     
     func updateTimer(_ stopwatch: Stopwatch, label: UILabel) {
-      stopwatch.counter = stopwatch.counter + 0.035
-      
-      var minutes: String = "\((Int)(stopwatch.counter / 60))"
-      if (Int)(stopwatch.counter / 60) < 10 {
-        minutes = "0\((Int)(stopwatch.counter / 60))"
-      }
-      
-      var seconds: String = String(format: "%.2f", (stopwatch.counter.truncatingRemainder(dividingBy: 60)))
-      if stopwatch.counter.truncatingRemainder(dividingBy: 60) < 10 {
-        seconds = "0" + seconds
-      }
-      
-      label.text = minutes + ":" + seconds
+        stopwatch.counter = stopwatch.counter + 0.035
+        
+        var minutes: String = "\((Int)(stopwatch.counter / 60))"
+        if (Int)(stopwatch.counter / 60) < 10 {
+            minutes = "0\((Int)(stopwatch.counter / 60))"
+        }
+        
+        var seconds: String = String(format: "%.2f", (stopwatch.counter.truncatingRemainder(dividingBy: 60)))
+        if stopwatch.counter.truncatingRemainder(dividingBy: 60) < 10 {
+            seconds = "0" + seconds
+        }
+        
+        label.text = minutes + ":" + seconds
     }
 }
 
 // MARK: - Extension
-fileprivate extension Selector {
-    static let updateMainTimer = #selector(TimerVC.updateMainTimer)
-}
+//fileprivate extension Selector {
+//    static let updateMainTimer = #selector(TimerVC.updateMainTimer)
+//}
