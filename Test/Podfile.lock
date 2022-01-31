@@ -1,16 +1,28 @@
 PODS:
+  - JJFloatingActionButton (2.5.0)
   - SnapKit (5.0.1)
+  - Then (2.7.0)
+  - VerticalCardSwiper (2.3.1)
 
 DEPENDENCIES:
+  - JJFloatingActionButton
   - SnapKit (~> 5.0.0)
+  - Then
+  - VerticalCardSwiper
 
 SPEC REPOS:
   trunk:
+    - JJFloatingActionButton
     - SnapKit
+    - Then
+    - VerticalCardSwiper
 
 SPEC CHECKSUMS:
+  JJFloatingActionButton: fdc3aefb0f28f04d0f988fa25d5fac97028a9ea7
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  Then: acfe0be7e98221c6204e12f8161459606d5d822d
+  VerticalCardSwiper: 68df635b354500f86934ea044ade37a264c044c6
 
-PODFILE CHECKSUM: e101e275ede4f9e7d03870c655bdb1b60fd6ba96
+PODFILE CHECKSUM: 8c45c5864bcbc5e14b8f45b6023f3cdc15c3c2f6
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2

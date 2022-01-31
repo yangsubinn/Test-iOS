@@ -7,16 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B0A8D572779D5D300E6CFEA /* FifthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A8D562779D5D200E6CFEA /* FifthVC.swift */; };
+		2B0A8D5B2779DC1600E6CFEA /* IconTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A8D5A2779DC1600E6CFEA /* IconTabVC.swift */; };
 		2B20C04526CBAC5A00037FDD /* KeyboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B20C04426CBAC5A00037FDD /* KeyboardVC.swift */; };
+		2B21C9C027313DEC004E2370 /* NotiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B21C9BF27313DEC004E2370 /* NotiVC.swift */; };
+		2B22FE1F27829CA500BB2978 /* SideCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B22FE1E27829CA500BB2978 /* SideCollectionVC.swift */; };
+		2B22FE2227829DE300BB2978 /* SideCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B22FE2127829DE300BB2978 /* SideCVC.swift */; };
+		2B37BA602742DCEB005BE803 /* HeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B37BA5F2742DCEB005BE803 /* HeaderVC.swift */; };
+		2B48088D274646240067724A /* HeaderCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B48088C274646240067724A /* HeaderCVC.swift */; };
+		2B48088F274646650067724A /* HeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B48088E274646650067724A /* HeaderReusableView.swift */; };
+		2B514D0B2710BFF100D1731A /* SearchBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B514D0A2710BFF100D1731A /* SearchBarVC.swift */; };
+		2B60D94427856CA800D4E760 /* TimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B60D94327856CA800D4E760 /* TimerVC.swift */; };
+		2B60D94627856CD400D4E760 /* Spark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B60D94527856CD400D4E760 /* Spark.storyboard */; };
+		2B60D94827856FB000D4E760 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B60D94727856FB000D4E760 /* Stopwatch.swift */; };
+		2B60D94B27857F0800D4E760 /* FloatingButtonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B60D94A27857F0800D4E760 /* FloatingButtonVC.swift */; };
 		2B89500626C8126B0070DB10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89500526C8126B0070DB10 /* AppDelegate.swift */; };
 		2B89500826C8126B0070DB10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89500726C8126B0070DB10 /* SceneDelegate.swift */; };
-		2B89500A26C8126B0070DB10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89500926C8126B0070DB10 /* ViewController.swift */; };
+		2B89500A26C8126B0070DB10 /* HapticVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89500926C8126B0070DB10 /* HapticVC.swift */; };
 		2B89500D26C8126B0070DB10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B89500B26C8126B0070DB10 /* Main.storyboard */; };
 		2B89501226C8126C0070DB10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B89501026C8126C0070DB10 /* LaunchScreen.storyboard */; };
+		2B93A41A27041D410000E667 /* VerticalCardSwiperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93A41927041D410000E667 /* VerticalCardSwiperVC.swift */; };
+		2B93A41C27041EDC0000E667 /* ExampleCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93A41B27041EDC0000E667 /* ExampleCardCell.swift */; };
+		2B97075D26FAF26200B6B4A3 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B97075C26FAF26200B6B4A3 /* TestVC.swift */; };
 		2BB3B5D826F1B88D00EF7856 /* StackViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB3B5D726F1B88D00EF7856 /* StackViewVC.swift */; };
 		2BBEE1C326CC0308009064B9 /* AnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBEE1C226CC0308009064B9 /* AnimationVC.swift */; };
+		2BC0081C270ECF0C0001F679 /* LabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0081B270ECF0C0001F679 /* LabelVC.swift */; };
+		2BC19D4A27783C0700407707 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC19D4927783C0700407707 /* Tabbar.storyboard */; };
+		2BC19D4D27783E7200407707 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC19D4C27783E7200407707 /* TabBarController.swift */; };
+		2BC19D4F2778410C00407707 /* MyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC19D4E2778410C00407707 /* MyVC.swift */; };
+		2BC19D512778411800407707 /* OtherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC19D502778411800407707 /* OtherVC.swift */; };
+		2BC19D53277846C100407707 /* CommunityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC19D52277846C100407707 /* CommunityVC.swift */; };
+		2BC19D55277846D200407707 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC19D54277846D200407707 /* HomeVC.swift */; };
+		2BC19D57277846DC00407707 /* LikeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC19D56277846DC00407707 /* LikeVC.swift */; };
+		2BC19D5A277884A500407707 /* FloatingTabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC19D59277884A500407707 /* FloatingTabbar.storyboard */; };
+		2BC19D5C2778850A00407707 /* TabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC19D5B2778850A00407707 /* TabVC.swift */; };
+		2BC19D5E277886AA00407707 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC19D5D277886AA00407707 /* FirstVC.swift */; };
+		2BC19D60277886B100407707 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC19D5F277886B100407707 /* SecondVC.swift */; };
+		2BC19D62277886BC00407707 /* ThirdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC19D61277886BC00407707 /* ThirdVC.swift */; };
+		2BC19D64277886CF00407707 /* FourthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC19D63277886CF00407707 /* FourthVC.swift */; };
 		2BC2CC8426EDE54D00916279 /* ScrollVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2CC8326EDE54D00916279 /* ScrollVC.swift */; };
-		2BE6E34026CA23C30006E2DB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6E33F26CA23C30006E2DB /* SecondViewController.swift */; };
+		2BE6E34026CA23C30006E2DB /* AutolayoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6E33F26CA23C30006E2DB /* AutolayoutVC.swift */; };
 		2BE6E34726CA493D0006E2DB /* Navigate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BE6E34626CA493D0006E2DB /* Navigate.storyboard */; };
 		2BE6E34926CA49750006E2DB /* FirstNaviVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6E34826CA49750006E2DB /* FirstNaviVC.swift */; };
 		2BE6E34B26CA49C60006E2DB /* SecondNaviVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6E34A26CA49C60006E2DB /* SecondNaviVC.swift */; };
@@ -27,24 +57,54 @@
 
 /* Begin PBXFileReference section */
 		0A08C96D7CA146DF5734B9E3 /* Pods_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B0A8D562779D5D200E6CFEA /* FifthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthVC.swift; sourceTree = "<group>"; };
+		2B0A8D5A2779DC1600E6CFEA /* IconTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTabVC.swift; sourceTree = "<group>"; };
 		2B20C04426CBAC5A00037FDD /* KeyboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardVC.swift; sourceTree = "<group>"; };
+		2B21C9BF27313DEC004E2370 /* NotiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiVC.swift; sourceTree = "<group>"; };
+		2B22FE1E27829CA500BB2978 /* SideCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideCollectionVC.swift; sourceTree = "<group>"; };
+		2B22FE2127829DE300BB2978 /* SideCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideCVC.swift; sourceTree = "<group>"; };
+		2B37BA5F2742DCEB005BE803 /* HeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderVC.swift; sourceTree = "<group>"; };
+		2B48088C274646240067724A /* HeaderCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCVC.swift; sourceTree = "<group>"; };
+		2B48088E274646650067724A /* HeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderReusableView.swift; sourceTree = "<group>"; };
+		2B514D0A2710BFF100D1731A /* SearchBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarVC.swift; sourceTree = "<group>"; };
+		2B60D94327856CA800D4E760 /* TimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerVC.swift; sourceTree = "<group>"; };
+		2B60D94527856CD400D4E760 /* Spark.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Spark.storyboard; sourceTree = "<group>"; };
+		2B60D94727856FB000D4E760 /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
+		2B60D94A27857F0800D4E760 /* FloatingButtonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonVC.swift; sourceTree = "<group>"; };
 		2B89500226C8126B0070DB10 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B89500526C8126B0070DB10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B89500726C8126B0070DB10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2B89500926C8126B0070DB10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B89500926C8126B0070DB10 /* HapticVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticVC.swift; sourceTree = "<group>"; };
 		2B89500C26C8126B0070DB10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B89500E26C8126C0070DB10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B89501126C8126C0070DB10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2BB3B5D726F1B88D00EF7856 /* StackViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StackViewVC.swift; path = Test/Source/ViewControllers/StackViewVC.swift; sourceTree = "<group>"; };
+		2B93A41927041D410000E667 /* VerticalCardSwiperVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCardSwiperVC.swift; sourceTree = "<group>"; };
+		2B93A41B27041EDC0000E667 /* ExampleCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCardCell.swift; sourceTree = "<group>"; };
+		2B97075C26FAF26200B6B4A3 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+		2BB3B5D726F1B88D00EF7856 /* StackViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewVC.swift; sourceTree = "<group>"; };
 		2BBEE1C226CC0308009064B9 /* AnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationVC.swift; sourceTree = "<group>"; };
+		2BC0081B270ECF0C0001F679 /* LabelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelVC.swift; sourceTree = "<group>"; };
+		2BC19D4927783C0700407707 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
+		2BC19D4C27783E7200407707 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		2BC19D4E2778410C00407707 /* MyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVC.swift; sourceTree = "<group>"; };
+		2BC19D502778411800407707 /* OtherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherVC.swift; sourceTree = "<group>"; };
+		2BC19D52277846C100407707 /* CommunityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityVC.swift; sourceTree = "<group>"; };
+		2BC19D54277846D200407707 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		2BC19D56277846DC00407707 /* LikeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeVC.swift; sourceTree = "<group>"; };
+		2BC19D59277884A500407707 /* FloatingTabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FloatingTabbar.storyboard; sourceTree = "<group>"; };
+		2BC19D5B2778850A00407707 /* TabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabVC.swift; sourceTree = "<group>"; };
+		2BC19D5D277886AA00407707 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
+		2BC19D5F277886B100407707 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
+		2BC19D61277886BC00407707 /* ThirdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdVC.swift; sourceTree = "<group>"; };
+		2BC19D63277886CF00407707 /* FourthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthVC.swift; sourceTree = "<group>"; };
 		2BC2CC8326EDE54D00916279 /* ScrollVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollVC.swift; sourceTree = "<group>"; };
-		2BE6E33F26CA23C30006E2DB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		2BE6E33F26CA23C30006E2DB /* AutolayoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutolayoutVC.swift; sourceTree = "<group>"; };
 		2BE6E34626CA493D0006E2DB /* Navigate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Navigate.storyboard; sourceTree = "<group>"; };
-		2BE6E34826CA49750006E2DB /* FirstNaviVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirstNaviVC.swift; path = Test/Source/ViewControllers/FirstNaviVC.swift; sourceTree = SOURCE_ROOT; };
+		2BE6E34826CA49750006E2DB /* FirstNaviVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirstNaviVC.swift; path = Test/Source/ViewControllers/Navigation/FirstNaviVC.swift; sourceTree = SOURCE_ROOT; };
 		2BE6E34A26CA49C60006E2DB /* SecondNaviVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondNaviVC.swift; sourceTree = "<group>"; };
 		2BE6E34C26CA4AF80006E2DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BF35F6026EBBBC400C5A360 /* PresentBeforeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentBeforeVC.swift; sourceTree = "<group>"; };
-		2BF35F6226EBBFA800C5A360 /* PresentModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PresentModalVC.swift; path = Test/Source/ViewControllers/PresentModalVC.swift; sourceTree = SOURCE_ROOT; };
+		2BF35F6226EBBFA800C5A360 /* PresentModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PresentModalVC.swift; path = Test/Source/ViewControllers/Present/PresentModalVC.swift; sourceTree = SOURCE_ROOT; };
 		34C9A6C4D225611A1B9A0412 /* Pods-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.debug.xcconfig"; path = "Target Support Files/Pods-Test/Pods-Test.debug.xcconfig"; sourceTree = "<group>"; };
 		81F1FB71A0E81367868B1A24 /* Pods-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.release.xcconfig"; path = "Target Support Files/Pods-Test/Pods-Test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,10 +121,88 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B22FE1D27829AE500BB2978 /* Side */ = {
+			isa = PBXGroup;
+			children = (
+				2B22FE2027829DC000BB2978 /* Cell */,
+				2B22FE1E27829CA500BB2978 /* SideCollectionVC.swift */,
+			);
+			path = Side;
+			sourceTree = "<group>";
+		};
+		2B22FE2027829DC000BB2978 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2B22FE2127829DE300BB2978 /* SideCVC.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2B29504B27572AC4000C6F59 /* VerticalCardSwiper */ = {
+			isa = PBXGroup;
+			children = (
+				2B93A41927041D410000E667 /* VerticalCardSwiperVC.swift */,
+				2B93A41B27041EDC0000E667 /* ExampleCardCell.swift */,
+			);
+			path = VerticalCardSwiper;
+			sourceTree = "<group>";
+		};
+		2B29504C27572AF5000C6F59 /* Present */ = {
+			isa = PBXGroup;
+			children = (
+				2BF35F6026EBBBC400C5A360 /* PresentBeforeVC.swift */,
+				2BF35F6226EBBFA800C5A360 /* PresentModalVC.swift */,
+			);
+			path = Present;
+			sourceTree = "<group>";
+		};
+		2B29504D27572B0D000C6F59 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				2BE6E34826CA49750006E2DB /* FirstNaviVC.swift */,
+				2BE6E34A26CA49C60006E2DB /* SecondNaviVC.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		2B48088A274643680067724A /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				2B48088B274643740067724A /* Cell */,
+				2B37BA5F2742DCEB005BE803 /* HeaderVC.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		2B48088B274643740067724A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2B48088C274646240067724A /* HeaderCVC.swift */,
+				2B48088E274646650067724A /* HeaderReusableView.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2B60D94227856C8800D4E760 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				2B60D94327856CA800D4E760 /* TimerVC.swift */,
+				2B60D94727856FB000D4E760 /* Stopwatch.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		2B60D94927857ED500D4E760 /* FloatingButton */ = {
+			isa = PBXGroup;
+			children = (
+				2B60D94A27857F0800D4E760 /* FloatingButtonVC.swift */,
+			);
+			path = FloatingButton;
+			sourceTree = "<group>";
+		};
 		2B894FF926C8126B0070DB10 = {
 			isa = PBXGroup;
 			children = (
-				2BB3B5D726F1B88D00EF7856 /* StackViewVC.swift */,
 				2B89500426C8126B0070DB10 /* Test */,
 				2B89500326C8126B0070DB10 /* Products */,
 				68EE808B2122C8195C114B8D /* Pods */,
@@ -89,6 +227,33 @@
 			path = Test;
 			sourceTree = "<group>";
 		};
+		2BC19D4B27783E4300407707 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				2BC19D4C27783E7200407707 /* TabBarController.swift */,
+				2BC19D4E2778410C00407707 /* MyVC.swift */,
+				2BC19D502778411800407707 /* OtherVC.swift */,
+				2BC19D52277846C100407707 /* CommunityVC.swift */,
+				2BC19D54277846D200407707 /* HomeVC.swift */,
+				2BC19D56277846DC00407707 /* LikeVC.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		2BC19D582778845D00407707 /* FloatingTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				2BC19D5B2778850A00407707 /* TabVC.swift */,
+				2BC19D5D277886AA00407707 /* FirstVC.swift */,
+				2BC19D5F277886B100407707 /* SecondVC.swift */,
+				2BC19D61277886BC00407707 /* ThirdVC.swift */,
+				2BC19D63277886CF00407707 /* FourthVC.swift */,
+				2B0A8D562779D5D200E6CFEA /* FifthVC.swift */,
+				2B0A8D5A2779DC1600E6CFEA /* IconTabVC.swift */,
+			);
+			path = FloatingTabbar;
+			sourceTree = "<group>";
+		};
 		2BE6E34126CA45140006E2DB /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,15 +276,25 @@
 		2BE6E34326CA454C0006E2DB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				2B89500926C8126B0070DB10 /* ViewController.swift */,
-				2BE6E33F26CA23C30006E2DB /* SecondViewController.swift */,
-				2BE6E34826CA49750006E2DB /* FirstNaviVC.swift */,
-				2BE6E34A26CA49C60006E2DB /* SecondNaviVC.swift */,
+				2B60D94927857ED500D4E760 /* FloatingButton */,
+				2B60D94227856C8800D4E760 /* Timer */,
+				2B22FE1D27829AE500BB2978 /* Side */,
+				2B29504D27572B0D000C6F59 /* Navigation */,
+				2B29504C27572AF5000C6F59 /* Present */,
+				2B29504B27572AC4000C6F59 /* VerticalCardSwiper */,
+				2B48088A274643680067724A /* Header */,
+				2BC19D4B27783E4300407707 /* Tabbar */,
+				2BC19D582778845D00407707 /* FloatingTabbar */,
+				2B89500926C8126B0070DB10 /* HapticVC.swift */,
+				2BE6E33F26CA23C30006E2DB /* AutolayoutVC.swift */,
+				2BB3B5D726F1B88D00EF7856 /* StackViewVC.swift */,
 				2B20C04426CBAC5A00037FDD /* KeyboardVC.swift */,
 				2BBEE1C226CC0308009064B9 /* AnimationVC.swift */,
-				2BF35F6026EBBBC400C5A360 /* PresentBeforeVC.swift */,
-				2BF35F6226EBBFA800C5A360 /* PresentModalVC.swift */,
 				2BC2CC8326EDE54D00916279 /* ScrollVC.swift */,
+				2B97075C26FAF26200B6B4A3 /* TestVC.swift */,
+				2BC0081B270ECF0C0001F679 /* LabelVC.swift */,
+				2B514D0A2710BFF100D1731A /* SearchBarVC.swift */,
+				2B21C9BF27313DEC004E2370 /* NotiVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -139,6 +314,9 @@
 				2B89500B26C8126B0070DB10 /* Main.storyboard */,
 				2B89501026C8126C0070DB10 /* LaunchScreen.storyboard */,
 				2BE6E34626CA493D0006E2DB /* Navigate.storyboard */,
+				2BC19D4927783C0700407707 /* Tabbar.storyboard */,
+				2BC19D59277884A500407707 /* FloatingTabbar.storyboard */,
+				2B60D94527856CD400D4E760 /* Spark.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -219,8 +397,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B60D94627856CD400D4E760 /* Spark.storyboard in Resources */,
+				2BC19D4A27783C0700407707 /* Tabbar.storyboard in Resources */,
 				2B89501226C8126C0070DB10 /* LaunchScreen.storyboard in Resources */,
 				2BE6E34726CA493D0006E2DB /* Navigate.storyboard in Resources */,
+				2BC19D5A277884A500407707 /* FloatingTabbar.storyboard in Resources */,
 				2B89500D26C8126B0070DB10 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,18 +455,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B22FE1F27829CA500BB2978 /* SideCollectionVC.swift in Sources */,
 				2BE6E34B26CA49C60006E2DB /* SecondNaviVC.swift in Sources */,
+				2BC0081C270ECF0C0001F679 /* LabelVC.swift in Sources */,
+				2BC19D5C2778850A00407707 /* TabVC.swift in Sources */,
 				2BC2CC8426EDE54D00916279 /* ScrollVC.swift in Sources */,
-				2BE6E34026CA23C30006E2DB /* SecondViewController.swift in Sources */,
-				2B89500A26C8126B0070DB10 /* ViewController.swift in Sources */,
+				2B22FE2227829DE300BB2978 /* SideCVC.swift in Sources */,
+				2BC19D512778411800407707 /* OtherVC.swift in Sources */,
+				2B93A41A27041D410000E667 /* VerticalCardSwiperVC.swift in Sources */,
+				2BE6E34026CA23C30006E2DB /* AutolayoutVC.swift in Sources */,
+				2BC19D5E277886AA00407707 /* FirstVC.swift in Sources */,
+				2B89500A26C8126B0070DB10 /* HapticVC.swift in Sources */,
+				2B21C9C027313DEC004E2370 /* NotiVC.swift in Sources */,
 				2BE6E34926CA49750006E2DB /* FirstNaviVC.swift in Sources */,
+				2B0A8D572779D5D300E6CFEA /* FifthVC.swift in Sources */,
+				2B60D94427856CA800D4E760 /* TimerVC.swift in Sources */,
 				2B89500626C8126B0070DB10 /* AppDelegate.swift in Sources */,
 				2BB3B5D826F1B88D00EF7856 /* StackViewVC.swift in Sources */,
+				2B514D0B2710BFF100D1731A /* SearchBarVC.swift in Sources */,
+				2BC19D4F2778410C00407707 /* MyVC.swift in Sources */,
+				2B37BA602742DCEB005BE803 /* HeaderVC.swift in Sources */,
+				2BC19D60277886B100407707 /* SecondVC.swift in Sources */,
+				2B60D94827856FB000D4E760 /* Stopwatch.swift in Sources */,
+				2BC19D57277846DC00407707 /* LikeVC.swift in Sources */,
 				2BF35F6326EBBFA800C5A360 /* PresentModalVC.swift in Sources */,
+				2B97075D26FAF26200B6B4A3 /* TestVC.swift in Sources */,
+				2B0A8D5B2779DC1600E6CFEA /* IconTabVC.swift in Sources */,
+				2B48088F274646650067724A /* HeaderReusableView.swift in Sources */,
+				2BC19D55277846D200407707 /* HomeVC.swift in Sources */,
 				2BBEE1C326CC0308009064B9 /* AnimationVC.swift in Sources */,
+				2BC19D4D27783E7200407707 /* TabBarController.swift in Sources */,
+				2BC19D62277886BC00407707 /* ThirdVC.swift in Sources */,
 				2B20C04526CBAC5A00037FDD /* KeyboardVC.swift in Sources */,
+				2B60D94B27857F0800D4E760 /* FloatingButtonVC.swift in Sources */,
+				2BC19D64277886CF00407707 /* FourthVC.swift in Sources */,
 				2B89500826C8126B0070DB10 /* SceneDelegate.swift in Sources */,
+				2B48088D274646240067724A /* HeaderCVC.swift in Sources */,
 				2BF35F6126EBBBC400C5A360 /* PresentBeforeVC.swift in Sources */,
+				2BC19D53277846C100407707 /* CommunityVC.swift in Sources */,
+				2B93A41C27041EDC0000E667 /* ExampleCardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

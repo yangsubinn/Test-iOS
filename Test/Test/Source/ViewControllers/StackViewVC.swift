@@ -7,14 +7,23 @@
 
 import UIKit
 
+import SnapKit
+
 class StackViewVC: UIViewController {
 
     @IBOutlet weak var storyboardStackLabel: UILabel!
     
+    let stackView = UIStackView()
+    let leftButton = UIButton()
+    let centerButton = UIButton()
+    let rightButton = UIButton()
+    let codeStackLabel = UILabel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupStackView()
+        setLabel()
     }
     
     @IBAction func clickFirstButton(_ sender: UIButton) {
@@ -29,14 +38,42 @@ class StackViewVC: UIViewController {
         storyboardStackLabel.text = "Button3 clicked"
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupStackView() {
+        view.addSubview(stackView)
+        
+        stackView.backgroundColor = .darkGray
+        
+        stackView.axis = .horizontal
+        stackView.alignment = .fill
+        stackView.distribution = .fillEqually
+        stackView.addArrangedSubview(leftButton)
+        stackView.addArrangedSubview(centerButton)
+        stackView.addArrangedSubview(rightButton)
+        
+        leftButton.setTitle("left", for: .normal)
+        centerButton.setTitle("center", for: .normal)
+        rightButton.setTitle("right", for: .normal)
+        
+        leftButton.backgroundColor = .purple
+        centerButton.backgroundColor = .systemYellow
+        rightButton.backgroundColor = .systemPink
+        
+        stackView.snp.makeConstraints { make in
+            make.top.equalTo(storyboardStackLabel.snp.bottom).offset(100)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(100)
+        }
     }
-    */
+    
+    func setLabel() {
+        view.addSubview(codeStackLabel)
+        
+        codeStackLabel.text = "Label"
+        
+        codeStackLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(stackView.snp.bottom).offset(50)
+        }
+    }
 
 }
