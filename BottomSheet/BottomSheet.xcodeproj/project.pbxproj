@@ -14,6 +14,7 @@
 		2BC2733327AFBC1100CE266B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BC2733227AFBC1100CE266B /* Assets.xcassets */; };
 		2BC2733627AFBC1100CE266B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC2733427AFBC1100CE266B /* LaunchScreen.storyboard */; };
 		2BC2733E27AFBE8D00CE266B /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2733D27AFBE8D00CE266B /* BottomSheetViewController.swift */; };
+		2BC2734227AFDB1300CE266B /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2734127AFDB1300CE266B /* MainVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		2BC2733527AFBC1100CE266B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BC2733727AFBC1100CE266B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BC2733D27AFBE8D00CE266B /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
+		2BC2734127AFDB1300CE266B /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				2BC2732927AFBC1000CE266B /* AppDelegate.swift */,
 				2BC2732B27AFBC1000CE266B /* SceneDelegate.swift */,
 				2BC2732D27AFBC1000CE266B /* ViewController.swift */,
+				2BC2734127AFDB1300CE266B /* MainVC.swift */,
 				2BC2733D27AFBE8D00CE266B /* BottomSheetViewController.swift */,
 				2BC2732F27AFBC1000CE266B /* Main.storyboard */,
 				2BC2733227AFBC1100CE266B /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BC2732E27AFBC1000CE266B /* ViewController.swift in Sources */,
+				2BC2734227AFDB1300CE266B /* MainVC.swift in Sources */,
 				2BC2732A27AFBC1000CE266B /* AppDelegate.swift in Sources */,
 				2BC2732C27AFBC1000CE266B /* SceneDelegate.swift in Sources */,
 				2BC2733E27AFBE8D00CE266B /* BottomSheetViewController.swift in Sources */,

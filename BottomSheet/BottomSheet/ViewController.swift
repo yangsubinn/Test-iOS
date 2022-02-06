@@ -43,8 +43,8 @@ class ViewController: UIViewController {
     // MARK: - @objc
     @objc
     func buttonTapped() {
-        print("버튼 눌림")
-        guard let bottomSheet = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BottomSheetViewController") as? BottomSheetViewController else { return }
+        // contentViewController에 보이고자하는 VC를 넣어주면 나타납니다.
+        let bottomSheet = BottomSheetViewController(contentViewController: MainVC())
         bottomSheet.modalPresentationStyle = .overFullScreen
         self.present(bottomSheet, animated: false, completion: nil)
     }
