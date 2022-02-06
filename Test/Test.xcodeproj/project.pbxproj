@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		2B0A8D572779D5D300E6CFEA /* FifthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A8D562779D5D200E6CFEA /* FifthVC.swift */; };
 		2B0A8D5B2779DC1600E6CFEA /* IconTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A8D5A2779DC1600E6CFEA /* IconTabVC.swift */; };
+		2B1E446D27A7E4E7004C4331 /* CustomTabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1E446C27A7E4E7004C4331 /* CustomTabbar.storyboard */; };
+		2B1E447027A7E5A6004C4331 /* CustomTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1E446F27A7E5A6004C4331 /* CustomTabbar.swift */; };
+		2B1E447227A7E866004C4331 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1E447127A7E866004C4331 /* FeedVC.swift */; };
+		2B1E447427A7E875004C4331 /* MainHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1E447327A7E875004C4331 /* MainHomeVC.swift */; };
+		2B1E447627A7E87D004C4331 /* StorageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1E447527A7E87D004C4331 /* StorageVC.swift */; };
 		2B20C04526CBAC5A00037FDD /* KeyboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B20C04426CBAC5A00037FDD /* KeyboardVC.swift */; };
 		2B21C9C027313DEC004E2370 /* NotiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B21C9BF27313DEC004E2370 /* NotiVC.swift */; };
 		2B22FE1F27829CA500BB2978 /* SideCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B22FE1E27829CA500BB2978 /* SideCollectionVC.swift */; };
@@ -59,6 +64,11 @@
 		0A08C96D7CA146DF5734B9E3 /* Pods_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B0A8D562779D5D200E6CFEA /* FifthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthVC.swift; sourceTree = "<group>"; };
 		2B0A8D5A2779DC1600E6CFEA /* IconTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTabVC.swift; sourceTree = "<group>"; };
+		2B1E446C27A7E4E7004C4331 /* CustomTabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomTabbar.storyboard; sourceTree = "<group>"; };
+		2B1E446F27A7E5A6004C4331 /* CustomTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbar.swift; sourceTree = "<group>"; };
+		2B1E447127A7E866004C4331 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		2B1E447327A7E875004C4331 /* MainHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeVC.swift; sourceTree = "<group>"; };
+		2B1E447527A7E87D004C4331 /* StorageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageVC.swift; sourceTree = "<group>"; };
 		2B20C04426CBAC5A00037FDD /* KeyboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardVC.swift; sourceTree = "<group>"; };
 		2B21C9BF27313DEC004E2370 /* NotiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiVC.swift; sourceTree = "<group>"; };
 		2B22FE1E27829CA500BB2978 /* SideCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideCollectionVC.swift; sourceTree = "<group>"; };
@@ -121,6 +131,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B1E446E27A7E549004C4331 /* CustomTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				2B1E446F27A7E5A6004C4331 /* CustomTabbar.swift */,
+				2B1E447127A7E866004C4331 /* FeedVC.swift */,
+				2B1E447327A7E875004C4331 /* MainHomeVC.swift */,
+				2B1E447527A7E87D004C4331 /* StorageVC.swift */,
+			);
+			path = CustomTabbar;
+			sourceTree = "<group>";
+		};
 		2B22FE1D27829AE500BB2978 /* Side */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +297,7 @@
 		2BE6E34326CA454C0006E2DB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2B1E446E27A7E549004C4331 /* CustomTabbar */,
 				2B60D94927857ED500D4E760 /* FloatingButton */,
 				2B60D94227856C8800D4E760 /* Timer */,
 				2B22FE1D27829AE500BB2978 /* Side */,
@@ -317,6 +339,7 @@
 				2BC19D4927783C0700407707 /* Tabbar.storyboard */,
 				2BC19D59277884A500407707 /* FloatingTabbar.storyboard */,
 				2B60D94527856CD400D4E760 /* Spark.storyboard */,
+				2B1E446C27A7E4E7004C4331 /* CustomTabbar.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -397,6 +420,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B1E446D27A7E4E7004C4331 /* CustomTabbar.storyboard in Resources */,
 				2B60D94627856CD400D4E760 /* Spark.storyboard in Resources */,
 				2BC19D4A27783C0700407707 /* Tabbar.storyboard in Resources */,
 				2B89501226C8126C0070DB10 /* LaunchScreen.storyboard in Resources */,
@@ -460,6 +484,7 @@
 				2BC0081C270ECF0C0001F679 /* LabelVC.swift in Sources */,
 				2BC19D5C2778850A00407707 /* TabVC.swift in Sources */,
 				2BC2CC8426EDE54D00916279 /* ScrollVC.swift in Sources */,
+				2B1E447627A7E87D004C4331 /* StorageVC.swift in Sources */,
 				2B22FE2227829DE300BB2978 /* SideCVC.swift in Sources */,
 				2BC19D512778411800407707 /* OtherVC.swift in Sources */,
 				2B93A41A27041D410000E667 /* VerticalCardSwiperVC.swift in Sources */,
@@ -470,6 +495,7 @@
 				2BE6E34926CA49750006E2DB /* FirstNaviVC.swift in Sources */,
 				2B0A8D572779D5D300E6CFEA /* FifthVC.swift in Sources */,
 				2B60D94427856CA800D4E760 /* TimerVC.swift in Sources */,
+				2B1E447427A7E875004C4331 /* MainHomeVC.swift in Sources */,
 				2B89500626C8126B0070DB10 /* AppDelegate.swift in Sources */,
 				2BB3B5D826F1B88D00EF7856 /* StackViewVC.swift in Sources */,
 				2B514D0B2710BFF100D1731A /* SearchBarVC.swift in Sources */,
@@ -491,7 +517,9 @@
 				2BC19D64277886CF00407707 /* FourthVC.swift in Sources */,
 				2B89500826C8126B0070DB10 /* SceneDelegate.swift in Sources */,
 				2B48088D274646240067724A /* HeaderCVC.swift in Sources */,
+				2B1E447027A7E5A6004C4331 /* CustomTabbar.swift in Sources */,
 				2BF35F6126EBBBC400C5A360 /* PresentBeforeVC.swift in Sources */,
+				2B1E447227A7E866004C4331 /* FeedVC.swift in Sources */,
 				2BC19D53277846C100407707 /* CommunityVC.swift in Sources */,
 				2B93A41C27041EDC0000E667 /* ExampleCardCell.swift in Sources */,
 			);
