@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BottomSheetViewController: UIViewController {
+class BottomSheetVC: UIViewController {
     
     /// bottomSheet 올라와있는 정도에 따른 상태
     enum BottomSheetViewState {

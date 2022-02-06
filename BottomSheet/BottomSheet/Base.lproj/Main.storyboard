@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="139" y="113"/>
         </scene>
-        <!--BottomSheetViewController-->
+        <!--BottomSheetVC-->
         <scene sceneID="ISb-ZW-5YO">
             <objects>
-                <viewController storyboardIdentifier="BottomSheetViewController" title="BottomSheetViewController" id="TO9-ej-JnN" customClass="BottomSheetViewController" customModule="BottomSheet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BottomSheetVC" title="BottomSheetVC" id="TO9-ej-JnN" customClass="BottomSheetVC" customModule="BottomSheet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hce-zD-LE5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
