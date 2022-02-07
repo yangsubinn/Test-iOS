@@ -12,7 +12,8 @@ import SnapKit
 class CustomViewController: UIViewController {
 
     // MARK: - Properties
-    private let centerLabel = UILabel()
+    private let contentLabel = UILabel()
+    private let selectedLabel = UILabel()
     private let dimmerView = UIView()
     private let floatingButton = UIButton()
     private let firstButton = UIButton()
@@ -34,7 +35,8 @@ class CustomViewController: UIViewController {
         dimmerView.backgroundColor = .black.withAlphaComponent(0.8)
         dimmerView.alpha = 0.0
         
-        centerLabel.text = "CustomViewController"
+        contentLabel.text = "CustomViewController"
+        selectedLabel.text = "-"
         
         floatingButton.backgroundColor = .white
         floatingButton.setImage(UIImage(systemName: "plus"), for: .normal)
@@ -58,14 +60,20 @@ class CustomViewController: UIViewController {
     }
     
     private func setLayout() {
-        view.addSubview(centerLabel)
+        view.addSubview(contentLabel)
+        view.addSubview(selectedLabel)
         view.addSubview(dimmerView)
         view.addSubview(firstButton)
         view.addSubview(secondButton)
         view.addSubview(floatingButton)
         
-        centerLabel.snp.makeConstraints { make in
+        contentLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()
+        }
+        
+        selectedLabel.snp.makeConstraints { make in
+            make.centerX.equalTo(contentLabel.snp.centerX)
+            make.top.equalTo(contentLabel.snp.bottom).offset(16)
         }
         
         dimmerView.snp.makeConstraints { make in
@@ -91,57 +99,72 @@ class CustomViewController: UIViewController {
     
     private func setAddTarget() {
         floatingButton.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
+        firstButton.addTarget(self, action: #selector(firstButtonTapped), for: .touchUpInside)
+        secondButton.addTarget(self, action: #selector(secondButtonTapped), for: .touchUpInside)
     }
     
-    private func isSelected() {
-        dimmerView.alpha = 0.0
-        floatingButton.backgroundColor = .white
-        floatingButton.tintColor = .black
-        floatingButton.layer.shadowColor = UIColor.black.cgColor
+    private func hiddenFloatingAction() {
+        UIView.animate(withDuration: 0.3,
+                       delay: 0,
+                       options: .curveEaseOut,
+                       animations: {
+            let frame = CGAffineTransform(translationX: 0, y: 0)
+            let rotate = CGAffineTransform(rotationAngle: 0.0)
+            
+            self.dimmerView.alpha = 0.0
+            self.floatingButton.backgroundColor = .white
+            self.floatingButton.tintColor = .black
+            self.floatingButton.layer.shadowColor = UIColor.black.cgColor
+            self.floatingButton.transform = rotate
+            self.firstButton.transform = frame
+            self.secondButton.transform = frame
+            
+        }, completion: { _ in
+            self.floatingButton.isSelected = false
+        })
     }
     
-    private func notSelected() {
-        dimmerView.alpha = 1.0
-        floatingButton.backgroundColor = .black
-        floatingButton.tintColor = .white
-        floatingButton.layer.shadowColor = UIColor.white.cgColor
+    private func showFloatingAction() {
+        UIView.animate(withDuration: 0.2,
+                       delay: 0,
+                       options: .curveEaseOut,
+                       animations: {
+            let firstFrame = CGAffineTransform(translationX: 0, y: -(80+50+16))
+            let secondFrame = CGAffineTransform(translationX: 0, y: -(80))
+            let rotate = CGAffineTransform(rotationAngle: -40.0)
+            
+            self.dimmerView.alpha = 1.0
+            self.floatingButton.backgroundColor = .black
+            self.floatingButton.tintColor = .white
+            self.floatingButton.layer.shadowColor = UIColor.white.cgColor
+            self.floatingButton.transform = rotate
+            self.firstButton.transform = firstFrame
+            self.secondButton.transform = secondFrame
+            
+        }, completion: { _ in
+            self.floatingButton.isSelected = true
+        })
     }
     
     // MARK: - @objc
     @objc
     func buttonClicked() {
         if floatingButton.isSelected {
-            UIView.animate(withDuration: 0.3,
-                           delay: 0,
-                           options: .curveEaseInOut,
-                           animations: {
-                self.isSelected()
-                self.floatingButton.transform = CGAffineTransform(rotationAngle: 0.0)
-                
-                let firstFrame = CGAffineTransform(translationX: 0, y: 0)
-                let secondFrame = CGAffineTransform(translationX: 0, y: 0)
-                self.firstButton.transform = firstFrame
-                self.secondButton.transform = secondFrame
-                
-            }, completion: { _ in
-                self.floatingButton.isSelected = false
-            })
+            hiddenFloatingAction()
         } else {
-            UIView.animate(withDuration: 0.2,
-                           delay: 0,
-                           options: .curveEaseInOut,
-                           animations: {
-                self.notSelected()
-                self.floatingButton.transform = CGAffineTransform(rotationAngle: -45.0)
-                
-                let firstFrame = CGAffineTransform(translationX: 0, y: -(80+50+16))
-                let secondFrame = CGAffineTransform(translationX: 0, y: -(80))
-                self.firstButton.transform = firstFrame
-                self.secondButton.transform = secondFrame
-                
-            }, completion: { _ in
-                self.floatingButton.isSelected = true
-            })
+            showFloatingAction()
         }
+    }
+    
+    @objc
+    func firstButtonTapped() {
+        selectedLabel.text = "firstButton tapped"
+        hiddenFloatingAction()
+    }
+    
+    @objc
+    func secondButtonTapped() {
+        selectedLabel.text = "secondButton tapped"
+        hiddenFloatingAction()
     }
 }
