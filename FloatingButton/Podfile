@@ -7,5 +7,6 @@ target 'FloatingButton' do
 
   # Pods for FloatingButton
   pod 'SnapKit', '~> 5.0.0'
+  pod 'JJFloatingActionButton', :git => 'https://github.com/yangsubinn/JJFloatingActionButton.git', :branch => 'master'
 
 end
