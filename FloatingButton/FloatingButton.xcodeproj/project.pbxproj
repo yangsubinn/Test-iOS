@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BBFD23127B16B5000B189A0 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBFD23027B16B5000B189A0 /* CustomViewController.swift */; };
 		2BC2735027B01EDA00CE266B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2734F27B01EDA00CE266B /* AppDelegate.swift */; };
 		2BC2735227B01EDA00CE266B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2735127B01EDA00CE266B /* SceneDelegate.swift */; };
 		2BC2735427B01EDA00CE266B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2735327B01EDA00CE266B /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2BBFD23027B16B5000B189A0 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		2BC2734C27B01EDA00CE266B /* FloatingButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloatingButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC2734F27B01EDA00CE266B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BC2735127B01EDA00CE266B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				2BC2734F27B01EDA00CE266B /* AppDelegate.swift */,
 				2BC2735127B01EDA00CE266B /* SceneDelegate.swift */,
 				2BC2735327B01EDA00CE266B /* ViewController.swift */,
+				2BBFD23027B16B5000B189A0 /* CustomViewController.swift */,
 				2BC2735527B01EDA00CE266B /* Main.storyboard */,
 				2BC2735827B01EDB00CE266B /* Assets.xcassets */,
 				2BC2735A27B01EDB00CE266B /* LaunchScreen.storyboard */,
@@ -88,7 +91,6 @@
 				D6FBC5DD57D02FE67CFC5980 /* Pods-FloatingButton.debug.xcconfig */,
 				2FBE11611B07222D03BC21C5 /* Pods-FloatingButton.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -210,6 +212,7 @@
 				2BC2735427B01EDA00CE266B /* ViewController.swift in Sources */,
 				2BC2735027B01EDA00CE266B /* AppDelegate.swift in Sources */,
 				2BC2735227B01EDA00CE266B /* SceneDelegate.swift in Sources */,
+				2BBFD23127B16B5000B189A0 /* CustomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
