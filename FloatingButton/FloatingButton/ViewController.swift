@@ -12,14 +12,19 @@ import JJFloatingActionButton
 
 class ViewController: UIViewController {
     
+    // MARK: - Properties
+    
     let actionButton = JJFloatingActionButton()
 
+    // MARK: - Life Cycles
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setLayout()
         setButtonUI()
     }
+    
+    // MARK: - Custom Method
     
     func setLayout() {
         view.addSubview(actionButton)
