@@ -20,6 +20,8 @@ class SideCollectionVC: UIViewController {
     private let appendButton = UIButton()
     private let collectionViewFlowLayout = UICollectionViewFlowLayout()
     private let newColors: [UIColor] = [.black, .green]
+    
+    private var tryCount: Int = 0
     private var colors: [UIColor] = [.darkGray, .magenta, .orange, .purple, .brown]
     private var diffableDatasource: UICollectionViewDiffableDataSource<Section, UIColor>!
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
@@ -46,7 +48,6 @@ class SideCollectionVC: UIViewController {
         setupCollectionView()
         setupCollectionViewLayout()
         setAddTarget()
-        setData()
     }
     
     // MARK: - Custom Method
@@ -112,19 +113,22 @@ class SideCollectionVC: UIViewController {
     }
     
     // DiffableDataSourceSnapshot
-    private func setData() {
+    private func setData(arr: [UIColor]) {
         var snapshot = NSDiffableDataSourceSnapshot<Section, UIColor>()
         snapshot.appendSections([.main])
-        snapshot.appendItems(colors)
+        snapshot.appendItems(arr)
         self.diffableDatasource.apply(snapshot, animatingDifferences: true)
     }
     
     // MARK: - @objc
     @objc
     func touchAppendButton() {
-        colors.append(contentsOf: newColors)
 //        collectionView.reloadData()
-        setData()
+        if tryCount == 1 {
+            colors.append(contentsOf: newColors)
+        }
+        setData(arr: colors)
+        tryCount += 1
     }
 }
 
