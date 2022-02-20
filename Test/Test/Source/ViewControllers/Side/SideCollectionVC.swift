@@ -13,7 +13,11 @@ class SideCollectionVC: UIViewController {
     
     // MARK: - Properties
     
-    var colors: [UIColor] = [.darkGray, .magenta, .orange, .purple, .brown]
+    private let appendButton = UIButton()
+    private let collectionViewFlowLayout = UICollectionViewFlowLayout()
+    private let newColors: [UIColor] = [.black, .green]
+    private var colors: [UIColor] = [.darkGray, .magenta, .orange, .purple, .brown]
+    private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
     
     /// collectionViewFlowLayout 변수 정의할 때 세팅
 //    let collectionViewFlowLayout: UICollectionViewLayout = {
@@ -27,19 +31,16 @@ class SideCollectionVC: UIViewController {
 //        layout.scrollDirection = .horizontal
 //        return layout
 //    }()
-    
-    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
-    
-    let collectionViewFlowLayout = UICollectionViewFlowLayout()
 
     // MARK: - Life Cycles
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUI()
         setupLayout()
         setupCollectionView()
         setupCollectionViewLayout()
+        setAddTarget()
     }
     
     // MARK: - Custom Method
@@ -70,12 +71,37 @@ class SideCollectionVC: UIViewController {
     
     private func setupLayout() {
         view.addSubview(collectionView)
+        view.addSubview(appendButton)
         
         collectionView.snp.makeConstraints { make in
             make.center.equalToSuperview()
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(400)
         }
+        
+        appendButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(view.safeAreaLayoutGuide).inset(30)
+        }
+    }
+    
+    private func setUI() {
+        appendButton.setTitle("cell 추가 버튼", for: .normal)
+        appendButton.setTitleColor(UIColor.blue, for: .normal)
+        appendButton.setTitle("버튼 눌림", for: .highlighted)
+        appendButton.setTitleColor(UIColor.red, for: .highlighted)
+        appendButton.titleLabel?.font = .systemFont(ofSize: 20)
+    }
+    
+    private func setAddTarget() {
+        appendButton.addTarget(self, action: #selector(touchAppendButton), for: .touchUpInside)
+    }
+    
+    // MARK: - @objc
+    @objc
+    func touchAppendButton() {
+        colors.append(contentsOf: newColors)
+        collectionView.reloadData()
     }
 }
 
@@ -83,7 +109,7 @@ class SideCollectionVC: UIViewController {
 
 extension SideCollectionVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return colors.count
     }
 }
 
