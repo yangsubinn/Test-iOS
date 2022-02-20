@@ -11,12 +11,17 @@ import SnapKit
 
 class SideCollectionVC: UIViewController {
     
+    enum Section: CaseIterable {
+        case main
+    }
+    
     // MARK: - Properties
     
     private let appendButton = UIButton()
     private let collectionViewFlowLayout = UICollectionViewFlowLayout()
     private let newColors: [UIColor] = [.black, .green]
     private var colors: [UIColor] = [.darkGray, .magenta, .orange, .purple, .brown]
+    private var diffableDatasource: UICollectionViewDiffableDataSource<Section, UIColor>!
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
     
     /// collectionViewFlowLayout 변수 정의할 때 세팅
@@ -41,20 +46,29 @@ class SideCollectionVC: UIViewController {
         setupCollectionView()
         setupCollectionViewLayout()
         setAddTarget()
+        setData()
     }
     
     // MARK: - Custom Method
     
     /// collectionView 세팅
     private func setupCollectionView() {
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        
-        collectionView.register(SideCVC.self, forCellWithReuseIdentifier: SideCVC.identifier)
         collectionView.backgroundColor = .clear
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.decelerationRate = .fast
         collectionView.isPagingEnabled = false
+        collectionView.register(SideCVC.self, forCellWithReuseIdentifier: SideCVC.identifier)
+        
+        self.diffableDatasource = UICollectionViewDiffableDataSource<Section, UIColor> (collectionView: self.collectionView) {(UICollectionView, IndexPath, String) -> UICollectionViewCell? in
+            guard let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: SideCVC.identifier, for: IndexPath) as? SideCVC else { return UICollectionViewCell() }
+            
+            cell.backgroundColor = self.colors[IndexPath.item]
+            cell.layer.cornerRadius = 26
+            
+            return cell
+        }
+        collectionView.delegate = self
+        collectionView.dataSource = diffableDatasource
     }
     
     /// collectionViewFlowLayout 세팅
@@ -97,33 +111,42 @@ class SideCollectionVC: UIViewController {
         appendButton.addTarget(self, action: #selector(touchAppendButton), for: .touchUpInside)
     }
     
+    // DiffableDataSourceSnapshot
+    private func setData() {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, UIColor>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(colors)
+        self.diffableDatasource.apply(snapshot, animatingDifferences: true)
+    }
+    
     // MARK: - @objc
     @objc
     func touchAppendButton() {
         colors.append(contentsOf: newColors)
-        collectionView.reloadData()
+//        collectionView.reloadData()
+        setData()
     }
 }
 
 // MARK: - UICollectionViewDataSource
 
-extension SideCollectionVC: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return colors.count
-    }
-}
+//extension SideCollectionVC: UICollectionViewDataSource {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return colors.count
+//    }
+//}
 
     // MARK: - UICollectionViewDelegate
 
 extension SideCollectionVC: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SideCVC.identifier, for: indexPath) as? SideCVC else { return UICollectionViewCell() }
-        
-        cell.backgroundColor = colors[indexPath.item]
-        cell.layer.cornerRadius = 26
-        
-        return cell
-    }
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SideCVC.identifier, for: indexPath) as? SideCVC else { return UICollectionViewCell() }
+//
+//        cell.backgroundColor = colors[indexPath.item]
+//        cell.layer.cornerRadius = 26
+//
+//        return cell
+//    }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         
