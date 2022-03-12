@@ -46,6 +46,16 @@ class CustomCVC: UICollectionViewCell {
         userImageView.isSkeletonable = true
         nameLabel.isSkeletonable = true
         numberLabel.isSkeletonable = true
+        
+        userImageView.skeletonCornerRadius = 4
+        nameLabel.linesCornerRadius = 4
+        numberLabel.linesCornerRadius = 4
+        
+        nameLabel.skeletonTextLineHeight = .fixed(20)
+        numberLabel.skeletonTextLineHeight = .fixed(20)
+        
+        nameLabel.skeletonLineSpacing = 10
+        numberLabel.skeletonLineSpacing = 10
     }
     
     private func setUI() {
@@ -57,9 +67,14 @@ class CustomCVC: UICollectionViewCell {
     }
     
     private func setLayout() {
-        self.addSubview(userImageView)
-        self.addSubview(nameLabel)
-        self.addSubview(numberLabel)
+//        self.addSubview(userImageView)
+//        self.addSubview(nameLabel)
+//        self.addSubview(numberLabel)
+        
+        // 각 요소별로 스켈레톤을 적용하려면 contentView에 addSubview 해야한다.
+        self.contentView.addSubview(userImageView)
+        self.contentView.addSubview(nameLabel)
+        self.contentView.addSubview(numberLabel)
         
         userImageView.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(20)
@@ -70,13 +85,15 @@ class CustomCVC: UICollectionViewCell {
         nameLabel.snp.makeConstraints { make in
             make.leading.equalTo(userImageView.snp.trailing).offset(20)
             make.trailing.equalToSuperview().inset(20)
-            make.top.equalToSuperview().inset(16)
+            make.top.equalToSuperview().inset(20)
+            make.height.equalTo(20)
         }
         
         numberLabel.snp.makeConstraints { make in
             make.leading.equalTo(nameLabel.snp.leading)
             make.trailing.equalToSuperview().inset(20)
             make.top.equalTo(nameLabel.snp.bottom).offset(10)
+            make.height.equalTo(20)
         }
     }
     
