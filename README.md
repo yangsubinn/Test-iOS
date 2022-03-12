@@ -24,7 +24,7 @@
 | 17 | MVVM | ✔️ |[📂](https://github.com/yangsubinn/Test-iOS/tree/master/Test-MVVM) |
 | 18 | TabBar Programmatically | ✔️ | [📂](https://github.com/yangsubinn/Test-iOS/tree/master/Test/Test/Source/ViewControllers/Tabbar) |
 | 19 | Floating Tabbar | ✔️ | [📂](https://github.com/yangsubinn/Test-iOS/tree/master/Test/Test/Source/ViewControllers/FloatingTabbar) |
-| 20 | SketetonView [📚](https://github.com/Juanpe/SkeletonView) | 💬 | [📂](https://github.com/yangsubinn/Test-iOS/tree/master/Skeleton) |
+| 20 | SketetonView [📚](https://github.com/Juanpe/SkeletonView) | ✔️ | [📂](https://github.com/yangsubinn/Test-iOS/tree/master/Skeleton) |
 | 21 | UIBezierPath | | |
 | 22 | FSCalendar | ✔️ | [📂](https://github.com/yangsubinn/Test-iOS/blob/master/Calendar/Calendar/ViewController.swift) |
 | 23 | Custom Calendar | ✔️ | [📂](https://github.com/yangsubinn/Test-iOS/blob/master/Calendar/Calendar/SecondViewController.swift) |
