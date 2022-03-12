@@ -11,9 +11,20 @@ import SnapKit
 
 class SideCollectionVC: UIViewController {
     
+    enum Section: CaseIterable {
+        case main
+    }
+    
     // MARK: - Properties
     
-    var colors: [UIColor] = [.darkGray, .magenta, .orange, .purple, .brown]
+    private let appendButton = UIButton()
+    private let collectionViewFlowLayout = UICollectionViewFlowLayout()
+    private let newColors: [UIColor] = [.black, .green]
+    
+    private var tryCount: Int = 0
+    private var colors: [UIColor] = [.darkGray, .magenta, .orange, .purple, .brown]
+    private var diffableDatasource: UICollectionViewDiffableDataSource<Section, UIColor>!
+    private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
     
     /// collectionViewFlowLayout 변수 정의할 때 세팅
 //    let collectionViewFlowLayout: UICollectionViewLayout = {
@@ -27,33 +38,38 @@ class SideCollectionVC: UIViewController {
 //        layout.scrollDirection = .horizontal
 //        return layout
 //    }()
-    
-    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
-    
-    let collectionViewFlowLayout = UICollectionViewFlowLayout()
 
     // MARK: - Life Cycles
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUI()
         setupLayout()
         setupCollectionView()
         setupCollectionViewLayout()
+        setAddTarget()
     }
     
     // MARK: - Custom Method
     
     /// collectionView 세팅
     private func setupCollectionView() {
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        
-        collectionView.register(SideCVC.self, forCellWithReuseIdentifier: SideCVC.identifier)
         collectionView.backgroundColor = .clear
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.decelerationRate = .fast
         collectionView.isPagingEnabled = false
+        collectionView.register(SideCVC.self, forCellWithReuseIdentifier: SideCVC.identifier)
+        
+        self.diffableDatasource = UICollectionViewDiffableDataSource<Section, UIColor> (collectionView: self.collectionView) {(UICollectionView, IndexPath, String) -> UICollectionViewCell? in
+            guard let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: SideCVC.identifier, for: IndexPath) as? SideCVC else { return UICollectionViewCell() }
+            
+            cell.backgroundColor = self.colors[IndexPath.item]
+            cell.layer.cornerRadius = 26
+            
+            return cell
+        }
+        collectionView.delegate = self
+        collectionView.dataSource = diffableDatasource
     }
     
     /// collectionViewFlowLayout 세팅
@@ -70,34 +86,71 @@ class SideCollectionVC: UIViewController {
     
     private func setupLayout() {
         view.addSubview(collectionView)
+        view.addSubview(appendButton)
         
         collectionView.snp.makeConstraints { make in
             make.center.equalToSuperview()
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(400)
         }
+        
+        appendButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(view.safeAreaLayoutGuide).inset(30)
+        }
+    }
+    
+    private func setUI() {
+        appendButton.setTitle("cell 추가 버튼", for: .normal)
+        appendButton.setTitleColor(UIColor.blue, for: .normal)
+        appendButton.setTitle("버튼 눌림", for: .highlighted)
+        appendButton.setTitleColor(UIColor.red, for: .highlighted)
+        appendButton.titleLabel?.font = .systemFont(ofSize: 20)
+    }
+    
+    private func setAddTarget() {
+        appendButton.addTarget(self, action: #selector(touchAppendButton), for: .touchUpInside)
+    }
+    
+    // DiffableDataSourceSnapshot
+    private func setData(arr: [UIColor]) {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, UIColor>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(arr)
+        self.diffableDatasource.apply(snapshot, animatingDifferences: true)
+    }
+    
+    // MARK: - @objc
+    @objc
+    func touchAppendButton() {
+//        collectionView.reloadData()
+        if tryCount == 1 {
+            colors.append(contentsOf: newColors)
+        }
+        setData(arr: colors)
+        tryCount += 1
     }
 }
 
 // MARK: - UICollectionViewDataSource
 
-extension SideCollectionVC: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
-    }
-}
+//extension SideCollectionVC: UICollectionViewDataSource {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return colors.count
+//    }
+//}
 
     // MARK: - UICollectionViewDelegate
 
 extension SideCollectionVC: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SideCVC.identifier, for: indexPath) as? SideCVC else { return UICollectionViewCell() }
-        
-        cell.backgroundColor = colors[indexPath.item]
-        cell.layer.cornerRadius = 26
-        
-        return cell
-    }
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SideCVC.identifier, for: indexPath) as? SideCVC else { return UICollectionViewCell() }
+//
+//        cell.backgroundColor = colors[indexPath.item]
+//        cell.layer.cornerRadius = 26
+//
+//        return cell
+//    }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         
