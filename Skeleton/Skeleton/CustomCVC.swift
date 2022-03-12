@@ -7,6 +7,8 @@
 
 import UIKit
 
+import SkeletonView
+
 class CustomCVC: UICollectionViewCell {
     
     static let identifier = "CustomCVC"
@@ -23,6 +25,7 @@ class CustomCVC: UICollectionViewCell {
         super.init(frame: frame)
         setUI()
         setLayout()
+        setSkeleton()
     }
     
     required init?(coder: NSCoder) {
@@ -38,10 +41,14 @@ class CustomCVC: UICollectionViewCell {
     
     // MARK: - Methods
     
+    private func setSkeleton() {
+        self.isSkeletonable = true
+        userImageView.isSkeletonable = true
+        nameLabel.isSkeletonable = true
+        numberLabel.isSkeletonable = true
+    }
+    
     private func setUI() {
-        userImageView.image = UIImage(named: "꼬부기 1")
-        userImageView.layer.cornerRadius = 4
-        
         nameLabel.font = .systemFont(ofSize: 24)
         nameLabel.textColor = .black
         
@@ -73,8 +80,9 @@ class CustomCVC: UICollectionViewCell {
         }
     }
     
-    func initCell(name: String, number: String) {
+    func initCell(name: String, number: String, image: String) {
         nameLabel.text = name
         numberLabel.text = number
+        userImageView.image = UIImage(named: image)
     }
 }
