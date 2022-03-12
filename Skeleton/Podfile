@@ -7,5 +7,6 @@ target 'Skeleton' do
 
   # Pods for Skeleton
   pod 'SkeletonView'
+  pod 'SnapKit', '~> 5.0.0'
 
 end
