@@ -20,7 +20,7 @@
 | 13 | UILabel 특정 범위만 다른 속성 | ✔️ | [📂](https://github.com/yangsubinn/Test-iOS/blob/master/Test/Test/Source/ViewControllers/LabelVC.swift) |
 | 14 | Search Bar | ✔️ | [📂](https://github.com/UXThinkBig/YangSuBin/blob/master/UXThinkBig-SearchBar/UXThinkBig-SearchBar/Source/ViewControllers/ViewController.swift) |
 | 15 | NotificationCenter | ✔️ |[📂](https://github.com/yangsubinn/Test-iOS/blob/master/Test/Test/Source/ViewControllers/NotiVC.swift) |
-| 16 | UserDefaults | ✔️ |[📂](https://github.com/yangsubinn/Test-iOS/blob/master/Test/Test/Source/ViewControllers/SecondNaviVC.swift) |
+| 16 | UserDefaults | ✔️ |[📂](https://github.com/yangsubinn/Test-iOS/blob/master/Test/Test/Source/ViewControllers/Navigation/SecondNaviVC.swift) |
 | 17 | MVVM | ✔️ |[📂](https://github.com/yangsubinn/Test-iOS/tree/master/Test-MVVM) |
 | 18 | TabBar Programmatically | ✔️ | [📂](https://github.com/yangsubinn/Test-iOS/tree/master/Test/Test/Source/ViewControllers/Tabbar) |
 | 19 | Floating Tabbar | ✔️ | [📂](https://github.com/yangsubinn/Test-iOS/tree/master/Test/Test/Source/ViewControllers/FloatingTabbar) |
