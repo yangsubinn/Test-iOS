@@ -34,6 +34,9 @@
 		2B93A41A27041D410000E667 /* VerticalCardSwiperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93A41927041D410000E667 /* VerticalCardSwiperVC.swift */; };
 		2B93A41C27041EDC0000E667 /* ExampleCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93A41B27041EDC0000E667 /* ExampleCardCell.swift */; };
 		2B97075D26FAF26200B6B4A3 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B97075C26FAF26200B6B4A3 /* TestVC.swift */; };
+		2B9D296227EC565300972172 /* LifeCycleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D296127EC565300972172 /* LifeCycleVC.swift */; };
+		2B9D296427EC569800972172 /* LifeCycle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B9D296327EC569800972172 /* LifeCycle.storyboard */; };
+		2B9D296727EC56F000972172 /* SecondLifeCycleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D296627EC56F000972172 /* SecondLifeCycleVC.swift */; };
 		2BB3B5D826F1B88D00EF7856 /* StackViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB3B5D726F1B88D00EF7856 /* StackViewVC.swift */; };
 		2BBEE1C326CC0308009064B9 /* AnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBEE1C226CC0308009064B9 /* AnimationVC.swift */; };
 		2BC0081C270ECF0C0001F679 /* LabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0081B270ECF0C0001F679 /* LabelVC.swift */; };
@@ -91,6 +94,9 @@
 		2B93A41927041D410000E667 /* VerticalCardSwiperVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCardSwiperVC.swift; sourceTree = "<group>"; };
 		2B93A41B27041EDC0000E667 /* ExampleCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCardCell.swift; sourceTree = "<group>"; };
 		2B97075C26FAF26200B6B4A3 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+		2B9D296127EC565300972172 /* LifeCycleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycleVC.swift; sourceTree = "<group>"; };
+		2B9D296327EC569800972172 /* LifeCycle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LifeCycle.storyboard; sourceTree = "<group>"; };
+		2B9D296627EC56F000972172 /* SecondLifeCycleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondLifeCycleVC.swift; sourceTree = "<group>"; };
 		2BB3B5D726F1B88D00EF7856 /* StackViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewVC.swift; sourceTree = "<group>"; };
 		2BBEE1C226CC0308009064B9 /* AnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationVC.swift; sourceTree = "<group>"; };
 		2BC0081B270ECF0C0001F679 /* LabelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelVC.swift; sourceTree = "<group>"; };
@@ -248,6 +254,15 @@
 			path = Test;
 			sourceTree = "<group>";
 		};
+		2B9D296527EC56D700972172 /* LifeCycle */ = {
+			isa = PBXGroup;
+			children = (
+				2B9D296127EC565300972172 /* LifeCycleVC.swift */,
+				2B9D296627EC56F000972172 /* SecondLifeCycleVC.swift */,
+			);
+			path = LifeCycle;
+			sourceTree = "<group>";
+		};
 		2BC19D4B27783E4300407707 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +322,7 @@
 				2B48088A274643680067724A /* Header */,
 				2BC19D4B27783E4300407707 /* Tabbar */,
 				2BC19D582778845D00407707 /* FloatingTabbar */,
+				2B9D296527EC56D700972172 /* LifeCycle */,
 				2B89500926C8126B0070DB10 /* HapticVC.swift */,
 				2BE6E33F26CA23C30006E2DB /* AutolayoutVC.swift */,
 				2BB3B5D726F1B88D00EF7856 /* StackViewVC.swift */,
@@ -340,6 +356,7 @@
 				2BC19D59277884A500407707 /* FloatingTabbar.storyboard */,
 				2B60D94527856CD400D4E760 /* Spark.storyboard */,
 				2B1E446C27A7E4E7004C4331 /* CustomTabbar.storyboard */,
+				2B9D296327EC569800972172 /* LifeCycle.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -423,6 +440,7 @@
 				2B1E446D27A7E4E7004C4331 /* CustomTabbar.storyboard in Resources */,
 				2B60D94627856CD400D4E760 /* Spark.storyboard in Resources */,
 				2BC19D4A27783C0700407707 /* Tabbar.storyboard in Resources */,
+				2B9D296427EC569800972172 /* LifeCycle.storyboard in Resources */,
 				2B89501226C8126C0070DB10 /* LaunchScreen.storyboard in Resources */,
 				2BE6E34726CA493D0006E2DB /* Navigate.storyboard in Resources */,
 				2BC19D5A277884A500407707 /* FloatingTabbar.storyboard in Resources */,
@@ -496,6 +514,7 @@
 				2B0A8D572779D5D300E6CFEA /* FifthVC.swift in Sources */,
 				2B60D94427856CA800D4E760 /* TimerVC.swift in Sources */,
 				2B1E447427A7E875004C4331 /* MainHomeVC.swift in Sources */,
+				2B9D296227EC565300972172 /* LifeCycleVC.swift in Sources */,
 				2B89500626C8126B0070DB10 /* AppDelegate.swift in Sources */,
 				2BB3B5D826F1B88D00EF7856 /* StackViewVC.swift in Sources */,
 				2B514D0B2710BFF100D1731A /* SearchBarVC.swift in Sources */,
@@ -506,6 +525,7 @@
 				2BC19D57277846DC00407707 /* LikeVC.swift in Sources */,
 				2BF35F6326EBBFA800C5A360 /* PresentModalVC.swift in Sources */,
 				2B97075D26FAF26200B6B4A3 /* TestVC.swift in Sources */,
+				2B9D296727EC56F000972172 /* SecondLifeCycleVC.swift in Sources */,
 				2B0A8D5B2779DC1600E6CFEA /* IconTabVC.swift in Sources */,
 				2B48088F274646650067724A /* HeaderReusableView.swift in Sources */,
 				2BC19D55277846D200407707 /* HomeVC.swift in Sources */,
