@@ -30,6 +30,7 @@ class LabelVC: UIViewController {
     func configUI() {
         testLabel.text = "다양한 캐츄와 함께, 모두의 매일을 다채롭게"
         testLabel.bold(targetString: "모두의 매일")
+        testLabel.bold(targetString: "캐츄")
         
 //        testTwoLabel.text = "안녕하세요 양수빈입니당"
         testTwoLabel.attributedText = NSMutableAttributedString()
