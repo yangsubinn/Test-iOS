@@ -24,13 +24,16 @@ class MainCoordinator: NSObject, Coordinator {
         navigationController.pushViewController(vc, animated: false)
     }
     
-    // BuyCoordinator에서 화면 전환
-    // buyCoordinator의 navigationController에 self와 같은 네비를 넣어주어 같은 네비게이션 컨트롤러 내에서 전환이 되도록
+    // Parent - Child Coordinator 관계를 통해 화면 전화
     func buySubscription() {
+        // BuyCoordinator 타입의 인스턴스 생성
         let child = BuyCoordinator(navigationController: navigationController)
+        // BuyCoordinator의 parent coordinator는 self(MainCoordinator)
         child.parentCoordinator = self
+        // BuyCoordinator을 자신(MainCoordinator)의 child coordinator로 추가
         childCoordinators.append(child)
-        child.start() // child VC 화면을 보여줌
+        // BuyViewController(childVC) 화면 전환
+        child.start()
     }
     
     // 여기서 화면 전환
@@ -41,29 +44,30 @@ class MainCoordinator: NSObject, Coordinator {
         navigationController.present(vc, animated: true)
     }
     
+    // Child Coordinator이 일을 마쳤을 때, 지워주는 방법
     func childDidFinish(_ child: Coordinator?) {
         for (index, coordinator) in childCoordinators.enumerated() {
+            // 클래스의 두 인스턴스(coordinator, child)가 같은 메모리를 가리키고 있으면 (= 같은 인스턴스면) 지우기
             if coordinator === child {
                 childCoordinators.remove(at: index)
                 break
             }
         }
     }
-    
 }
 
 extension MainCoordinator: UINavigationControllerDelegate {
+    // MainCoordinator가 Nacigation Controller의 상호작용을 바로 감지 가능
     func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
         
-        guard let fromViewController = navigationController.transitionCoordinator?.viewController(forKey: .from) else {
-            return
-        }
+        // 이동할 VC
+        guard let fromViewController = navigationController.transitionCoordinator?.viewController(forKey: .from) else { return }
         
-        if navigationController.viewControllers.contains(fromViewController) {
-            return
-        }
+        // 이동할 VC가 navigationController의 VC들에 포함되어 있으면 return
+        // -> 포함되어 있지 않아야 현재 이동할 VC가 사라질 화면이라는 의미 (뒤로 이동)
+        if navigationController.viewControllers.contains(fromViewController) { return }
         
-        
+        // child coordinator가 일을 끝냈어요
         if let buyViewController = fromViewController as? BuyViewController {
             childDidFinish(buyViewController.coordinator)
         }

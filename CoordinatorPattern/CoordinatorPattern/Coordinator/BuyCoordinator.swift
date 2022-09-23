@@ -9,6 +9,7 @@ import UIKit
 
 class BuyCoordinator: Coordinator {
     
+    // retain cycle 피하기 위해 weak 참조 선언
     weak var parentCoordinator: MainCoordinator?
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
