@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
     
@@ -18,7 +19,7 @@ class ViewController: UIViewController {
     
     // MARK: - Properties
     
-    private var loginButtonClicked = PublishSubject<Void>()
+    private var loginButtonClicked = PublishSubject<UserData>()
     private var emailEditEventFinished = PublishSubject<String?>()
     private var pwEditEvendFinished = PublishSubject<String?>()
     private var disposeBag = DisposeBag()
@@ -35,6 +36,7 @@ class ViewController: UIViewController {
         setDelegate()
         setButtonState(false)
         bindViewModels()
+        setButtonAction()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -83,6 +85,17 @@ class ViewController: UIViewController {
     private func removeNoti() {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    private func setButtonAction() {
+        self.loginButton.rx.tap
+            .bind {
+                let userData = UserData(
+                    email: self.emailTextField.text ?? "-",
+                    password: self.pwTextField.text ?? "--")
+                self.loginButtonClicked.onNext(userData)
+            }
+            .disposed(by: disposeBag)
     }
     
     // MARK: - @objc
