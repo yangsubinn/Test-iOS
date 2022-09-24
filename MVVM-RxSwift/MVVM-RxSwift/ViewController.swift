@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class ViewController: UIViewController {
     
@@ -15,15 +16,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var pwTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
+    // MARK: - Properties
+    
+    private var loginButtonClicked = PublishSubject<Void>()
+    private var emailEditEventFinished = PublishSubject<String?>()
+    private var pwEditEvendFinished = PublishSubject<String?>()
+    private var disposeBag = DisposeBag()
+    var viewModel = TestViewModel()
+    
     // MARK: - Life Cycles
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configUI()
+        addTargets()
         setNoti()
         setDelegate()
         setButtonState(false)
+        bindViewModels()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -46,9 +57,12 @@ class ViewController: UIViewController {
     private func configUI() {
         emailTextField.placeholder = "email plz"
         pwTextField.placeholder = "password plz"
-        
-        loginButton.titleLabel?.textColor = .white
         loginButton.titleLabel?.text = "LOGIN"
+    }
+    
+    private func addTargets() {
+        self.emailTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+        self.pwTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
     }
     
     private func setButtonState(_ enable: Bool) {
@@ -75,7 +89,6 @@ class ViewController: UIViewController {
     
     @objc func keyboardMoveUp(_ notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            print(keyboardSize)
             UIView.animate(withDuration: 0.3, animations: {
                 self.loginButton.transform = CGAffineTransform(translationX: 0, y: -keyboardSize.height + 30)
             })
@@ -85,6 +98,28 @@ class ViewController: UIViewController {
     
     @objc func keyboardMoveDown(_ notification: NSNotification) {
         self.loginButton.transform = .identity
+    }
+    
+    @objc func textFieldDidChange(_ sender: Any?) {
+        self.emailEditEventFinished.onNext(self.emailTextField.text)
+        self.pwEditEvendFinished.onNext(self.pwTextField.text)
+    }
+}
+
+extension ViewController {
+    private func bindViewModels() {
+        let input = TestViewModel.Input(
+            email: emailEditEventFinished.asObservable(),
+            password: pwEditEvendFinished.asObservable(),
+            tapLogIn: loginButtonClicked)
+        let output = self.viewModel.transform(from: input, disposeBag: disposeBag)
+        
+        output.enableLogInButton
+            .subscribe(onNext: { [weak self] state in
+                guard let self = self else { return }
+                self.setButtonState(state)
+            })
+            .disposed(by: disposeBag)
     }
 }
 

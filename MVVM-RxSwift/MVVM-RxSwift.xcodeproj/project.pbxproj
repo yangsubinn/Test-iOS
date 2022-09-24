@@ -13,6 +13,11 @@
 		2BE1720E28DF3D2A00F7E4E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BE1720C28DF3D2A00F7E4E0 /* Main.storyboard */; };
 		2BE1721028DF3D2B00F7E4E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BE1720F28DF3D2B00F7E4E0 /* Assets.xcassets */; };
 		2BE1721328DF3D2B00F7E4E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BE1721128DF3D2B00F7E4E0 /* LaunchScreen.storyboard */; };
+		2BE1721C28DF445200F7E4E0 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2BE1721B28DF445200F7E4E0 /* RxCocoa */; };
+		2BE1721E28DF445200F7E4E0 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 2BE1721D28DF445200F7E4E0 /* RxRelay */; };
+		2BE1722028DF445200F7E4E0 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2BE1721F28DF445200F7E4E0 /* RxSwift */; };
+		2BE1722428DF44F300F7E4E0 /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE1722328DF44F300F7E4E0 /* TestViewModel.swift */; };
+		2BE1722628DF4A5300F7E4E0 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE1722528DF4A5300F7E4E0 /* ViewModelType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,8 @@
 		2BE1720F28DF3D2B00F7E4E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BE1721228DF3D2B00F7E4E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BE1721428DF3D2B00F7E4E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BE1722328DF44F300F7E4E0 /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
+		2BE1722528DF4A5300F7E4E0 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BE1722028DF445200F7E4E0 /* RxSwift in Frameworks */,
+				2BE1721E28DF445200F7E4E0 /* RxRelay in Frameworks */,
+				2BE1721C28DF445200F7E4E0 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +52,7 @@
 			children = (
 				2BE1720528DF3D2A00F7E4E0 /* MVVM-RxSwift */,
 				2BE1720428DF3D2A00F7E4E0 /* Products */,
+				2BE1722728DF5C5200F7E4E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +70,21 @@
 				2BE1720628DF3D2A00F7E4E0 /* AppDelegate.swift */,
 				2BE1720828DF3D2A00F7E4E0 /* SceneDelegate.swift */,
 				2BE1720A28DF3D2A00F7E4E0 /* ViewController.swift */,
+				2BE1722328DF44F300F7E4E0 /* TestViewModel.swift */,
+				2BE1722528DF4A5300F7E4E0 /* ViewModelType.swift */,
 				2BE1720C28DF3D2A00F7E4E0 /* Main.storyboard */,
 				2BE1720F28DF3D2B00F7E4E0 /* Assets.xcassets */,
 				2BE1721128DF3D2B00F7E4E0 /* LaunchScreen.storyboard */,
 				2BE1721428DF3D2B00F7E4E0 /* Info.plist */,
 			);
 			path = "MVVM-RxSwift";
+			sourceTree = "<group>";
+		};
+		2BE1722728DF5C5200F7E4E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +103,11 @@
 			dependencies = (
 			);
 			name = "MVVM-RxSwift";
+			packageProductDependencies = (
+				2BE1721B28DF445200F7E4E0 /* RxCocoa */,
+				2BE1721D28DF445200F7E4E0 /* RxRelay */,
+				2BE1721F28DF445200F7E4E0 /* RxSwift */,
+			);
 			productName = "MVVM-RxSwift";
 			productReference = 2BE1720328DF3D2A00F7E4E0 /* MVVM-RxSwift.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +136,9 @@
 				Base,
 			);
 			mainGroup = 2BE171FA28DF3D2A00F7E4E0;
+			packageReferences = (
+				2BE1721A28DF445200F7E4E0 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 2BE1720428DF3D2A00F7E4E0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +168,8 @@
 			files = (
 				2BE1720B28DF3D2A00F7E4E0 /* ViewController.swift in Sources */,
 				2BE1720728DF3D2A00F7E4E0 /* AppDelegate.swift in Sources */,
+				2BE1722428DF44F300F7E4E0 /* TestViewModel.swift in Sources */,
+				2BE1722628DF4A5300F7E4E0 /* ViewModelType.swift in Sources */,
 				2BE1720928DF3D2A00F7E4E0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +388,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2BE1721A28DF445200F7E4E0 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2BE1721B28DF445200F7E4E0 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BE1721A28DF445200F7E4E0 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		2BE1721D28DF445200F7E4E0 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BE1721A28DF445200F7E4E0 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		2BE1721F28DF445200F7E4E0 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BE1721A28DF445200F7E4E0 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2BE171FB28DF3D2A00F7E4E0 /* Project object */;
 }
