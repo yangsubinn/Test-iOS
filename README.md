@@ -34,3 +34,5 @@
 | 27 | UICollectionViewDiffableDataSource |  ✔️  | [📂](https://github.com/yangsubinn/Test-iOS/blob/76b852f6d7d0471475adb1cbf35f5de36afcb22c/Test/Test/Source/ViewControllers/Side/SideCollectionVC.swift) |
 | 28 | SocialLogin - Apple | ✔️ | [📂](https://github.com/TeamSparker/Spark-Practice-iOS/pull/12) |
 | 29 | Keyboard 대응 애니메이션 | ✔️ | [📂](https://github.com/yangsubinn/Test-iOS/tree/master/KeyboardAction) |
+| 30 | Coordinator Pattern | ✔️ | [📂](https://github.com/yangsubinn/Test-iOS/tree/master/CoordinatorPattern) |
+| 31 | MVVM + RxSwift | ✔️ | [📂](https://github.com/yangsubinn/Test-iOS/tree/master/MVVM-RxSwift) |
