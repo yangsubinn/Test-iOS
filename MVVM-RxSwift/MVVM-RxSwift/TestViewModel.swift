@@ -5,23 +5,40 @@
 //  Created by 양수빈 on 2022/09/24.
 //
 
-import RxSwift
-import RxRelay
+//import RxSwift
+//import RxRelay
+import Combine
 
 class TestViewModel: ViewModelType {
     
-    private let disposeBag = DisposeBag()
+    // Rx
+//    private let disposeBag = DisposeBag()
+    
+    // Combine
+    private var cancelBag = Set<AnyCancellable>()
     
     struct Input {
-        let email: Observable<String?>
-        let password: Observable<String?>
-        let tapLogIn: Observable<UserData>
+        // Rx
+//        let email: Observable<String?>
+//        let password: Observable<String?>
+//        let tapLogIn: Observable<UserData>
+        
+        // Combine
+        let email: AnyPublisher<String?, Error>
+        let password: AnyPublisher<String?, Error>
+        let tapLogin: AnyPublisher<UserData, Error>
     }
     
     struct Output {
-        let enableLogInButton = BehaviorRelay<Bool>(value: false)
-        let errorMessage = PublishRelay<String>()
-        let logInSuccess = PublishRelay<Void>()
+        // Rx
+//        let enableLogInButton = BehaviorRelay<Bool>(value: false)
+//        let errorMessage = PublishRelay<String>()
+//        let logInSuccess = PublishRelay<Void>()
+        
+        // Combine
+        let enableLogInButton = CurrentValueSubject<Bool, Error>.init(false)
+        let errorMessage = PassthroughSubject<String, Error>()
+        let logInSuccess = PassthroughSubject<Void, Error>()
     }
     
     init() { }
@@ -29,29 +46,62 @@ class TestViewModel: ViewModelType {
 
 extension TestViewModel {
     /// CleanArchitecture: - input에 따라 useCase로 연결
-    func transform(from input: Input, disposeBag: DisposeBag) -> Output {
+    // Rx
+//    func transform(from input: Input, disposeBag: DisposeBag) -> Output {
+//        let output = Output()
+////        self.bindOutput(output: output, disposeBag: disposeBag)
+//
+//        Observable.combineLatest(input.email, input.password)
+//            .filter { $0.0 != nil && $0.1 != nil }
+//            .subscribe(onNext: { str in
+//                if str.0!.count > 0 && str.1!.count > 0 {
+//                    output.enableLogInButton.accept(true)
+//                } else {
+//                    output.enableLogInButton.accept(false)
+//                }
+//            })
+//            .disposed(by: disposeBag)
+//
+//        input.tapLogIn.subscribe(onNext: { data in
+//            if data.email == "subin" && data.password == "0000" {
+//                print("로그인 경축")
+//            } else {
+//                print("로그인 실패")
+//            }
+//        })
+//        .disposed(by: disposeBag)
+//
+//        return output
+//    }
+    
+    // Combine
+    func transform(from input: Input) -> Output {
         let output = Output()
-//        self.bindOutput(output: output, disposeBag: disposeBag)
         
-        Observable.combineLatest(input.email, input.password)
+        input.email.combineLatest(input.password)
             .filter { $0.0 != nil && $0.1 != nil }
-            .subscribe(onNext: { str in
+            .sink(receiveCompletion: { event in
+                print("completion \(event)")
+            }, receiveValue: { str in
                 if str.0!.count > 0 && str.1!.count > 0 {
-                    output.enableLogInButton.accept(true)
+                    output.enableLogInButton.send(true)
                 } else {
-                    output.enableLogInButton.accept(false)
+                    output.enableLogInButton.send(false)
                 }
             })
-            .disposed(by: disposeBag)
+            .store(in: &cancelBag)
         
-        input.tapLogIn.subscribe(onNext: { data in
-            if data.email == "subin" && data.password == "0000" {
-                print("로그인 경축")
-            } else {
-                print("로그인 실패")
-            }
-        })
-        .disposed(by: disposeBag)
+        input.tapLogin
+            .sink(receiveCompletion: { event in
+                print("completion \(event)")
+            }, receiveValue: { value in
+                if value.email == "subin" && value.password == "0000" {
+                    print("로그인 경축")
+                } else {
+                    print("로그인 실패")
+                }
+            })
+            .store(in: &cancelBag)
         
         return output
     }

@@ -6,8 +6,9 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
+//import RxSwift
+//import RxCocoa
+import Combine
 
 class ViewController: UIViewController {
     
@@ -19,11 +20,17 @@ class ViewController: UIViewController {
     
     // MARK: - Properties
     
-    private var loginButtonClicked = PublishSubject<UserData>()
-    private var emailEditEventFinished = PublishSubject<String?>()
-    private var pwEditEvendFinished = PublishSubject<String?>()
-    private var disposeBag = DisposeBag()
     var viewModel = TestViewModel()
+    // Rx
+//    private var loginButtonClicked = PublishSubject<UserData>()
+//    private var emailEditEventFinished = PublishSubject<String?>()
+//    private var pwEditEvendFinished = PublishSubject<String?>()
+//    private var disposeBag = DisposeBag()
+    // Combine
+    private var loginButtonClicked = PassthroughSubject<UserData, Error>()
+    private var emailEditEventFinished = PassthroughSubject<String?, Error>()
+    private var pwEditEvendFinished = PassthroughSubject<String?, Error>()
+    private var cancelBag = Set<AnyCancellable>()
     
     // MARK: - Life Cycles
     
@@ -36,7 +43,7 @@ class ViewController: UIViewController {
         setDelegate()
         setButtonState(false)
         bindViewModels()
-        setButtonAction()
+//        setButtonAction()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -65,6 +72,9 @@ class ViewController: UIViewController {
     private func addTargets() {
         self.emailTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
         self.pwTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+        
+        // combine
+        self.loginButton.addTarget(self, action: #selector(setButtonAction), for: .touchUpInside)
     }
     
     private func setButtonState(_ enable: Bool) {
@@ -87,18 +97,26 @@ class ViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    private func setButtonAction() {
-        self.loginButton.rx.tap
-            .bind {
-                let userData = UserData(
-                    email: self.emailTextField.text ?? "-",
-                    password: self.pwTextField.text ?? "--")
-                self.loginButtonClicked.onNext(userData)
-            }
-            .disposed(by: disposeBag)
-    }
+    // RxCocoa
+//    private func setButtonAction() {
+//        self.loginButton.rx.tap
+//            .bind {
+//                let userData = UserData(
+//                    email: self.emailTextField.text ?? "-",
+//                    password: self.pwTextField.text ?? "--")
+//                self.loginButtonClicked.onNext(userData)
+//            }
+//            .disposed(by: disposeBag)
+//    }
     
     // MARK: - @objc
+    
+    @objc func setButtonAction() {
+        let userData = UserData(
+            email: self.emailTextField.text ?? "-",
+            password: self.pwTextField.text ?? "--")
+        self.loginButtonClicked.send(userData)
+    }
     
     @objc func keyboardMoveUp(_ notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
@@ -114,25 +132,46 @@ class ViewController: UIViewController {
     }
     
     @objc func textFieldDidChange(_ sender: Any?) {
-        self.emailEditEventFinished.onNext(self.emailTextField.text)
-        self.pwEditEvendFinished.onNext(self.pwTextField.text)
+        // Rx
+//        self.emailEditEventFinished.onNext(self.emailTextField.text)
+//        self.pwEditEvendFinished.onNext(self.pwTextField.text)
+        
+        // Combine
+        self.emailEditEventFinished.send(self.emailTextField.text)
+        self.pwEditEvendFinished.send(self.pwTextField.text)
     }
 }
 
 extension ViewController {
     private func bindViewModels() {
+        // Rx
+//        let input = TestViewModel.Input(
+//            email: emailEditEventFinished.asObservable(),
+//            password: pwEditEvendFinished.asObservable(),
+//            tapLogIn: loginButtonClicked)
+//        let output = self.viewModel.transform(from: input, disposeBag: disposeBag)
+//
+//        output.enableLogInButton
+//            .subscribe(onNext: { [weak self] state in
+//                guard let self = self else { return }
+//                self.setButtonState(state)
+//            })
+//            .disposed(by: disposeBag)
+        
+        // Combine
         let input = TestViewModel.Input(
-            email: emailEditEventFinished.asObservable(),
-            password: pwEditEvendFinished.asObservable(),
-            tapLogIn: loginButtonClicked)
-        let output = self.viewModel.transform(from: input, disposeBag: disposeBag)
+            email: emailEditEventFinished.eraseToAnyPublisher(),
+            password: pwEditEvendFinished.eraseToAnyPublisher(),
+            tapLogin: loginButtonClicked.eraseToAnyPublisher())
+        let output = self.viewModel.transform(from: input)
         
         output.enableLogInButton
-            .subscribe(onNext: { [weak self] state in
-                guard let self = self else { return }
+            .sink(receiveCompletion: { completion in
+                print("completed")
+            }, receiveValue: { state in
                 self.setButtonState(state)
             })
-            .disposed(by: disposeBag)
+            .store(in: &cancelBag)
     }
 }
 

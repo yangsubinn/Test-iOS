@@ -6,11 +6,15 @@
 //
 
 import Foundation
-import RxSwift
+//import RxSwift
 
 protocol ViewModelType{
-  associatedtype Input
-  associatedtype Output
+    associatedtype Input
+    associatedtype Output
   
-  func transform(from input: Input, disposeBag: DisposeBag) -> Output
+    // Rx
+//  func transform(from input: Input, disposeBag: DisposeBag) -> Output
+    
+    // Combine
+    func transform(from input: Input) -> Output
 }
