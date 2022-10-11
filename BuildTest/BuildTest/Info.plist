@@ -6,8 +6,6 @@
 	<string>$(APP_NAME)</string>
 	<key>AppURL</key>
 	<string>$(APP_URL)</string>
-	<key>CFBundleName</key>
-	<string>$(APP_NAME)</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
