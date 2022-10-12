@@ -24,6 +24,7 @@
 		2B0A74AE28F6A31D00A30B52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B0A74B128F6A31D00A30B52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B0A74B328F6A31D00A30B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B0A74B928F6B10900A30B52 /* Test-APNS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Test-APNS.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +57,7 @@
 		2B0A74A428F6A31C00A30B52 /* Test-APNS */ = {
 			isa = PBXGroup;
 			children = (
+				2B0A74B928F6B10900A30B52 /* Test-APNS.entitlements */,
 				2B0A74A528F6A31C00A30B52 /* AppDelegate.swift */,
 				2B0A74A728F6A31C00A30B52 /* SceneDelegate.swift */,
 				2B0A74A928F6A31C00A30B52 /* ViewController.swift */,
@@ -285,6 +287,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Test-APNS/Test-APNS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6L372B2RJ6;
@@ -313,6 +316,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Test-APNS/Test-APNS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6L372B2RJ6;

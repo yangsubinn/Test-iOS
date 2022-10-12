@@ -13,8 +13,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        UNUserNotificationCenter.current().delegate = self // 푸시알림 권한 설정
+        // APNS 설정
+        UNUserNotificationCenter.current().delegate = self
+        
+        UNUserNotificationCenter.current()
+            .requestAuthorization(options: [.alert, .sound]) { granted, error in
+                // APNS 권한 성공?
+                print("permission granted: \(granted)")
+        }
+        
+        // APNS 등록
+        application.registerForRemoteNotifications()
+        
         return true
+    }
+    
+    /// APNS 등록 실패할 경우 호출되는 메서드
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("Failed to register for notifications: \(error.localizedDescription)")
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let tokenPart = deviceToken.map { data in String(format: "%02.2hhx", data) }
+        let token = tokenPart.joined()
+        print("Device Token:", token)
     }
 
     // MARK: UISceneSession Lifecycle

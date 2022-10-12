@@ -14,7 +14,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.requestNotificationAuthorization()
+//        self.requestNotificationAuthorization()
     }
     
     /// 푸시알림 권한 허용 요청
