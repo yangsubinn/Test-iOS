@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     private let stackView = UIStackView()
     private let webViewButton = UIButton()
+    private let safariButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +25,14 @@ class ViewController: UIViewController {
     private func configUI() {
         webViewButton.setTitle("WKWebView", for: .normal)
         webViewButton.setTitleColor(.blue, for: .normal)
+        
+        safariButton.setTitle("SafariApp", for: .normal)
+        safariButton.setTitleColor(.blue, for: .normal)
     }
     
     private func setStackView() {
         stackView.axis = .vertical
+        stackView.spacing = 20
     }
 
     private func setLayout() {
@@ -38,10 +43,12 @@ class ViewController: UIViewController {
         }
         
         stackView.addArrangedSubview(webViewButton)
+        stackView.addArrangedSubview(safariButton)
     }
 
     private func setAddTarget() {
         webViewButton.addTarget(self, action: #selector(presentWKWebVC), for: .touchUpInside)
+        safariButton.addTarget(self, action: #selector(moveToSafari), for: .touchUpInside)
     }
     
     @objc
@@ -49,6 +56,12 @@ class ViewController: UIViewController {
         guard let WKWebVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WKWebVC") as? WKWebVC else { return }
         
         self.present(WKWebVC, animated: true)
+    }
+    
+    @objc
+    private func moveToSafari() {
+        let url = URL(string: "https://nosy-repair-8a6.notion.site/Web-views-b0673c13e9564ecfbe880481ab74454b")
+        UIApplication.shared.open(url!)
     }
 }
 
