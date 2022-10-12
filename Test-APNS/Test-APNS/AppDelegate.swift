@@ -33,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("Failed to register for notifications: \(error.localizedDescription)")
     }
     
+    /// APNS 등록 성공할 경우 호출되는 메서드
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let tokenPart = deviceToken.map { data in String(format: "%02.2hhx", data) }
         let token = tokenPart.joined()
