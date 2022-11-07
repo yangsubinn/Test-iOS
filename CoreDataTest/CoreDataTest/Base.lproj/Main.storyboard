@@ -117,6 +117,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="actionButton" destination="SiQ-WC-CC9" id="Obo-Sq-6NM"/>
                         <outlet property="memoTextField" destination="fcQ-Ih-tVZ" id="DUM-xq-SLA"/>
                         <outlet property="nameTextField" destination="EPM-2h-gxw" id="ies-3p-ChZ"/>
                         <outlet property="phoneTextField" destination="nyL-uE-J2b" id="31X-x0-zru"/>

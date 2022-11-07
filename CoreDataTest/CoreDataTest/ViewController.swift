@@ -32,15 +32,11 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("viewWillAppear")
         fetchContact()
         phoneTableView.reloadData()
     }
     
     @IBAction func createButtonTapped(_ sender: Any) {
-        // TODO: - 모달로 CreateViewController 띄우기
-//        createContact()
-//        phoneTableView.reloadData()
         presentCreateVC()
     }
     
@@ -112,6 +108,13 @@ class ViewController: UIViewController {
         createVC.modalPresentationStyle = .fullScreen
         self.present(createVC, animated: true)
     }
+    
+    func presentCreateVCWithData(_ data: PhoneBook) {
+        guard let createVC = self.storyboard?.instantiateViewController(withIdentifier: "CreateViewController") as? CreateViewController else { return }
+        createVC.modalPresentationStyle = .fullScreen
+        createVC.data = data
+        self.present(createVC, animated: true)
+    }
 }
 
 extension ViewController: UITableViewDelegate {
@@ -121,13 +124,19 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
+        let update = UIContextualAction(style: .normal, title: "Update") { (UIContextualAction, UIView, success: @escaping (Bool) -> Void) in
+            self.presentCreateVCWithData(self.resultList[indexPath.item])
+            success(true)
+        }
+        update.backgroundColor = .systemBlue
+        
         let delete = UIContextualAction(style: .normal, title: "Delete") { (UIContextualAction, UIView, success: @escaping (Bool) -> Void) in
             self.deleteContactItem(indexPath.item)
             success(true)
         }
         delete.backgroundColor = .systemRed
         
-        return UISwipeActionsConfiguration(actions:[delete])
+        return UISwipeActionsConfiguration(actions:[update, delete])
     }
 }
 
