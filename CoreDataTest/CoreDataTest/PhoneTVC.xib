@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="74" id="KGk-i7-Jjw" customClass="PhoneTVC" customModule="CoreDataTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="322" height="74"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="322" height="74"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zy8-80-HbG">
+                        <rect key="frame" x="16" y="16" width="30" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전화번호" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bZ-U7-5cy">
+                        <rect key="frame" x="245" y="16" width="59" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메모" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwp-qc-5s9">
+                        <rect key="frame" x="15.999999999999998" y="41" width="24.333333333333329" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Zy8-80-HbG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="LbE-h4-yaS"/>
+                    <constraint firstAttribute="trailing" secondItem="7bZ-U7-5cy" secondAttribute="trailing" constant="18" id="QEl-XJ-86A"/>
+                    <constraint firstItem="Zy8-80-HbG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Ycl-O9-mOM"/>
+                    <constraint firstItem="dwp-qc-5s9" firstAttribute="top" secondItem="Zy8-80-HbG" secondAttribute="bottom" constant="4" id="b9Y-ko-1mI"/>
+                    <constraint firstItem="7bZ-U7-5cy" firstAttribute="centerY" secondItem="Zy8-80-HbG" secondAttribute="centerY" id="pbH-4L-UuB"/>
+                    <constraint firstItem="dwp-qc-5s9" firstAttribute="leading" secondItem="Zy8-80-HbG" secondAttribute="leading" id="rvC-bV-C2p"/>
+                    <constraint firstAttribute="bottom" secondItem="dwp-qc-5s9" secondAttribute="bottom" constant="16" id="s1a-ju-3V5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="memoLabel" destination="dwp-qc-5s9" id="xVX-N1-fLE"/>
+                <outlet property="nameLabel" destination="Zy8-80-HbG" id="wmJ-Pt-OPw"/>
+                <outlet property="phoneLabel" destination="7bZ-U7-5cy" id="jtF-vz-fwB"/>
+            </connections>
+            <point key="canvasLocation" x="137.40458015267174" y="30.281690140845072"/>
+        </tableViewCell>
+    </objects>
+</document>
