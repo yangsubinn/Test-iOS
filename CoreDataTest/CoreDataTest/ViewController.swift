@@ -26,13 +26,22 @@ class ViewController: UIViewController {
         // 2. VC에서 생성한 persistentContainter을 가져옴
         self.container = appDelegate.persistentContainer
         
-        fetchContact()
+//        fetchContact()
         registerTableView()
     }
     
-    @IBAction func createButtonTapped(_ sender: Any) {
-        createContact()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillAppear")
+        fetchContact()
         phoneTableView.reloadData()
+    }
+    
+    @IBAction func createButtonTapped(_ sender: Any) {
+        // TODO: - 모달로 CreateViewController 띄우기
+//        createContact()
+//        phoneTableView.reloadData()
+        presentCreateVC()
     }
     
     @IBAction func deleteButtonTapped(_ sender: Any) {
@@ -95,6 +104,13 @@ class ViewController: UIViewController {
         phoneTableView.register(UINib(nibName: "PhoneTVC", bundle: nil), forCellReuseIdentifier: "PhoneTVC")
         phoneTableView.delegate = self
         phoneTableView.dataSource = self
+        phoneTableView.backgroundColor = .white
+    }
+    
+    func presentCreateVC() {
+        guard let createVC = self.storyboard?.instantiateViewController(withIdentifier: "CreateViewController") as? CreateViewController else { return }
+        createVC.modalPresentationStyle = .fullScreen
+        self.present(createVC, animated: true)
     }
 }
 

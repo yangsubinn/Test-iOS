@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2BA1C5342918D76400845340 /* PhoneTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1C5322918D76400845340 /* PhoneTVC.swift */; };
 		2BA1C5352918D76400845340 /* PhoneTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BA1C5332918D76400845340 /* PhoneTVC.xib */; };
+		2BA1C5372918E82300845340 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1C5362918E82300845340 /* CreateViewController.swift */; };
 		2BF103E9291552E600FB53E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF103E8291552E600FB53E1 /* AppDelegate.swift */; };
 		2BF103EB291552E600FB53E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF103EA291552E600FB53E1 /* SceneDelegate.swift */; };
 		2BF103ED291552E600FB53E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF103EC291552E600FB53E1 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		2BA1C5322918D76400845340 /* PhoneTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTVC.swift; sourceTree = "<group>"; };
 		2BA1C5332918D76400845340 /* PhoneTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneTVC.xib; sourceTree = "<group>"; };
+		2BA1C5362918E82300845340 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		2BF103E5291552E600FB53E1 /* CoreDataTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BF103E8291552E600FB53E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BF103EA291552E600FB53E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				2BF103EA291552E600FB53E1 /* SceneDelegate.swift */,
 				2BF103EC291552E600FB53E1 /* ViewController.swift */,
 				2BF103EE291552E600FB53E1 /* Main.storyboard */,
+				2BA1C5362918E82300845340 /* CreateViewController.swift */,
 				2BA1C5322918D76400845340 /* PhoneTVC.swift */,
 				2BA1C5332918D76400845340 /* PhoneTVC.xib */,
 				2BF103F4291552E800FB53E1 /* Assets.xcassets */,
@@ -154,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BA1C5372918E82300845340 /* CreateViewController.swift in Sources */,
 				2BF103F3291552E600FB53E1 /* Model.xcdatamodeld in Sources */,
 				2BA1C5342918D76400845340 /* PhoneTVC.swift in Sources */,
 				2BF103ED291552E600FB53E1 /* ViewController.swift in Sources */,
