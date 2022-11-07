@@ -36,7 +36,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func deleteButtonTapped(_ sender: Any) {
-        
+        deleteAllContact()
+        phoneTableView.reloadData()
     }
     
     func fetchContact() {
@@ -63,6 +64,18 @@ class ViewController: UIViewController {
         
         do {
             try self.container.viewContext.save()
+            fetchContact()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func deleteAllContact() {
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = PhoneBook.fetchRequest()
+        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        do {
+            try self.container.viewContext.execute(batchDeleteRequest)
             fetchContact()
         } catch {
             print(error.localizedDescription)
