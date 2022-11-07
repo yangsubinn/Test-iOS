@@ -81,6 +81,15 @@ class ViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
+    
+    func deleteContactItem(_ index: Int) {
+        let viewContext = appDelegate.persistentContainer.viewContext
+        viewContext.delete(resultList[index])
+        
+        resultList.remove(at: index)
+        phoneTableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
+        appDelegate.saveContext()
+    }
 
     func registerTableView() {
         phoneTableView.register(UINib(nibName: "PhoneTVC", bundle: nil), forCellReuseIdentifier: "PhoneTVC")
@@ -92,6 +101,17 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let delete = UIContextualAction(style: .normal, title: "Delete") { (UIContextualAction, UIView, success: @escaping (Bool) -> Void) in
+            self.deleteContactItem(indexPath.item)
+            success(true)
+        }
+        delete.backgroundColor = .systemRed
+        
+        return UISwipeActionsConfiguration(actions:[delete])
     }
 }
 
