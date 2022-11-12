@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct CurrentWeatherService {
     static let shared = CurrentWeatherService()
     

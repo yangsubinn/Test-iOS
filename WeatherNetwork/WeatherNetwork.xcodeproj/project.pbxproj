@@ -13,6 +13,8 @@
 		2B5D2C41291A981B00E8F75E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5D2C3F291A981B00E8F75E /* Main.storyboard */; };
 		2B5D2C43291A981D00E8F75E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B5D2C42291A981D00E8F75E /* Assets.xcassets */; };
 		2B5D2C46291A981D00E8F75E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5D2C44291A981D00E8F75E /* LaunchScreen.storyboard */; };
+		2B769B79291D5CBB0050E930 /* CurrentWeatherAlamofireService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B769B78291D5CBB0050E930 /* CurrentWeatherAlamofireService.swift */; };
+		2B769B7B291D626C0050E930 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B769B7A291D626C0050E930 /* NetworkResult.swift */; };
 		2BB5ACCE291C1498000EED45 /* CurrentWeatherEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB5ACCD291C1498000EED45 /* CurrentWeatherEntity.swift */; };
 		2BB5ACD0291C14E9000EED45 /* CurrentWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB5ACCF291C14E9000EED45 /* CurrentWeatherService.swift */; };
 		61C185A25806C19348085B9E /* Pods_WeatherNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA1A6243D31187C97F32AAB /* Pods_WeatherNetwork.framework */; };
@@ -28,6 +30,8 @@
 		2B5D2C42291A981D00E8F75E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B5D2C45291A981D00E8F75E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B5D2C47291A981D00E8F75E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B769B78291D5CBB0050E930 /* CurrentWeatherAlamofireService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherAlamofireService.swift; sourceTree = "<group>"; };
+		2B769B7A291D626C0050E930 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		2BB5ACCD291C1498000EED45 /* CurrentWeatherEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherEntity.swift; sourceTree = "<group>"; };
 		2BB5ACCF291C14E9000EED45 /* CurrentWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherService.swift; sourceTree = "<group>"; };
 		8D7333100F2E17049BDA5E8C /* Pods-WeatherNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherNetwork.release.xcconfig"; path = "Target Support Files/Pods-WeatherNetwork/Pods-WeatherNetwork.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 				2B5D2C47291A981D00E8F75E /* Info.plist */,
 				2BB5ACCD291C1498000EED45 /* CurrentWeatherEntity.swift */,
 				2BB5ACCF291C14E9000EED45 /* CurrentWeatherService.swift */,
+				2B769B78291D5CBB0050E930 /* CurrentWeatherAlamofireService.swift */,
+				2B769B7A291D626C0050E930 /* NetworkResult.swift */,
 			);
 			path = WeatherNetwork;
 			sourceTree = "<group>";
@@ -217,6 +223,8 @@
 				2B5D2C3E291A981B00E8F75E /* ViewController.swift in Sources */,
 				2B5D2C3A291A981B00E8F75E /* AppDelegate.swift in Sources */,
 				2B5D2C3C291A981B00E8F75E /* SceneDelegate.swift in Sources */,
+				2B769B79291D5CBB0050E930 /* CurrentWeatherAlamofireService.swift in Sources */,
+				2B769B7B291D626C0050E930 /* NetworkResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

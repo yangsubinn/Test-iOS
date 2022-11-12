@@ -7,6 +7,7 @@
 
 import UIKit
 
+import Alamofire
 import SnapKit
 
 class ViewController: UIViewController {
@@ -21,7 +22,8 @@ class ViewController: UIViewController {
         
         setUI()
         setLayout()
-        getCurrentWeather()
+//        getCurrentWeather()
+        getCurrentWeatherWithAlamofire()
     }
 
     private func setUI() {
@@ -72,6 +74,30 @@ extension ViewController {
                 }
             case .failure(let err):
                 print("❌ getCurrentWeather - ",err)
+            }
+        }
+    }
+    
+    func getCurrentWeatherWithAlamofire() {
+        CurrentWeatherAlamofireService.shared.fetchCurrentWeatherData { response in
+            switch response {
+            case .success(let data):
+                print("✅ getCurrentWeatherWithAlamofire - ", data)
+                if let data = data as? CurrentWeatherEntity {
+                    self.currentWeatherData = data
+                    DispatchQueue.main.async {
+                        let tempData = data.main
+                        self.setData(current: tempData.temp, max: tempData.tempMax, min: tempData.tempMin)
+                    }
+                }
+            case .requestErr(let err):
+                print("requestErr - \(err)")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
             }
         }
     }
