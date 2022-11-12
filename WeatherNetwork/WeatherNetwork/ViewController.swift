@@ -23,7 +23,8 @@ class ViewController: UIViewController {
         setUI()
         setLayout()
 //        getCurrentWeather()
-        getCurrentWeatherWithAlamofire()
+//        getCurrentWeatherWithAlamofire()
+        getCurrentWeatherWithMoya()
     }
 
     private func setUI() {
@@ -59,6 +60,7 @@ class ViewController: UIViewController {
 // MARK: - Network
 
 extension ViewController {
+    // MARK: - URLSession
     func getCurrentWeather() {
         CurrentWeatherService.shared.fetchCurrentWeatherData { response in
             switch response {
@@ -78,11 +80,37 @@ extension ViewController {
         }
     }
     
+    // MARK: - Alamofire
     func getCurrentWeatherWithAlamofire() {
         CurrentWeatherAlamofireService.shared.fetchCurrentWeatherData { response in
             switch response {
             case .success(let data):
                 print("✅ getCurrentWeatherWithAlamofire - ", data)
+                if let data = data as? CurrentWeatherEntity {
+                    self.currentWeatherData = data
+                    DispatchQueue.main.async {
+                        let tempData = data.main
+                        self.setData(current: tempData.temp, max: tempData.tempMax, min: tempData.tempMin)
+                    }
+                }
+            case .requestErr(let err):
+                print("requestErr - \(err)")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
+    
+    // MARK: - Moya
+    func getCurrentWeatherWithMoya() {
+        CurrentWeatherMoyaAPI().getCurrentWeather { response in
+            switch response {
+            case .success(let data):
+                print("✅ getCurrentWeatherWithMoya - ", data)
                 if let data = data as? CurrentWeatherEntity {
                     self.currentWeatherData = data
                     DispatchQueue.main.async {

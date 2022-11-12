@@ -12,25 +12,19 @@ import Alamofire
 struct CurrentWeatherAlamofireService {
     static let shared = CurrentWeatherAlamofireService()
     
-    let urlString = "https://api.openweathermap.org/data/2.5/weather"
-    let appid = "118e38c88f78ef1eb986616b22f12fec"
-    let lat = "37.5666791"
-    let lon = "126.9782914"
-    let units = "metric"
-    
     func fetchCurrentWeatherData(completion: @escaping (NetworkResult<Any>) -> Void) {
         
         let parameters: Parameters = [
-            "appid": appid,
-            "lat": lat,
-            "lon": lon,
-            "units": units
+            "appid": Const.appid,
+            "lat": Const.lat,
+            "lon": Const.lon,
+            "units": Const.units
         ]
         
-        let dataRequest = AF.request(urlString,
+        let dataRequest = AF.request(Const.urlString,
                                      method: .get,
                                      parameters: parameters,
-                                     encoding: URLEncoding(destination: .queryString))
+                                     encoding: URLEncoding.queryString)
         
         dataRequest.response { data in
             switch data.result {

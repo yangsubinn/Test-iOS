@@ -10,21 +10,16 @@ import Foundation
 struct CurrentWeatherService {
     static let shared = CurrentWeatherService()
     
-    // 1. create url
-    let urlString = "https://api.openweathermap.org/data/2.5/weather"
-    let appid = "118e38c88f78ef1eb986616b22f12fec"
-    let lat = "37.5666791"
-    let lon = "126.9782914"
-    let units = "metric"
+    // 1. create url -> Constant
     
     func fetchCurrentWeatherData(completion: @escaping (Result<Any, Error>) -> ()) {
-        guard var urlComponents = URLComponents(string: urlString) else { return }
+        guard var urlComponents = URLComponents(string: Const.urlString) else { return }
         
         let query: [String: String] = [
-            "appid": appid,
-            "lat": lat,
-            "lon": lon,
-            "units": units
+            "appid": Const.appid,
+            "lat": Const.lat,
+            "lon": Const.lon,
+            "units": Const.units
         ]
         
         let queryItemArray = query.map {

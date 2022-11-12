@@ -13,6 +13,9 @@
 		2B5D2C41291A981B00E8F75E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5D2C3F291A981B00E8F75E /* Main.storyboard */; };
 		2B5D2C43291A981D00E8F75E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B5D2C42291A981D00E8F75E /* Assets.xcassets */; };
 		2B5D2C46291A981D00E8F75E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5D2C44291A981D00E8F75E /* LaunchScreen.storyboard */; };
+		2B5FB0BC291FCBAE007C4D08 /* CurrentWeatherMoyaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5FB0BB291FCBAE007C4D08 /* CurrentWeatherMoyaService.swift */; };
+		2B5FB0BE291FCBEF007C4D08 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5FB0BD291FCBEF007C4D08 /* Const.swift */; };
+		2B5FB0C0291FD151007C4D08 /* CurrentWeatherMoyaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5FB0BF291FD151007C4D08 /* CurrentWeatherMoyaAPI.swift */; };
 		2B769B79291D5CBB0050E930 /* CurrentWeatherAlamofireService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B769B78291D5CBB0050E930 /* CurrentWeatherAlamofireService.swift */; };
 		2B769B7B291D626C0050E930 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B769B7A291D626C0050E930 /* NetworkResult.swift */; };
 		2BB5ACCE291C1498000EED45 /* CurrentWeatherEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB5ACCD291C1498000EED45 /* CurrentWeatherEntity.swift */; };
@@ -30,6 +33,9 @@
 		2B5D2C42291A981D00E8F75E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B5D2C45291A981D00E8F75E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B5D2C47291A981D00E8F75E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B5FB0BB291FCBAE007C4D08 /* CurrentWeatherMoyaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherMoyaService.swift; sourceTree = "<group>"; };
+		2B5FB0BD291FCBEF007C4D08 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		2B5FB0BF291FD151007C4D08 /* CurrentWeatherMoyaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherMoyaAPI.swift; sourceTree = "<group>"; };
 		2B769B78291D5CBB0050E930 /* CurrentWeatherAlamofireService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherAlamofireService.swift; sourceTree = "<group>"; };
 		2B769B7A291D626C0050E930 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		2BB5ACCD291C1498000EED45 /* CurrentWeatherEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherEntity.swift; sourceTree = "<group>"; };
@@ -80,6 +86,9 @@
 				2B5D2C47291A981D00E8F75E /* Info.plist */,
 				2BB5ACCD291C1498000EED45 /* CurrentWeatherEntity.swift */,
 				2BB5ACCF291C14E9000EED45 /* CurrentWeatherService.swift */,
+				2B5FB0BB291FCBAE007C4D08 /* CurrentWeatherMoyaService.swift */,
+				2B5FB0BF291FD151007C4D08 /* CurrentWeatherMoyaAPI.swift */,
+				2B5FB0BD291FCBEF007C4D08 /* Const.swift */,
 				2B769B78291D5CBB0050E930 /* CurrentWeatherAlamofireService.swift */,
 				2B769B7A291D626C0050E930 /* NetworkResult.swift */,
 			);
@@ -220,8 +229,11 @@
 			files = (
 				2BB5ACD0291C14E9000EED45 /* CurrentWeatherService.swift in Sources */,
 				2BB5ACCE291C1498000EED45 /* CurrentWeatherEntity.swift in Sources */,
+				2B5FB0BE291FCBEF007C4D08 /* Const.swift in Sources */,
 				2B5D2C3E291A981B00E8F75E /* ViewController.swift in Sources */,
 				2B5D2C3A291A981B00E8F75E /* AppDelegate.swift in Sources */,
+				2B5FB0C0291FD151007C4D08 /* CurrentWeatherMoyaAPI.swift in Sources */,
+				2B5FB0BC291FCBAE007C4D08 /* CurrentWeatherMoyaService.swift in Sources */,
 				2B5D2C3C291A981B00E8F75E /* SceneDelegate.swift in Sources */,
 				2B769B79291D5CBB0050E930 /* CurrentWeatherAlamofireService.swift in Sources */,
 				2B769B7B291D626C0050E930 /* NetworkResult.swift in Sources */,
