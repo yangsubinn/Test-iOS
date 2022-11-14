@@ -9,6 +9,12 @@ import Foundation
 
 import Moya
 
+/**
+ 1. enum형 Service에 사용할 api case 추가
+ 2. Service가 TargetType을 상속받도록 한뒤, 그 안의 내용을 적절히 추가
+ 3. API에서 Service의 case에 접근하여 해당 case의 요소를 갖고 request, response 처리
+ */
+
 enum CurrentWeatherMoyaService {
     case getCurrentWeather(lat: String, lon: String, units: String)
 }

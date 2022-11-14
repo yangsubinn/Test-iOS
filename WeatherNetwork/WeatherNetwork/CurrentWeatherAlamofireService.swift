@@ -9,11 +9,17 @@ import Foundation
 
 import Alamofire
 
+/**
+ 1. Send Request
+ 2. Handle Response
+ */
+
 struct CurrentWeatherAlamofireService {
     static let shared = CurrentWeatherAlamofireService()
     
     func fetchCurrentWeatherData(completion: @escaping (NetworkResult<Any>) -> Void) {
         
+        // parameters 생성
         let parameters: Parameters = [
             "appid": Const.appid,
             "lat": Const.lat,
@@ -21,11 +27,15 @@ struct CurrentWeatherAlamofireService {
             "units": Const.units
         ]
         
+        // 1. Send Request
+        // URLSession과 달리 직접 URLSession을 생성하고 Task를 부여하지 않음
+        // request 안에 url, methoe, parameters, encoding type 등 설정
         let dataRequest = AF.request(Const.urlString,
                                      method: .get,
                                      parameters: parameters,
                                      encoding: URLEncoding.queryString)
         
+        // 2. Handle Response
         dataRequest.response { data in
             switch data.result {
             case .success(_):

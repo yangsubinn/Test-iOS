@@ -22,9 +22,9 @@ class ViewController: UIViewController {
         
         setUI()
         setLayout()
-//        getCurrentWeather()
+        getCurrentWeather()
 //        getCurrentWeatherWithAlamofire()
-        getCurrentWeatherWithMoya()
+//        getCurrentWeatherWithMoya()
     }
 
     private func setUI() {
@@ -74,9 +74,10 @@ extension ViewController {
                         self.setData(current: tempData.temp, max: tempData.tempMax, min: tempData.tempMin)
                     }
                 }
-            case .failure(let err):
-                print("❌ getCurrentWeather - ",err)
+            default:
+                print("❌ getCurrentWeather - ", response)
             }
+            
         }
     }
     

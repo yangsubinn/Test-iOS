@@ -7,14 +7,22 @@
 
 import Foundation
 
+/**
+ 1. Create URL
+ 2. Create URLSession
+ 3. Give URLSession Task
+ 4. Start Task
+ */
+
 struct CurrentWeatherService {
     static let shared = CurrentWeatherService()
     
-    // 1. create url -> Constant
-    
-    func fetchCurrentWeatherData(completion: @escaping (Result<Any, Error>) -> ()) {
+    func fetchCurrentWeatherData(completion: @escaping (NetworkResult<Any>) -> ()) {
+        // 1. Create URL
+        // URLComponents로 생성하여 query parameter 추가
         guard var urlComponents = URLComponents(string: Const.urlString) else { return }
         
+        // query parameter
         let query: [String: String] = [
             "appid": Const.appid,
             "lat": Const.lat,
@@ -22,13 +30,18 @@ struct CurrentWeatherService {
             "units": Const.units
         ]
         
+        // parameter 하나씩 URLQueryItem에 추가
         let queryItemArray = query.map {
             URLQueryItem(name: $0.key, value: $0.value)
         }
         urlComponents.queryItems = queryItemArray
         
+        // 요청 URL
         guard let requestURL = urlComponents.url else { return }
         
+        // 2. Create URLSession
+        // 3. Give URLSession Task
+        // Session 생성 및 Task 부여
         let session = URLSession(configuration: .default)
         let dataTask = session.dataTask(with: requestURL) { (data, response, error) in
             if error != nil {
@@ -57,53 +70,8 @@ struct CurrentWeatherService {
                 
             }
         }
-        dataTask.resume()
         
-//        if let url = URL(string: urlString) {
-//            // 2. create urlsession
-//            // URLSession 유형: default(기본), ephemeral(쿠키나 캐시 X), background(백그라운드에서 다운로드/업로드)
-//            let session = URLSession(configuration: .default)
-//
-//            var requestURL = URLRequest(url: url)
-//            // header
-//            requestURL.setValue(appid, forHTTPHeaderField: "appid")
-//            requestURL.setValue(lat, forHTTPHeaderField: "lat")
-//            requestURL.setValue(lon, forHTTPHeaderField: "lon")
-//            requestURL.setValue(units, forHTTPHeaderField: "units")
-//
-//            // 3. give urlsession task
-//            // SessionTask 작업 유형: dataTask, uploadTask, downloadTask
-//            let dataTask = session.dataTask(with: requestURL) { (data, response, error) in
-//                if error != nil {
-//                    print(error!)
-//                    return
-//                }
-//
-//                if let safeData = data {
-//                    do {
-//                        print("safeData", safeData)
-//                        let decodedData = try JSONDecoder().decode(CurrentWeatherEntity.self, from: safeData)
-//                        print("decodedData", decodedData)
-//                        completion(.success(decodedData))
-//                    } catch let DecodingError.dataCorrupted(context) {
-//                        print(context)
-//                    } catch let DecodingError.keyNotFound(key, context) {
-//                        print("Key '\(key)' not found:", context.debugDescription)
-//                        print("codingPath:", context.codingPath)
-//                    } catch let DecodingError.valueNotFound(value, context) {
-//                        print("Value '\(value)' not found:", context.debugDescription)
-//                        print("codingPath:", context.codingPath)
-//                    } catch let DecodingError.typeMismatch(type, context)  {
-//                        print("Type '\(type)' mismatch:", context.debugDescription)
-//                        print("codingPath:", context.codingPath)
-//                    } catch {
-//                        print("error: ", error)
-//                    }
-//
-//                }
-//            }
-//            // 4. start task
-//            dataTask.resume()
-//        }
+        // 4. Start Task
+        dataTask.resume()
     }
 }
