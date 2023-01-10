@@ -18,17 +18,18 @@ class QRCodeView: UIView {
     private var imageView = UIImageView()
     
     // MARK: - Initilaize
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(imageView)
+        setLayout()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    private func setLayout() {
+        addSubview(imageView)
         
         imageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
