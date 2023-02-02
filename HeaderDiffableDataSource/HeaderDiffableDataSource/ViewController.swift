@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     }
     
     private func setUI() {
-        self.view.backgroundColor = .white.withAlphaComponent(0.8)
+        self.view.backgroundColor = .white
         
         collectionView.backgroundColor = .clear
         addButton.setTitle("추가", for: .normal)

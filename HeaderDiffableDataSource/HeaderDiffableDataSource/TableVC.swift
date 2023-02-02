@@ -14,6 +14,7 @@ class TableVC: UIViewController {
     private var awayData: [Memo] = []
     private var index = 0
     private let addButton = UIButton()
+    private let collectionViewButton = UIButton()
     private var diffableeDatasource: UITableViewDiffableDataSource<Section, Memo>!
     private let tableView = UITableView(frame: .zero, style: .plain)
 
@@ -30,17 +31,26 @@ class TableVC: UIViewController {
         
         tableView.sectionHeaderTopPadding = 11
         
+        collectionViewButton.setTitle("CollectionView로 가보기", for: .normal)
+        collectionViewButton.setTitleColor(.systemBlue, for: .normal)
+        collectionViewButton.addTarget(self, action: #selector(tappedCollectionViewButton), for: .touchUpInside)
+        
         addButton.setTitle("추가", for: .normal)
-        addButton.setTitleColor(.black, for: .normal)
+        addButton.setTitleColor(.systemBlue, for: .normal)
         addButton.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
     }
 
     private func setLayout() {
-        [tableView, addButton].forEach { view.addSubview($0) }
+        [tableView, addButton, collectionViewButton].forEach { view.addSubview($0) }
         
         addButton.snp.makeConstraints { make in
             make.trailing.equalToSuperview().inset(16)
             make.top.equalTo(view.safeAreaLayoutGuide).inset(20)
+        }
+        
+        collectionViewButton.snp.makeConstraints { make in
+            make.leading.equalToSuperview().inset(16)
+            make.top.equalTo(addButton.snp.top)
         }
         
         tableView.snp.makeConstraints { make in
@@ -95,6 +105,12 @@ class TableVC: UIViewController {
         }
         
         applySnapshot()
+    }
+    
+    @objc
+    private func tappedCollectionViewButton() {
+        let collectionVC = ViewController()
+        self.present(collectionVC, animated: true)
     }
 }
 
