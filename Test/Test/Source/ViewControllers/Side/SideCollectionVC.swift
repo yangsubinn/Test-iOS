@@ -12,7 +12,8 @@ import SnapKit
 class SideCollectionVC: UIViewController {
     
     enum Section: CaseIterable {
-        case main
+        case first
+        case second
     }
     
     // MARK: - Properties
@@ -55,7 +56,7 @@ class SideCollectionVC: UIViewController {
     /// collectionView 세팅
     private func setupCollectionView() {
         collectionView.backgroundColor = .clear
-        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.showsHorizontalScrollIndicator = true
         collectionView.decelerationRate = .fast
         collectionView.isPagingEnabled = false
         collectionView.register(SideCVC.self, forCellWithReuseIdentifier: SideCVC.identifier)
@@ -79,7 +80,7 @@ class SideCollectionVC: UIViewController {
         let spacing = (UIScreen.main.bounds.width - cellWidth) / 2
 
         collectionView.collectionViewLayout = collectionViewFlowLayout
-        collectionViewFlowLayout.scrollDirection = .horizontal
+        collectionViewFlowLayout.scrollDirection = .vertical
         collectionViewFlowLayout.itemSize = CGSize(width: cellWidth, height: cellHeight)
         collectionViewFlowLayout.sectionInset = UIEdgeInsets(top: 0, left: spacing, bottom: 0, right: spacing)
     }
@@ -88,15 +89,17 @@ class SideCollectionVC: UIViewController {
         view.addSubview(collectionView)
         view.addSubview(appendButton)
         
-        collectionView.snp.makeConstraints { make in
-            make.center.equalToSuperview()
-            make.leading.trailing.equalToSuperview()
-            make.height.equalTo(400)
-        }
-        
         appendButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(view.safeAreaLayoutGuide).inset(30)
+        }
+        
+        collectionView.snp.makeConstraints { make in
+//            make.center.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
+            make.top.equalTo(appendButton.snp.bottom)
+            make.bottom.equalToSuperview()
+//            make.height.equalTo(400)
         }
     }
     
@@ -115,7 +118,7 @@ class SideCollectionVC: UIViewController {
     // DiffableDataSourceSnapshot
     private func setData(arr: [UIColor]) {
         var snapshot = NSDiffableDataSourceSnapshot<Section, UIColor>()
-        snapshot.appendSections([.main])
+        snapshot.appendSections([.first, .second])
         snapshot.appendItems(arr)
         self.diffableDatasource.apply(snapshot, animatingDifferences: true)
     }
@@ -156,22 +159,33 @@ extension SideCollectionVC: UICollectionViewDelegate {
         
         guard let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
 
-        let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing
+//        let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing
+        let cellHeightIncludingSpacing = layout.itemSize.height + layout.minimumLineSpacing
         
         var offset = targetContentOffset.pointee
-        let index = (offset.x + scrollView.contentInset.left) / cellWidthIncludingSpacing
+//        let index = (offset.x + scrollView.contentInset.left) / cellWidthIncludingSpacing
+        let index = (offset.y + scrollView.contentInset.top) / cellHeightIncludingSpacing
         var roundedIndex = round(index)
         
-        if scrollView.contentOffset.x > targetContentOffset.pointee.x {
+//        if scrollView.contentOffset.x > targetContentOffset.pointee.x {
+//            roundedIndex = floor(index)
+//        } else if scrollView.contentOffset.x < targetContentOffset.pointee.x {
+//            roundedIndex = ceil(index)
+//        } else {
+//            roundedIndex = round(index)
+//        }
+        
+        if scrollView.contentOffset.y > targetContentOffset.pointee.y {
             roundedIndex = floor(index)
-        } else if scrollView.contentOffset.x < targetContentOffset.pointee.x {
+        } else if scrollView.contentOffset.y < targetContentOffset.pointee.y {
             roundedIndex = ceil(index)
         } else {
             roundedIndex = round(index)
         }
         
-        offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left,
-                         y: -scrollView.contentInset.top)
+//        offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left,
+//                         y: -scrollView.contentInset.top)
+        offset = CGPoint(x: -scrollView.contentInset.left, y: roundedIndex * cellHeightIncludingSpacing - scrollView.contentInset.top)
         targetContentOffset.pointee = offset
     }
 }
