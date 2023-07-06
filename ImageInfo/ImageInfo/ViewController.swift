@@ -8,16 +8,15 @@
 import UIKit
 import SnapKit
 import RxSwift
+import RxCocoa
 import PhotosUI
 import MapKit
 import CoreLocation
-//import Photos
 
 class ViewController: UIViewController {
     
     // MARK: - Properties
     
-//    var viewModel: MainViewModel!
     private let disposeBag = DisposeBag()
     
     // MARK: - UI Components
@@ -35,7 +34,6 @@ class ViewController: UIViewController {
         setUI()
         setLayout()
         bindButton()
-        bindViewModel()
     }
     
     // MARK: - Methods
@@ -48,14 +46,7 @@ class ViewController: UIViewController {
             }.disposed(by: disposeBag)
     }
     
-    private func bindViewModel() {
-        
-    }
-    
     private func requestAlbum() {
-//        imagePicker.sourceType = .photoLibrary
-//        present(imagePicker, animated: true)
-        
         var configuration = PHPickerConfiguration(photoLibrary: PHPhotoLibrary.shared())
         configuration.selectionLimit = 0
         configuration.filter = .any(of: [.images, .videos])
@@ -65,23 +56,12 @@ class ViewController: UIViewController {
         self.present(picker, animated: true)
     }
     
-//    private func requestAlbumAuthorization(completion: @escaping (Bool) -> Void) {
-//        if #available(iOS 14.0, *) {
-//            PHPhotoLibrary.requestAuthorization(for: .readWrite) { status in
-//                completion([.authorized, .limited].contains(where: { $0 == status }))
-//            }
-//        } else {
-//            PHPhotoLibrary.requestAuthorization { status in
-//                completion(status == .authorized)
-//            }
-//        }
-//    }
-    
     // MARK: - UI & Layout
     
     private func setUI() {
-//        imagePicker.delegate = self
         imageView.backgroundColor = .gray
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         
         dateLabel.textColor = .darkGray
         dateLabel.text = "date"
@@ -164,40 +144,4 @@ extension ViewController: PHPickerViewControllerDelegate {
         }
     }
 }
-
-//extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-//            self.imageView.image = image
-//        }
-//        if let asset = info[.phAsset] as? PHAsset {
-//            print("asset: \(asset)")
-//            if let date = asset.creationDate, let location = asset.location {
-//                dateLabel.text = "\(date)"
-//                print("🍫 date: \(date)")
-//                print("📍 location: \(location)")
-//            }
-//        }
-//        dismiss(animated: true)
-//    }
-//
-//    func getAssetAfterStoreImage(image:UIImage,completion:@escaping (PHAsset) -> Void){
-//
-//        PHPhotoLibrary.shared().performChanges({
-//
-//            PHAssetChangeRequest.creationRequestForAsset(from: image)
-//        }) { saved, error in
-//
-//            if saved {
-//                let fetchOptions = PHFetchOptions()
-//                fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
-//
-//                // After uploading we fetch the PHAsset for most recent video and then get its current location url
-//                if let fetchResult = PHAsset.fetchAssets(with:.image, options: fetchOptions).lastObject{
-//                    completion(fetchResult)
-//                }
-//            }
-//        }
-//    }
-//}
 
