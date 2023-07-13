@@ -13,6 +13,7 @@
 		2B706E462A604FCF004F352F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B706E452A604FCF004F352F /* Preview Assets.xcassets */; };
 		2B706E4D2A60516B004F352F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B706E4C2A60516B004F352F /* AppDelegate.swift */; };
 		2B706E4F2A6052E2004F352F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B706E4E2A6052E2004F352F /* SceneDelegate.swift */; };
+		2B706E522A60587E004F352F /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 2B706E512A60587E004F352F /* KakaoSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		2B706E452A604FCF004F352F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2B706E4C2A60516B004F352F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B706E4E2A6052E2004F352F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2B706E532A605A2E004F352F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B706E522A60587E004F352F /* KakaoSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +58,7 @@
 		2B706E3D2A604FCC004F352F /* KakaoShareAPI */ = {
 			isa = PBXGroup;
 			children = (
+				2B706E532A605A2E004F352F /* Info.plist */,
 				2B706E3E2A604FCC004F352F /* KakaoShareAPIApp.swift */,
 				2B706E4E2A6052E2004F352F /* SceneDelegate.swift */,
 				2B706E4C2A60516B004F352F /* AppDelegate.swift */,
@@ -89,6 +93,9 @@
 			dependencies = (
 			);
 			name = KakaoShareAPI;
+			packageProductDependencies = (
+				2B706E512A60587E004F352F /* KakaoSDK */,
+			);
 			productName = KakaoShareAPI;
 			productReference = 2B706E3B2A604FCC004F352F /* KakaoShareAPI.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +124,9 @@
 				Base,
 			);
 			mainGroup = 2B706E322A604FCC004F352F;
+			packageReferences = (
+				2B706E502A60587E004F352F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+			);
 			productRefGroup = 2B706E3C2A604FCC004F352F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -278,6 +288,7 @@
 				DEVELOPMENT_TEAM = 6L372B2RJ6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KakaoShareAPI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -307,6 +318,7 @@
 				DEVELOPMENT_TEAM = 6L372B2RJ6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KakaoShareAPI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -347,6 +359,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2B706E502A60587E004F352F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2B706E512A60587E004F352F /* KakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B706E502A60587E004F352F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2B706E332A604FCC004F352F /* Project object */;
 }
