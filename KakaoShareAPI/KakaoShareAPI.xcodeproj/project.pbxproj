@@ -14,6 +14,11 @@
 		2B706E4D2A60516B004F352F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B706E4C2A60516B004F352F /* AppDelegate.swift */; };
 		2B706E4F2A6052E2004F352F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B706E4E2A6052E2004F352F /* SceneDelegate.swift */; };
 		2B706E522A60587E004F352F /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 2B706E512A60587E004F352F /* KakaoSDK */; };
+		2BF967E82A6592A700D2A59E /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF967E72A6592A700D2A59E /* FirstView.swift */; };
+		2BF967EA2A6593DA00D2A59E /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF967E92A6593DA00D2A59E /* SecondView.swift */; };
+		2BF967EC2A6594A500D2A59E /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF967EB2A6594A500D2A59E /* ModalView.swift */; };
+		2BF967EE2A6595C700D2A59E /* ModalFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF967ED2A6595C700D2A59E /* ModalFirstView.swift */; };
+		2BF967F02A6597F800D2A59E /* ModalSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF967EF2A6597F800D2A59E /* ModalSecondView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +29,12 @@
 		2B706E452A604FCF004F352F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2B706E4C2A60516B004F352F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B706E4E2A6052E2004F352F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2B706E532A605A2E004F352F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2B706E532A605A2E004F352F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BF967E72A6592A700D2A59E /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		2BF967E92A6593DA00D2A59E /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		2BF967EB2A6594A500D2A59E /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		2BF967ED2A6595C700D2A59E /* ModalFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalFirstView.swift; sourceTree = "<group>"; };
+		2BF967EF2A6597F800D2A59E /* ModalSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalSecondView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +68,9 @@
 		2B706E3D2A604FCC004F352F /* KakaoShareAPI */ = {
 			isa = PBXGroup;
 			children = (
-				2B706E532A605A2E004F352F /* Info.plist */,
-				2B706E3E2A604FCC004F352F /* KakaoShareAPIApp.swift */,
-				2B706E4E2A6052E2004F352F /* SceneDelegate.swift */,
-				2B706E4C2A60516B004F352F /* AppDelegate.swift */,
-				2B706E402A604FCC004F352F /* ContentView.swift */,
+				2BF967F32A65989500D2A59E /* App */,
+				2BF967F22A65988100D2A59E /* NavigationView */,
+				2BF967F12A65987000D2A59E /* ModalView */,
 				2B706E422A604FCF004F352F /* Assets.xcassets */,
 				2B706E442A604FCF004F352F /* Preview Content */,
 			);
@@ -75,6 +83,37 @@
 				2B706E452A604FCF004F352F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2BF967F12A65987000D2A59E /* ModalView */ = {
+			isa = PBXGroup;
+			children = (
+				2BF967EB2A6594A500D2A59E /* ModalView.swift */,
+				2BF967ED2A6595C700D2A59E /* ModalFirstView.swift */,
+				2BF967EF2A6597F800D2A59E /* ModalSecondView.swift */,
+			);
+			path = ModalView;
+			sourceTree = "<group>";
+		};
+		2BF967F22A65988100D2A59E /* NavigationView */ = {
+			isa = PBXGroup;
+			children = (
+				2B706E402A604FCC004F352F /* ContentView.swift */,
+				2BF967E72A6592A700D2A59E /* FirstView.swift */,
+				2BF967E92A6593DA00D2A59E /* SecondView.swift */,
+			);
+			path = NavigationView;
+			sourceTree = "<group>";
+		};
+		2BF967F32A65989500D2A59E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2B706E532A605A2E004F352F /* Info.plist */,
+				2B706E3E2A604FCC004F352F /* KakaoShareAPIApp.swift */,
+				2B706E4E2A6052E2004F352F /* SceneDelegate.swift */,
+				2B706E4C2A60516B004F352F /* AppDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +193,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B706E4D2A60516B004F352F /* AppDelegate.swift in Sources */,
+				2BF967EA2A6593DA00D2A59E /* SecondView.swift in Sources */,
 				2B706E412A604FCC004F352F /* ContentView.swift in Sources */,
 				2B706E3F2A604FCC004F352F /* KakaoShareAPIApp.swift in Sources */,
+				2BF967EC2A6594A500D2A59E /* ModalView.swift in Sources */,
+				2BF967F02A6597F800D2A59E /* ModalSecondView.swift in Sources */,
+				2BF967E82A6592A700D2A59E /* FirstView.swift in Sources */,
 				2B706E4F2A6052E2004F352F /* SceneDelegate.swift in Sources */,
+				2BF967EE2A6595C700D2A59E /* ModalFirstView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +332,7 @@
 				DEVELOPMENT_TEAM = 6L372B2RJ6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = KakaoShareAPI/Info.plist;
+				INFOPLIST_FILE = KakaoShareAPI/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -318,7 +362,7 @@
 				DEVELOPMENT_TEAM = 6L372B2RJ6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = KakaoShareAPI/Info.plist;
+				INFOPLIST_FILE = KakaoShareAPI/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

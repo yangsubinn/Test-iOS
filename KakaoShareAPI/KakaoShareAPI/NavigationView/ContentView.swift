@@ -14,16 +14,21 @@ struct ContentView: View {
     @Binding var param: String
     
     var body: some View {
-        VStack(spacing: 20) {
-            Button("카카오톡 공유하기", action: {
-                shareButtonTapped()
-            })
-            Text("위의 버튼을 눌러보세요")
-                .foregroundColor(.gray)
-            Text(param)
-                .foregroundColor(.gray)
+        NavigationView {
+            VStack(spacing: 20) {
+                Button("카카오톡 공유하기", action: {
+                    shareButtonTapped()
+                })
+                Text("위의 버튼을 눌러보세요")
+                    .foregroundColor(.gray)
+                Text(param)
+                    .foregroundColor(.gray)
+                NavigationLink(destination: FirstView()) {
+                    Text("Move to FirstView")
+                }
+            }
+            .padding()
         }
-        .padding()
     }
     
     func shareButtonTapped() {
