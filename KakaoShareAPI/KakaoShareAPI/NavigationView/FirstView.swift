@@ -24,9 +24,6 @@ struct FirstView: View {
             .fullScreenCover(isPresented: $isPresented) {
                 ModalView(isPresented: $isPresented)
             }
-//            .sheet(isPresented: $isPresented) {
-//                ModalView()
-//            }
         }
     }
 }

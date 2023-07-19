@@ -23,11 +23,10 @@ struct KakaoShareAPIApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(param: $param)
+            ContentView()
                 .onOpenURL { url in
                     // 카카오톡 링크로 들어온 경우, 링크 마지막에 'kakaolink?happy=cat' 형태로 파라미터가 넘어옴
                     print("🍫 URL: \(url)")
-                    param = "\(String(describing: url.absoluteString.split(separator: "?").last))"
                 }
         }
     }

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ModalView: View {
     @Binding var isPresented: Bool
-//    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         NavigationView {
@@ -22,7 +21,6 @@ struct ModalView: View {
                 
                 Button("Back to FirstView") {
                     isPresented.toggle()
-//                    dismiss()
                 }
             }
         }

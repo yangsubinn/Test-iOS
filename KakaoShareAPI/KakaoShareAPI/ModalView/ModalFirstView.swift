@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ModalFirstView: View {
-//    @Environment(\.dismiss) var dismiss
     @Binding var isPresented: Bool
     
     var body: some View {
@@ -20,7 +19,6 @@ struct ModalFirstView: View {
             }
             
             Button("모달 한번에 닫기") {
-//                dismiss()
                 isPresented.toggle()
             }
         }

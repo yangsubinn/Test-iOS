@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B6FAAF72A66F2E400C8A125 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 2B6FAAF62A66F2E400C8A125 /* ComposableArchitecture */; };
 		2B706E3F2A604FCC004F352F /* KakaoShareAPIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B706E3E2A604FCC004F352F /* KakaoShareAPIApp.swift */; };
 		2B706E412A604FCC004F352F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B706E402A604FCC004F352F /* ContentView.swift */; };
 		2B706E432A604FCF004F352F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B706E422A604FCF004F352F /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6FAAF72A66F2E400C8A125 /* ComposableArchitecture in Frameworks */,
 				2B706E522A60587E004F352F /* KakaoSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,6 +136,7 @@
 			name = KakaoShareAPI;
 			packageProductDependencies = (
 				2B706E512A60587E004F352F /* KakaoSDK */,
+				2B6FAAF62A66F2E400C8A125 /* ComposableArchitecture */,
 			);
 			productName = KakaoShareAPI;
 			productReference = 2B706E3B2A604FCC004F352F /* KakaoShareAPI.app */;
@@ -165,6 +168,7 @@
 			mainGroup = 2B706E322A604FCC004F352F;
 			packageReferences = (
 				2B706E502A60587E004F352F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				2B6FAAF52A66F2E400C8A125 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = 2B706E3C2A604FCC004F352F /* Products */;
 			projectDirPath = "";
@@ -257,7 +261,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -311,7 +315,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -405,6 +409,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2B6FAAF52A66F2E400C8A125 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.56.0;
+			};
+		};
 		2B706E502A60587E004F352F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
@@ -416,6 +428,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2B6FAAF62A66F2E400C8A125 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B6FAAF52A66F2E400C8A125 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
 		2B706E512A60587E004F352F /* KakaoSDK */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2B706E502A60587E004F352F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
