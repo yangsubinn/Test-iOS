@@ -7,23 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B3F477C2A68253C00FAA681 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3F477B2A68253C00FAA681 /* AppDelegate.swift */; };
+		2B3F477E2A68267B00FAA681 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B3F477D2A68267B00FAA681 /* GoogleService-Info.plist */; };
 		2B584AE02A67E38600FB66D6 /* ActivityView_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B584ADF2A67E38600FB66D6 /* ActivityView_SwiftUIApp.swift */; };
 		2B584AE22A67E38600FB66D6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B584AE12A67E38600FB66D6 /* ContentView.swift */; };
 		2B584AE42A67E38800FB66D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B584AE32A67E38800FB66D6 /* Assets.xcassets */; };
 		2B584AE72A67E38800FB66D6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B584AE62A67E38800FB66D6 /* Preview Assets.xcassets */; };
 		2B584AEE2A67E5C500FB66D6 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B584AED2A67E5C500FB66D6 /* ActivityView.swift */; };
 		2B584AF12A67EE7400FB66D6 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 2B584AF02A67EE7400FB66D6 /* KakaoSDK */; };
-		2B584AF32A67F2FE00FB66D6 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B584AF22A67F2FE00FB66D6 /* View+.swift */; };
+		2B584B022A681C7700FB66D6 /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = 2B584B012A681C7700FB66D6 /* FirebaseDynamicLinks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B3F477B2A68253C00FAA681 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B3F477D2A68267B00FAA681 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2B584ADC2A67E38600FB66D6 /* ActivityView-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ActivityView-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B584ADF2A67E38600FB66D6 /* ActivityView_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView_SwiftUIApp.swift; sourceTree = "<group>"; };
 		2B584AE12A67E38600FB66D6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2B584AE32A67E38800FB66D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B584AE62A67E38800FB66D6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2B584AED2A67E5C500FB66D6 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
-		2B584AF22A67F2FE00FB66D6 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +35,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B584AF12A67EE7400FB66D6 /* KakaoSDK in Frameworks */,
+				2B584B022A681C7700FB66D6 /* FirebaseDynamicLinks in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +45,7 @@
 		2B584AD32A67E38600FB66D6 = {
 			isa = PBXGroup;
 			children = (
+				2B3F477D2A68267B00FAA681 /* GoogleService-Info.plist */,
 				2B584ADE2A67E38600FB66D6 /* ActivityView-SwiftUI */,
 				2B584ADD2A67E38600FB66D6 /* Products */,
 			);
@@ -58,9 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				2B584ADF2A67E38600FB66D6 /* ActivityView_SwiftUIApp.swift */,
+				2B3F477B2A68253C00FAA681 /* AppDelegate.swift */,
 				2B584AE12A67E38600FB66D6 /* ContentView.swift */,
 				2B584AED2A67E5C500FB66D6 /* ActivityView.swift */,
-				2B584AF22A67F2FE00FB66D6 /* View+.swift */,
 				2B584AE32A67E38800FB66D6 /* Assets.xcassets */,
 				2B584AE52A67E38800FB66D6 /* Preview Content */,
 			);
@@ -93,6 +98,7 @@
 			name = "ActivityView-SwiftUI";
 			packageProductDependencies = (
 				2B584AF02A67EE7400FB66D6 /* KakaoSDK */,
+				2B584B012A681C7700FB66D6 /* FirebaseDynamicLinks */,
 			);
 			productName = "ActivityView-SwiftUI";
 			productReference = 2B584ADC2A67E38600FB66D6 /* ActivityView-SwiftUI.app */;
@@ -124,6 +130,7 @@
 			mainGroup = 2B584AD32A67E38600FB66D6;
 			packageReferences = (
 				2B584AEF2A67EE7400FB66D6 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				2B584B002A681C7700FB66D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 2B584ADD2A67E38600FB66D6 /* Products */;
 			projectDirPath = "";
@@ -140,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B584AE72A67E38800FB66D6 /* Preview Assets.xcassets in Resources */,
+				2B3F477E2A68267B00FAA681 /* GoogleService-Info.plist in Resources */,
 				2B584AE42A67E38800FB66D6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,9 +159,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B584AF32A67F2FE00FB66D6 /* View+.swift in Sources */,
 				2B584AE22A67E38600FB66D6 /* ContentView.swift in Sources */,
 				2B584AE02A67E38600FB66D6 /* ActivityView_SwiftUIApp.swift in Sources */,
+				2B3F477C2A68253C00FAA681 /* AppDelegate.swift in Sources */,
 				2B584AEE2A67E5C500FB66D6 /* ActivityView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,6 +373,14 @@
 				kind = branch;
 			};
 		};
+		2B584B002A681C7700FB66D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -372,6 +388,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2B584AEF2A67EE7400FB66D6 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
 			productName = KakaoSDK;
+		};
+		2B584B012A681C7700FB66D6 /* FirebaseDynamicLinks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B584B002A681C7700FB66D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDynamicLinks;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

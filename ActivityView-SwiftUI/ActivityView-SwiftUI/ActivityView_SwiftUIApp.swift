@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import FirebaseCore
 
 @main
 struct ActivityView_SwiftUIApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
