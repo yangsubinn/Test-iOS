@@ -6,34 +6,39 @@
 //
 
 import SwiftUI
-import KakaoSDKUser
-import KakaoSDKAuth
-import KakaoSDKTalk
+import FirebaseDynamicLinks
 
 struct ContentView: View {
     @State private var isActivityViewPresented = false
-    @State private var item: ActivityItem?
     
     var body: some View {
-        VStack {
+        let url = generateDynamicLink()
+        
+        VStack(spacing: 20) {
             Button("더보기") {
                 isActivityViewPresented = true
             }
             .background(
                 ActivityView(isPresented: $isActivityViewPresented,
-                             activityItems: [URL(string: "https://teamreadme.page.link/new")!],
+                             activityItems: [URL(string: url)!],
                              applicationActivities: nil))
-//            Button {
-//                item = ActivityItem(
-//                    items: [URL(string: "https://github.com/yangsubinn")!],
-//                    activities: [],
-//                    excludedTypes: [])
-//            } label: {
-//                Text("더보기")
-//            }
-//            .activitySheet($item)
         }
         .padding()
+    }
+    
+    func generateDynamicLink() -> String {
+        let urlPrefix = "https://teamreadme.page.link"
+        let link = URL(string: "https://teamreadme.page.link/new")!
+        let linkBuilder = DynamicLinkComponents(link: link, domainURIPrefix: urlPrefix)
+        
+        linkBuilder?.iOSParameters = DynamicLinkIOSParameters(bundleID: "com.readme.release")
+        linkBuilder?.iOSParameters?.appStoreID = "1617522900"
+        linkBuilder?.socialMetaTagParameters = DynamicLinkSocialMetaTagParameters()
+        linkBuilder?.socialMetaTagParameters?.title = "리드미 참여해보세요!"
+        linkBuilder?.socialMetaTagParameters?.imageURL = URL(string: "https://user-images.githubusercontent.com/81167570/184465852-cb05e110-a363-44d6-bcb1-729cc3c908c3.png")
+        let longDynamicLink = linkBuilder?.url?.absoluteString
+        print("😇", longDynamicLink)
+        return longDynamicLink ?? "-"
     }
 }
 

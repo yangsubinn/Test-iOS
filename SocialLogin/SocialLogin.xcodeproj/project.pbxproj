@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B30E31B2A6F802800949151 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 2B30E31A2A6F802800949151 /* KakaoSDK */; };
 		2BC45D3A27A409C100C6A354 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC45D3927A409C100C6A354 /* AppDelegate.swift */; };
 		2BC45D3C27A409C100C6A354 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC45D3B27A409C100C6A354 /* SceneDelegate.swift */; };
 		2BC45D3E27A409C100C6A354 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC45D3D27A409C100C6A354 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B30E31B2A6F802800949151 /* KakaoSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = SocialLogin;
+			packageProductDependencies = (
+				2B30E31A2A6F802800949151 /* KakaoSDK */,
+			);
 			productName = SocialLogin;
 			productReference = 2BC45D3627A409C100C6A354 /* SocialLogin.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 2BC45D2D27A409C000C6A354;
+			packageReferences = (
+				2B30E3192A6F802800949151 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+			);
 			productRefGroup = 2BC45D3727A409C100C6A354 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -289,7 +297,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L9D5M5DM3Y;
+				DEVELOPMENT_TEAM = 6L372B2RJ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SocialLogin/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -302,7 +310,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = subin.SocialLogin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.subin.SocialLogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -317,7 +325,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L9D5M5DM3Y;
+				DEVELOPMENT_TEAM = 6L372B2RJ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SocialLogin/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -330,7 +338,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = subin.SocialLogin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.subin.SocialLogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -360,6 +368,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2B30E3192A6F802800949151 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2B30E31A2A6F802800949151 /* KakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B30E3192A6F802800949151 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2BC45D2E27A409C000C6A354 /* Project object */;
 }
