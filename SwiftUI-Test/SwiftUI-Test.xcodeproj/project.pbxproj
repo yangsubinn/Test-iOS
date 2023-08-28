@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B1D1C382A9710B800014530 /* DynamicSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D1C372A9710B800014530 /* DynamicSize.swift */; };
 		2B2191D92A91E3E300F72570 /* InfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2191D82A91E3E300F72570 /* InfiniteScrollView.swift */; };
 		2BB81D572A83647800EE1D30 /* SwiftUI_TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB81D562A83647800EE1D30 /* SwiftUI_TestApp.swift */; };
 		2BB81D592A83647800EE1D30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB81D582A83647800EE1D30 /* ContentView.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B1D1C372A9710B800014530 /* DynamicSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicSize.swift; sourceTree = "<group>"; };
 		2B2191D82A91E3E300F72570 /* InfiniteScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollView.swift; sourceTree = "<group>"; };
 		2BB81D532A83647800EE1D30 /* SwiftUI-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB81D562A83647800EE1D30 /* SwiftUI_TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_TestApp.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				2BB81D582A83647800EE1D30 /* ContentView.swift */,
 				2BB81D662A8364E400EE1D30 /* AnimationView.swift */,
 				2B2191D82A91E3E300F72570 /* InfiniteScrollView.swift */,
+				2B1D1C372A9710B800014530 /* DynamicSize.swift */,
 				2BB81D642A83649D00EE1D30 /* SliderView.swift */,
 				2BB81D5A2A83647A00EE1D30 /* Assets.xcassets */,
 				2BB81D5C2A83647A00EE1D30 /* Preview Content */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B1D1C382A9710B800014530 /* DynamicSize.swift in Sources */,
 				2BB81D592A83647800EE1D30 /* ContentView.swift in Sources */,
 				2BB81D672A8364E400EE1D30 /* AnimationView.swift in Sources */,
 				2BB81D652A83649D00EE1D30 /* SliderView.swift in Sources */,
