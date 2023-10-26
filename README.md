@@ -3,7 +3,7 @@
 
 <br>
 
-| 👻 |  ❓  |  ✔️  | 👾 |
+| 👻 |  ❓  |  ✔️  | link |
 |:----------:|:-------------|:------:|:------:|
 | 1 |  Haptic Vibration | ✔️ | [📂](https://github.com/yangsubinn/Test-iOS/blob/master/Test/Test/Source/ViewControllers/HapticVC.swift) |
 | 2 |  NavigationBar Programmatically | ✔️ |🕳|
